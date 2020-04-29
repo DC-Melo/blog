@@ -1,0 +1,23 @@
+Sat Mar 14 15:04:48 CST 2020
+    TARGET:make clear why i cannot set out email via command?
+        △.550-5.7.1 to send email directly to our servers. Please use the SMTP relay at 550-5.7.1 your service provider instead
+        △.This IP address range has been identified by Spamhaus as not meeting our policy for IP addresses permitted to deliver unauthenticated 'direct-to-mx' email to PBL users.
+        △.Important: If you are using any normal email software (such as Outlook, Entourage, Thunderbird, Apple Mail, etc.) and you are being blocked by this Spamhaus PBL listing when you try to send email, the reason is simply that you need to turn on "SMTP Authentication" in your email program settings. For help with SMTP Authentication or ways to quickly fix this problem click here.
+    RESULT:
+        △.config the smtp email.
+Sat Mar 14 18:47:43 CST 2020
+
+
+Sat Mar 14 15:04:48 CST 2020
+    TARGET:move the contact to wangjiang@alumni.tongji.edu.cn email.
+    RESULT:change the code to windows utf-8 not linux utf-8.>> DONE
+Sat Mar 14 18:49:43 CST 2020
+
+EVENT:
+    MARKET:  
+    TARGET: 
+    ANALYSE:
+    RESOURCE:
+    ACTION:
+    RESULT:
+    DECLINE:

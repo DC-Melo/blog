@@ -1,0 +1,62 @@
+TARGET:
+●:Vim nomal short cut. ⇒ ✓ DONE
+●:stress test. ⇒ ✓ DONE
+●:SMT32 code. ⇒ ✓ 
+●:input KPI ⇒ ✓ DONE
+
+
+Thu Mar 26 10:16:10 CST 2020
+    TARGET:vim nomal short cut.
+        ▶:comment⇒ 1.ctrl+v 2. I 3.input comment
+        ▶:substitute ⇒ :%s/foo/bar/gc :.,+2s/foo/bar/gc :5,12s/foo/bar/gc
+        ▶:insert text ⇒ 
+        ▶:run command ⇒ :!command
+        ▶:inssert command ⇒ :r!command/wd 
+        ▶:exit vim command ⇒ :r sh
+        ▶:delete a word ⇒ :dw或daw d3w
+        ▶:save as ⇒  :w new_filename
+        ▶:move curse to old place ⇒ ctrl+o
+        ▶:move to a word end and begin ⇒ e/w  b
+        ▶:向下查找<字符串>	\<字符串>	输入n继续查找下一个
+        ▶:向上查找<字符串>	? <字符串>	输入N继续查找下一个
+        ▶:寻找游标所在处的单词	\*	向后
+        ▶:寻找游标所在处的单词	\#	向前
+        ▶:命令行模式下输入 :e# 回到前一个文件
+        ▶:命令行模式下输入 :e 3.txt 打开新文件3.txt
+        ▶:9r file 将file文件的内容，追加到当前文件的第9行后面。
+Thu Mar 26 11:00:40 CST 2020
+
+
+Thu Mar 26 11:00:57 CST 2020
+    TARGET:code the SMT32 
+    RESULT:
+        ▶:download stm32cubemx to make lib and project.
+            download url:
+            https://www.st.com/content/st_com/zh/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-configurators-and-code-generators/stm32cubemx.html
+        ▶:install the st-link driver
+            sudo apt-get install libusb-1.0
+            sudo apt-get install cmake
+            sudo apt-get install libgtk-3-dev
+            git clone https://github.com/texane/stlink.git
+            cd stlink
+            make release
+            make debug
+            cd build
+            cmake -DCMAKE_BUILD_TYPE=Debug ..
+            make
+            cd Release; sudo make install；sudo ldconfig
+            cd  ../..  (回到stlink目录下)
+            sudo  cp  etc/udev/rules.d/*  /etc/udev/rules.d/
+            udevadm control --reload-rules
+            udevadm trigger
+            四、测试
+            在命令行终端中输入命令：
+            st-info –version
+            会看到类似如下提示:
+            v1.4.0
+
+
+Thu Mar 26 15:40:44 CST 2020
+    TARGET:make season KPI check
+    RESULT:finished
+Thu Mar 26 16:39:48 CST 2020

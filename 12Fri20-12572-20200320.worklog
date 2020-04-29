@@ -1,0 +1,58 @@
+TARGET:
+●:go on debug stress test  ⇒ ✓ DONE
+●:make clear the scructure of uiautomater. ⇒ ✓ DONE
+●:add the power test to the structure ⇒  ✓ DONE
+●:go on to code stress power test ⇒ ✗ 
+
+Fri Mar 20 09:54:01 CST 2020
+    TARGET:debug stress test.make it canbe run in ubuntu.
+    RESULT: DONE
+    GUG:install python3 vitural enviroment
+    DEBUG:sudo apt-get install python3-venv
+        python3 -m venv myvenv
+        source myvenv/bin/activate
+        pip3 freeze > requirements.txt
+        pip3 install -r requirements.txt
+    BUG:add path to system path
+    BUG:UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb4 in position 5: invalid start byte
+        /home/dc/2P/064-auto_test_framework/auto_framework/log/meminfo_mu_music_switchMusic.txt
+        Exception in thread Thread-2:
+        Traceback (most recent call last):
+          File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+            self.run()
+          File "/usr/lib/python3.6/threading.py", line 864, in run
+            self._target(*self._args, **self._kwargs)
+          File "script/main.py", line 160, in execute
+            self.__run_all_cases(excel=True)
+          File "script/main.py", line 109, in __run_all_cases
+            res = self.module_function(i[0], tc_prco, i[1])
+          File "script/main.py", line 174, in module_function
+            res = self.__stress_one_prco(test_case, tc_prco, test_time)
+          File "script/main.py", line 212, in __stress_one_prco
+            memleak_detector.stop()
+          File "/home/dc/2P/064-auto_test_framework/auto_framework/utils/MemLeakUtils.py", line 252, in stop
+            self.analyse_result()
+          File "/home/dc/2P/064-auto_test_framework/auto_framework/utils/MemLeakUtils.py", line 255, in analyse_result
+            lines = MemLeakDetector.readfile_lines(os.path.join(self.log_dir, f"meminfo_{self.result_name}.txt"))
+          File "/home/dc/2P/064-auto_test_framework/auto_framework/utils/MemLeakUtils.py", line 181, in readfile_lines
+            return f.readlines()
+          File "/usr/lib/python3.6/codecs.py", line 321, in decode
+            (result, consumed) = self._buffer_decode(data, self.errors, final)
+        UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb4 in position 5: invalid start byte
+    DEBUG:check the code and make sure use utf-8 code.
+Fri Mar 20 16:26:19 CST 2020
+
+    
+Fri Mar 20 17:21:35 CST 2020
+    TARTET:add power test to the structure.
+    RESULT:could not add power test to the ui test structure.
+Fri Mar 20 17:23:03 CST 2020
+
+
+Fri Mar 20 17:24:53 CST 2020
+    TARGET:design power stress test structure.
+    RESULT:not finished.
+Fri Mar 20 18:59:40 CST 2020
+        
+
+

@@ -1,0 +1,40 @@
+TARGET:
+●:analyse bipolar power test result ⇒ ✓ DONE
+●:make a shell bipolar power test control ⇒ ✓ DONE
+●:make stress test case. ⇒ 
+
+
+Wed Mar 25 13:12:52 CST 2020
+    TARGET:read serial port by line
+    RESULT:
+        echo -en '*IDN?'
+        echo -en "*IDN?\r\n" > $port
+        read -t 1 -r ligne < /dev/ttyUSB0
+        echo $ligne
+
+        echo -en 'syst:err?'
+        echo -en "syst:err?\r\n" > $port
+        read -t 1 -r ligne < /dev/ttyUSB0
+        echo $ligne
+
+        echo -en 'syst:rem'
+        echo -en "syst:rem\r\n" > $port
+        read -t 1 -r ligne < /dev/ttyUSB0
+        echo $ligne
+
+        echo -en 'outp:stat on'
+        echo -en "outp:stat on\r\n" > $port
+        read -t 1 -r ligne < /dev/ttyUSB0
+        echo $ligne
+Wed Mar 25 13:37:32 CST 2020
+
+
+Wed Mar 25 13:37:48 CST 2020
+    ACTION:sleep
+Wed Mar 25 17:35:24 CST 2020
+
+Wed Mar 25 17:35:24 CST 2020
+    TARGET:stress test case all finished
+    RESULT:python3 -m weditor
+        ▶:finish 17 test case
+Wed Mar 25 20:13:05 CST 2020

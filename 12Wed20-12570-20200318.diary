@@ -1,0 +1,127 @@
+TARGET:
+●:handle the reconnect usb problem.>> ✓ DONE
+●:format diary,and remember the digraph shortcut. >> ✓ DONE
+
+
+Wed Mar 18 10:28:20 CST 2020
+    TARGET:remember short cut of digraph
+        ※	:X	203B	8251	REFERENCE MARK
+        ●	0M	25CF	9679	BLACK CIRCLE
+        ▷	Tr	25B7	9655	WHITE RIGHT-POINTING TRIANGLE
+        ▶	PR	25B6	9654	BLACK RIGHT-POINTING TRIANGLE
+        ◆	Db	25C6	9670	BLACK DIAMOND
+        ★	*2	2605	9733	BLACK STAR
+        ♩	Md	2669	9833	QUARTER NOTE `
+        ♪	M8	266A	9834	EIGHTH NOTE `
+        ♫	M2	266B	9835	BEAMED EIGHTH NOTES
+        ✓	OK	2713	10003	CHECK MARK
+        ✗	XX	2717	10007	BALLOT X
+        
+        ※	:X	203B	8251	REFERENCE MARK
+        ←	<-	2190	8592	LEFTWARDS ARROW
+        ↑	-!	2191	8593	UPWARDS ARROW
+        →	->	2192	8594	RIGHTWARDS ARROW
+        ↓	-v	2193	8595	DOWNWARDS ARROW
+        ↔	<>	2194	8596	LEFT RIGHT ARROW
+        ↕	UD	2195	8597	UP DOWN ARROW
+        ⇐	<=	21D0	8656	LEFTWARDS DOUBLE ARROW
+        ⇒	=>	21D2	8658	RIGHTWARDS DOUBLE ARROW
+        ⇔	==	21D4	8660	LEFT RIGHT DOUBLE ARROW
+        ■	fS	25A0	9632	BLACK SQUARE
+        □	OS	25A1	9633	WHITE SQUARE
+        ▢	RO	25A2	9634	WHITE SQUARE WITH ROUNDED CORNERS
+        ▣	Rr	25A3	9635	WHITE SQUARE CONTAINING BLACK SMALL SQUARE
+        ▤	RF	25A4	9636	SQUARE WITH HORIZONTAL FILL
+        ▥	RY	25A5	9637	SQUARE WITH VERTICAL FILL
+        ▦	RH	25A6	9638	SQUARE WITH ORTHOGONAL CROSSHATCH FILL
+        ▧	RZ	25A7	9639	SQUARE WITH UPPER LEFT TO LOWER RIGHT FILL
+        ▨	RK	25A8	9640	SQUARE WITH UPPER RIGHT TO LOWER LEFT FILL
+        ▩	RX	25A9	9641	SQUARE WITH DIAGONAL CROSSHATCH FILL
+        ▪	sB	25AA	9642	BLACK SMALL SQUARE
+        ▬	SR	25AC	9644	BLACK RECTANGLE
+        ▭	Or	25AD	9645	WHITE RECTANGLE
+        ▲	UT	25B2	9650	BLACK UP-POINTING TRIANGLE
+        △	uT	25B3	9651	WHITE UP-POINTING TRIANGLE
+        ▶	PR	25B6	9654	BLACK RIGHT-POINTING TRIANGLE
+        ▷	Tr	25B7	9655	WHITE RIGHT-POINTING TRIANGLE
+        ▼	Dt	25BC	9660	BLACK DOWN-POINTING TRIANGLE
+        ▽	dT	25BD	9661	WHITE DOWN-POINTING TRIANGLE
+        ◀	PL	25C0	9664	BLACK LEFT-POINTING TRIANGLE
+        ◁	Tl	25C1	9665	WHITE LEFT-POINTING TRIANGLE
+        ◆	Db	25C6	9670	BLACK DIAMOND
+        ◇	Dw	25C7	9671	WHITE DIAMOND
+        ◊	LZ	25CA	9674	LOZENGE
+        ○	0m	25CB	9675	WHITE CIRCLE
+        ◎	0o	25CE	9678	BULLSEYE
+        ●	0M	25CF	9679	BLACK CIRCLE
+        ◐	0L	25D0	9680	CIRCLE WITH LEFT HALF BLACK
+        ◑	0R	25D1	9681	CIRCLE WITH RIGHT HALF BLACK
+        ◘	Sn	25D8	9688	INVERSE BULLET
+        ◙	Ic	25D9	9689	INVERSE WHITE CIRCLE
+        ◢	Fd	25E2	9698	BLACK LOWER RIGHT TRIANGLE
+        ◣	Bd	25E3	9699	BLACK LOWER LEFT TRIANGLE
+        ★	*2	2605	9733	BLACK STAR
+        ☆	*1	2606	9734	WHITE STAR
+        ☜	<H	261C	9756	WHITE LEFT POINTING INDEX
+        ☞	>H	261E	9758	WHITE RIGHT POINTING INDEX
+        ☺	0u	263A	9786	WHITE SMILING FACE
+        ☻	0U	263B	9787	BLACK SMILING FACE
+        ☼	SU	263C	9788	WHITE SUN WITH RAYS
+        ♀	Fm	2640	9792	FEMALE SIGN
+        ♂	Ml	2642	9794	MALE SIGN
+        ♠	cS	2660	9824	BLACK SPADE SUIT
+        ♡	cH	2661	9825	WHITE HEART SUIT
+        ♢	cD	2662	9826	WHITE DIAMOND SUIT
+        ♣	cC	2663	9827	BLACK CLUB SUIT
+        ♩	Md	2669	9833	QUARTER NOTE `
+        ♪	M8	266A	9834	EIGHTH NOTE `
+        ♫	M2	266B	9835	BEAMED EIGHTH NOTES
+        ♭	Mb	266D	9837	MUSIC FLAT SIGN
+        ♮	Mx	266E	9838	MUSIC NATURAL SIGN
+        ♯	MX	266F	9839	MUSIC SHARP SIGN
+        ✓	OK	2713	10003	CHECK MARK
+        ✗	XX	2717	10007	BALLOT X
+        ✠	-X	2720	10016	MALTESE CROSS
+Wed Mar 18 10:31:55 CST 2020
+
+
+Wed Mar 18 10:32:28 CST 2020
+    TARGET:handle the reconnect usb problem.
+        ▶:原数据: b'\x13\x11103,"Operation denied while in PROTection state"\r\n'
+        ▶:编码数据: 103,"Operation denied while in PROTection state"
+        [  398.107732] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+        [  398.107736] usb 1-1: Product: S202
+        [  398.107739] usb 1-1: Manufacturer: WUTONG
+        [  398.107742] usb 1-1: SerialNumber: 1010280e8289702c
+        [  491.781671] usb 1-1: USB disconnect, device number 27
+        [  551.446636] usb usb1-port1: Cannot enable. Maybe the USB cable is bad?
+        [  552.414500] usb usb1-port1: Cannot enable. Maybe the USB cable is bad?
+        [  552.414592] usb usb1-port1: attempt power cycle
+        [  553.698521] usb usb1-port1: Cannot enable. Maybe the USB cable is bad?
+        [  554.666463] usb usb1-port1: Cannot enable. Maybe the USB cable is bad?
+        [  554.666557] usb usb1-port1: unable to enumerate USB device
+        [  593.745840] usb 1-1: new high-speed USB device number 32 using xhci_hcd
+        [  593.905243] usb 1-1: New USB device found, idVendor=18d1, idProduct=4ee7, bcdDevice= 4.40
+        [  593.905248] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+        [  593.905251] usb 1-1: Product: S202
+        [  593.905254] usb 1-1: Manufacturer: WUTONG
+        [  593.905256] usb 1-1: SerialNumber: 1010280e8289702c   
+    ACTION:
+        ▶:try to reset usb power.
+        ▶:try to re emumerate USB device.
+        ▶:try to mount USB device.
+        ▶:try to add a relay.
+    RESULT:
+        How re-enumerate USB device not plug USB interface and analog software plug movement?
+        ▶:In USB applications, there is no need to plug USB device to enumerate USB again in some special applications. In SONIX USB IC applications, users can use software to complete the plug simulation operation.
+            ◆:If using 2200 and 2210 series IC, user can use I/O control method, as follows:
+            ◆:1. Disable USB function;
+            ◆:2. Use one I/O port as output port and connected to Vreg Pin and output low to discharge Vreg Pin;
+            ◆:3. Delay a certain time to make USB in disconnected state; Enable USB functions;
+            ◆:Through the above steps, you can realize device re-enumeration function without plug USB. When using 2230 or 2250 or 2270 series IC, user can disable VREG3.3V by controlling USB_INT_EN Bit7 to realize this purpose.
+        ▶:sudo sh -c "echo 0 > /sys/bus/usb/devices/1-4.6/authorized"  power off
+        ▶:sudo sh -c "echo 1 > /sys/bus/usb/devices/1-4.6/authorized"  power on
+        ▶:buy usb adapter.
+Wed Mar 18 19:38:28 CST 2020
+
+

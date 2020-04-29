@@ -1,0 +1,3 @@
+rar破解方法:
+rarcrack --help
+rarcrack your_encrypted_archive.ext [--threads thread_num] [--type rar|zip|7z]

@@ -1,0 +1,28 @@
+TARGET:
+●:analyse the biploar power stress test result. ⇒ ✓ DONE
+●:update the analyse code to bipolar power stress test code. ⇒ 
+●:make other 13 test case ⇒ 
+
+
+Tue Mar 24 10:25:57 CST 2020
+    TARGET:analyse the log.
+    ACTION:get the log key words. onFixWordWakeup : word = 小安你好
+    RESULT:ok 306 times ok
+Tue Mar 24 12:19:37 CST 2020
+
+
+Tue Mar 24 12:19:37 CST 2020
+    TARGET:update the code to bipolar power stress test.
+
+
+Tue Mar 24 12:21:08 CST 2020
+    ACTION:lunch and sleep
+Tue Mar 24 13:39:26 CST 2020
+
+
+Tue Mar 24 13:39:38 CST 2020
+    BUG:ubuntu install pyttsx3
+    DEBUG:
+    sudo apt-get install sox
+    sudo apt-get install libsox-fmt-mp3
+

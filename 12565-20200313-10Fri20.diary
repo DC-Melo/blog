@@ -1,0 +1,38 @@
+
+Fri Mar 13 10:16:15 CST 2020
+    TARGET:进一步整理工作日志形式.
+    RESULT:
+        ▲.每天坚持记录工作日志.
+        ▲.每个动作都必须记录进日志,一边以后分析.
+        ▲.格式要慢慢简化清晰,易与导入excel.
+Fri Mar 13 11:15:36 CST 2020
+    
+    
+Fri Mar 13 10:59:39 CST 2020
+    TARGET:there is package com.autopai.com,but dumpsys package could not find it
+    ACTION:help liuzemeng to clear dumpsys package com.autopai.com
+Fri Mar 13 11:00:53 CST 2020
+    
+
+Fri Mar 13 11:15:58 CST 2020
+    TARGET:程控电源串口信息同时读写!
+    ACTION:
+        △.设计构架,需要两个进程/线程,同时操作读写.分别打印发送和接收.>> DONE
+        △.添加按键退出,保存log.>> 20%
+Fri Mar 13 19:30:34 CST 2020
+        
+        
+Fri Mar 13 12:45:19 CST 2020
+    ACTION:get lunch.
+Fri Mar 13 12:58:57 CST 2020
+
+
+Fri Mar 13 13:22:27 CST 2020
+    ACTION:sleep
+Fri Mar 13 14:03:26 CST 2020
+
+
+Fri Mar 13 19:03:05 CST 2020
+    ACTION:dinner
+Fri Mar 13 19:30:23 CST 2020
+

@@ -1,0 +1,64 @@
+TARGET:
+●:check the other task ⇒ ✓ DONE
+●:go on to finish speech test. ⇒ ✗ not finished
+●:colect contact every day.everyday one team.⇒ ✓ DONE
+●:make clear the stress test,try to run a round. ⇒ 
+●:try to put the script to github or send it to you emial ⇒ ✓ 
+
+Thu Mar 19 09:49:46 CST 2020
+    ACTION:break fast
+Thu Mar 19 09:56:12 CST 2020
+
+
+Thu Mar 19 10:20:30 CST 2020
+    TARGET:check the emunrate strage and try to find the path to handle it.
+    RESULT:read all the artical
+Thu Mar 19 17:07:12 CST 2020
+
+
+Thu Mar 19 11:49:46 CST 2020
+    TARGET:communication with huhongbao.is there any one good for me.
+        sudo umount /media/XXX/F
+        sudo mkfs.ntfs /dev/sdb1
+        sudo mkfs.ext4 /dev/sdb4
+        sudo mkfs.vfat -F 31 /dev/sdb4
+        DiaryName=`date +%V%a%y`-$(( ($(date +%s) - $(date --date="19851018" +%s) )/(60*60*24) ))-`date +%Y%m%d`.diary            
+    RESULT:
+        get the contact Mengmeng.
+Thu Mar 19 17:07:23 CST 2020
+
+
+Thu Mar 19 17:09:53 CST 2020
+    TARGET:try to run a round of stress test.
+        ▶:bug:runfile('/home/dc/2P/064-auto_test_framework/auto_framework/script/main.py', wdir='/home/dc/2P/064-auto_test_framework/auto_framework/script')
+            Backend Qt5Agg is interactive backend. Turning interactive mode on.
+            /bin/sh: 1: adb: not found
+            No Device attached
+        ▶:print(sys.path)
+            ['/home/dc/2P/064-auto_test_framework/auto_framework/script', 
+            '/snap/pycharm-community/188/plugins/python-ce/helpers/pydev',
+            '/home/dc/2P/064-auto_test_framework/auto_framework',
+            '/snap/pycharm-community/188/plugins/python-ce/helpers/third_party/thriftpy',
+            '/snap/pycharm-community/188/plugins/python-ce/helpers/pydev',
+            '/usr/lib/python36.zip',
+            '/usr/lib/python3.6', 
+            '/usr/lib/python3.6/lib-dynload', 
+            '/home/dc/.local/lib/python3.6/site-packages', 
+            '/usr/local/lib/python3.6/dist-packages', 
+            '/usr/lib/python3/dist-packages', 
+            '/usr/lib/python3/dist-packages/IPython/extensions', 
+            '/usr/lib/python3/dist-packages/IPython/extensions',
+            '/home/dc/2P/064-auto_test_framework/auto_framework', 
+            '/usr/lib/python3/dist-packages/IPython/extensions']
+Fri Mar 20 09:49:58 CST 2020
+
+    
+    
+    
+Thu Mar 19 17:49:20 CST 2020
+    TARGET:try to find gif maker.
+    RESULT:i must find a place to put my script.
+        ▶:put the script to the github.
+Thu Mar 19 17:50:10 CST 2020
+
+        

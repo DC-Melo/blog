@@ -1,0 +1,80 @@
+QUESTION:
+    research people,human activity,and entertainment products.
+RESULT:
+    technology:
+    1.read some book,about technology,make movie,make music,commercial.-> read note
+    2.use script and c++ to code video and audio. make phone-movie. -> scrip to process movie.
+    3.get the human activity data,analyse human activity mode -> human activity model
+    
+    culture:
+    1.exercise the english,and oral english.-> diary to record oral exercise.
+    2.research the india culture,and india activity. -> write research report
+    3.research the products,ask my mother to research the products.and write comment.-> research report
+
+
+Tue Mar 10 16:47:19 CST 2020
+QUESTION:
+    how to config mail?
+Tue Mar 10 16:49:06 CST 2020
+RESULT:
+    sudo apt-get install mailutils
+    sudo apt-get install uuencode
+
+
+Tue Mar 10 15:22:13 CST 2020
+TASK:
+    make common shell to process diary,note,report?
+Tue Mar 10 15:27:59 CST 2020
+REPORT:
+    echo $(( ($(date +%s) - $(date --date="19851018" +%s) )/(60*60*24) ))-`date +%Y%m%d`.diary
+    touch $(( ($(date +%s) - $(date --date="19851018" +%s) )/(60*60*24) ))-`date +%Y%m%d`.diary
+    目前还没有想到自动添加邮件地址，自动设置发送源地址，以后先采取手写吧
+    export emailaddr="wangjiang@alumni.tongji.edu.cn,365553100@qq.com -a from:dc@dc.com"
+
+
+Tue Mar 10 16:33:49 CST 2020
+TASK:
+    what the diary format?
+Tue Mar 10 16:34:43 CST 2020
+REPORT:
+    Time topic,and then what the result,or as atachment
+
+
+Tue Mar 10 17:06:28 CST 2020
+TASK-4H:
+    整理代码,学习gerrit,并学会使用gerrit,在这个上面管理和写代码?准备找一个人问问issueID
+Tue Mar 10 18:55:31 CST 2020
+RESULT:
+    set gitdir=$(...)
+    dc@laptop:WTT8_UploadBugs$ git push origin HEAD:refs/for/master
+    Counting objects: 3, done.
+    Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    remote: Processing changes: refs: 1, done    
+    remote: ERROR: [9e1f4d2] missing Change-Id in commit message footer
+    remote: 
+    remote: Hint: To automatically insert Change-Id, install the hook:
+    remote:   gitdir=$(git rev-parse --git-dir); scp -p -P 29418 p_dwjwang@10.1.120.4:hooks/commit-msg ${gitdir}/hooks/
+    remote: And then amend the commit:
+    remote:   git commit --amend
+    remote: 
+    To ssh://10.1.120.4:29418/WTT8_UploadBugs
+     ! [remote rejected] HEAD -> refs/for/master ([9e1f4d2] missing Change-Id in commit message footer)
+    error: failed to push some refs to 'ssh://p_dwjwang@10.1.120.4:29418/WTT8_UploadBugs'
+
+
+Tue Mar 10 18:58:15 CST 2020
+TASK-3H:
+    upload all the code and project?
+Tue Mar 10 19:38:35 CST 2020
+RESULT:
+    upload power control,up bug
+
+
+Tue Mar 10 19:38:54 CST 2020
+TASK-2H:
+    research audio process and video process.
+RESULT-30min:
+    看了相关pcm编码转换的代码.
+
+

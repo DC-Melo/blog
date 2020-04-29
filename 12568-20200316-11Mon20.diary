@@ -1,0 +1,46 @@
+TARGET:
+○.bipolar power supply, get the log and ananysy the log. >> not finished 
+○.analyse my career plan. >> delay this task to this  weekend.
+SUMMARY:write down all the idea. just do it.
+
+Mon Mar 16 09:54:29 CST 2020
+    ACTION:breakfast
+Mon Mar 16 10:08:07 CST 2020
+
+
+Mon Mar 16 10:11:06 CST 2020
+    TARGET:career plan. >> delay
+Mon Mar 16 11:35:26 CST 2020
+
+
+Mon Mar 16 11:36:01 CST 2020
+    TARGET:bipolar threading design.
+Mon Mar 16 19:15:07 CST 2020
+    
+    
+Mon Mar 16 12:30:53 CST 2020
+    ACTION:lunch
+Mon Mar 16 12:58:58 CST 2020
+    ACTION:sleep
+Mon Mar 16 14:09:25 CST 2020
+    
+    
+Mon Mar 16 15:42:36 CST 2020
+    ACTION:input digraph
+    RESULT:dig,hexdump -C file,man ascii,
+    ga: show the ascii code.
+    g8: show the utf-8 code
+    :%!xxd change to 16 bit code
+    :%!xxd -r change back
+    r!command :the command result insert to vim
+    r file: insert the file text. 
+    ctrl+k input keywords.
+    ctrl+v + decimal code
+    ctrl+vx+ hexadecimal code
+Mon Mar 16 16:37:07 CST 2020
+
+    
+Mon Mar 16 18:53:46 CST 2020
+    ACTION:dinner
+Mon Mar 16 19:14:56 CST 2020
+

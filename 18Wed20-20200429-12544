@@ -1,12 +1,11 @@
 TARGET:
-●:config mac vim and mutt email.
-
+●:config mac vim and mutt email. ⇒ DONE
+●:know about jenkens
 
 Wed Apr 29 06:51:14 CST 2020
     config mac vimplus
     config mac mutt
 Wed Apr 29 06:57:20 CST 2020
-
 
 Wed Apr 29 07:06:47 CST 2020
     如果是无法联网的话，请将邮件写入本地。因为无法将草稿上传到服务器
@@ -16,7 +15,10 @@ Wed Apr 29 07:21:21 CST 2020
     使用github来管理自己的日记和日志。
 Wed Apr 29 07:21:57 CST 2020
 
-
 Wed Apr 29 11:30:39 CST 2020
     finish use github to control my blog and script.
 Wed Apr 29 11:31:20 CST 2020
+
+Wed Apr 29 11:38:28 CST 2020
+    目标:文件名字批量替换
+    rename 's/old_char/new_char/' *

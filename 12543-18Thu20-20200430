@@ -1,0 +1,14 @@
+TARGET:
+●:
+
+
+Thu Apr 30 06:44:03 CST 2020
+    <blog>
+    idea:与其有时间犹豫不决，不如花时间多看看书。
+    </blog>
+    
+
+
+MEMO:
+    vim reload file: :e :edit :edit!
+    To do this for all buffers, use :bufdo :e or :bufdo :e! – Aaron H. Nov 13 '18 at 21:50 

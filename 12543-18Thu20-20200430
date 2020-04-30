@@ -1,14 +1,55 @@
 TARGET:
-●:
+●:use what to make living.
 
 
 Thu Apr 30 06:44:03 CST 2020
     <blog>
     idea:与其有时间犹豫不决，不如花时间多看看书。
     </blog>
+Thu Apr 30 10:03:30 CST 2020
+    arrive company
+    make clear web favorite
+    make clear wutong material.control all the project by text.
+Thu Apr 30 11:58:50 CST 2020
+    go to lunch
+Thu Apr 30 13:25:07 CST 2020
+    download program control power manual
+Thu Apr 30 14:44:03 CST 2020
+    learn cvim shortcuts
+    1.M<*> just for old windows.
+    2.tabnew
+    3.bookmark
+Thu Apr 30 16:54:02 CST 2020
+
+
+Thu Apr 30 17:03:46 CST 2020
+    what subject should be my subject?
     
+   
 
 
 MEMO:
     vim reload file: :e :edit :edit!
     To do this for all buffers, use :bufdo :e or :bufdo :e! – Aaron H. Nov 13 '18 at 21:50 
+    QuickMarks
+    M<*>	创建quickmark <*>	addQuickMark
+    go<*>	在当前标签中打开quickmark <*>	openQuickMark
+    gn<*>	在新标签页中打开quickmark <*>	openQuickMarkTabbed
+    gw<*>	在新窗口中打开quickmark <*>	openQuickMarkWindowed
+    文本框
+    <C-i>	将光标移动到行的开头	beginningOfLine
+    <C-e>	将光标移动到行尾	行结束
+    <C-u>	删除到行的开头	deleteToBeginning
+    <C-o>	删除到行尾	deleteToEnd
+    <C-y>	删除一个字	deleteWord
+    <C-p>	删除一个字	deleteForwardWord
+    未映射	删除一个字符	deleteChar
+    未映射	删除一个字符	deleteForwardChar
+    <C-h>	将光标移回一个字	backwardWord
+    <C-l>	将光标向前移动一个字	forwardWord
+    <C-f>	将光标向前移动一个字母	forwardChar
+    <C-b>	将光标移回一个字母	backwardChar
+    <C-j>	将光标向前移动一行	forwardLine
+    <C-k>	将光标移回一行	backwardLine
+    未映射	选择输入文本（相当于<C-a>）	全选
+    未映射	在终端中使用Vim进行编辑（需要运行该工作的cvim_server.py脚本以及该脚本中的VIM_COMMAND集）	editWithVim

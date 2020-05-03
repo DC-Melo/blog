@@ -1,0 +1,54 @@
+
+Sat May  2 08:22:16 CST 2020
+    整理书籍代码
+    备份各种文件
+Sat May  2 15:52:43 CST 2020
+
+
+Sat May  2 15:52:55 CST 2020
+    bug:
+    st-flash write build/iic.bin 0x08000000
+        st-flash 1.6.0
+        2020-05-02T15:49:27 INFO common.c: F1xx Medium-density: 20 KiB SRAM, 0 KiB flash in at least 1 KiB pages.
+        Unknown memory region
+
+    debug:
+        Short the BOOT0 pin with VDD
+        Reset the board
+        st-flash erase
+    调试：
+    需要打开两个终端
+    terminal 1.make && sudo st-util
+    terminal 2:
+    arm-none-eabi-gdb fancyblink.elf  （开启调试）
+    (gdb) tar extended-remote :4242  （连上GDB服务）
+    (gdb) load
+
+    bug:
+    dc@laptop:stm32f103rct6-led$ st-flash write build/stm32f103c8t6-led.bin 0x8000000
+    st-flash 1.6.0
+    2020-05-02T18:24:44 INFO common.c: F1xx High-density: 64 KiB SRAM, 0 KiB flash in at least 2 KiB pages.
+    Unknown memory region
+    没有问题的板子：
+    dc@laptop:stm32f103rct6-led$ st-info --probe
+    Found 1 stlink programmers
+    serial:     503f6b067171535523540967
+    hla-serial: "\x50\x3f\x6b\x06\x71\x71\x53\x55\x23\x54\x09\x67"
+    flash:      65536 (pagesize: 1024)
+    sram:       20480
+    chipid:     0x0410
+    descr:      F1xx Medium-density
+    有问题的板子：
+    dc@laptop:stm32f103rct6-led$ st-info --probe
+    Found 1 stlink programmers
+    serial:     503f6b067171535520330967
+    hla-serial: "\x50\x3f\x6b\x06\x71\x71\x53\x55\x20\x33\x09\x67"
+    flash:      0 (pagesize: 0)
+    sram:       0
+    chipid:     0x0004
+    问题没有被解决
+Sat May  2 21:58:43 CST 2020
+    把学习算法作为之后几天的主要工作C++
+
+
+

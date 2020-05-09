@@ -1,0 +1,84 @@
+TARGET:
+了解测试工具链
+
+
+Sat May  9 10:37:19 CST 2020
+    set eviroment in ~/.profile, this file will be run when login
+    start jenkins
+    start mysql
+    start gogs
+    start metabase
+    start grafana
+
+    strace:用于诊断、调试和教学的Linux用户空间跟踪器。我们用它来监控用户空间进程和内核的交互，比如系统调用、信号传递、进程状态变更等。
+        strace -e connect,socket,poll ping www.baidu.com
+        strace -e open,close ./a.out :只追踪open,close的系统调用
+        -t:时间戳
+        -T:显示每次系统调用所花费的时间
+    info = man better than man.
+    route -n:
+    vmstat:
+        vmstat - Report virtual memory statistics
+        vmstat是Virtual Meomory Statistics（虚拟内存统计）的缩写，可对操作系统的虚拟内存、进程、CPU活动进行监控。是对系统的整体情况进行统计，不足之处是无法对某个进程进行深入分析。
+        vmstat 5  5 【在5秒时间内进行5次采样】
+    top:
+    iftop:
+        iftop - display bandwidth usage on an interface by host
+        iftop是类似于top的实时流量监控工具。
+    iotop:
+        iotop - simple top-like I/O monitor
+        iotop是linux系统下测试硬盘IO读写的工具，简单的说,iotop是一个用来监视磁盘I/O使用状况的 top 类工具，可监测到哪一个程序使用的磁盘IO的信息
+
+    Lua:OpenResty/Tengine
+    Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，从而为应用程序提供灵活的扩展和定制功能
+    OpenResty(又称：ngx_openresty) 是一个基于 NGINX 的可伸缩的 Web 平台，由中国人章亦春发起，提供了很多高质量的第三方模块。
+    OpenResty 是一个强大的 Web 应用服务器，Web 开发人员可以使用 Lua 脚本语言调动 Nginx 支持的各种 C 以及 Lua 模块,更主要的是在性能方面，OpenResty可以 快速构造出足以胜任 10K 以上并发连接响应的超高性能 Web 应用系统。
+    Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。它的目的是打造一个高效、安全的Web平台。
+    CI/CD: jenkins/gitlab-ci/GoCD/Travis-CI
+    jenkins
+    gitlab-ci
+    GoCD:GoCD，一个开源的持续集成和持续交付系统，可以在持续交付过程中执行编译，自动化测试，自动部署等等，于Jenkins类似。GoCD的基础架构由Server和Agent组成：
+    Travis-CI:Travis CI 是在线托管的持续集成服务，绑定Github项目，抓取新的代码自动进行测试构建，甚至自动部署到测试环境。 使用这项服务，每次我们提交新的代码，都能及时发现问题并修复。
+    全栈:Vue/React/AngularJS
+    Vue:Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式JavaScript框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，方便与第三方库或既有项目整合。
+    React 是一个用于构建用户界面的 JAVASCRIPT 库。
+    AngularJS 是一个 JavaScript 框架。它可通过 <script> 标签添加到 HTML 页面。
+    Kibana 是为 Elasticsearch设计的开源分析和可视化平台。你可以使用 Kibana 来搜索，查看存储在 Elasticsearch 索引中的数据并与之交互。你可以很容易实现高级的数据分析和可视化，以图标的形式展现出来。
+Sat May  9 15:04:03 CST 2020
+
+
+Sat May  9 15:04:03 CST 2020
+    meeting:
+        meminfo
+        ddms/android studio
+        MAT:
+        Leakcanary:
+        dumpsys 出hprof文件供给开发分析.
+
+        prtest
+Sat May  9 15:51:12 CST 2020
+        
+
+Sat May  9 16:17:53 CST 2020
+    command command:
+        The lsb_release command provides certain LSB (Linux Standard Base) and distribution-specific information.
+        free - Display amount of free and used memory in the system
+        netstat  -  Print  network connections, routing tables, interface statistics, masquerade connections, and multicast
+        nmap - Network exploration tool and security / port scanner
+        ethtool - query or control network driver and hardware settings
+        uniq - report or omit repeated lines
+        who - show who is logged on
+        取出两个文件的并集(重复的行只保留一份)
+        # cat file1 file2 | sort | uniq
+        取出两个文件的交集(只留下同时存在于两个文件中的文件)
+        #36.杀掉80端口相关的进程
+        lsof -i :80|grep -v "PID"|awk '{print "kill -9",$2}'|sh
+        37.tcpdump 抓包 ，用来防止80端口被人攻击时可以分析数据
+        # tcpdump -c 10000 -i eth0 -n dst port 80 > /root/pkts cat file1 file2 | sort | uniq -d
+        38.然后检查IP的重复数并从小到大排序 注意 "-t\ +0" 中间是两个空格
+        # less pkts | awk {'printf $3"\n"'} | cut -d. -f 1-4 | sort | uniq -c | awk {'printf $1" "$2"\n"'} | sort -n -t\ +0
+        39.查看有多少个活动的php-cgi进程
+        netstat -anp | grep php-cgi | grep ^tcp | wc -l
+        chkconfig --list | awk '{if ($5=="3:on") print $1}'
+        40.查找/usr/local/apache/logs目录最后修改时间大于30天的文件，并删除。
+        find  /usr/local/apache/logs -type f -mtime +30 -exec rm -f {} \;

@@ -31,3 +31,8 @@ Fri May  8 10:32:26 CST 2020
   -v /etc/timezone:/etc/timezone jenkins/jenkins:lts
 Fri May  8 19:30:33 CST 2020
 
+
+Fri May  8 23:03:33 CST 2020
+    install wechat in linux
+Fri May  8 23:04:40 CST 2020
+

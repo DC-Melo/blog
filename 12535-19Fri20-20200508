@@ -3,6 +3,14 @@ TARGET:
 ○:use python to make memleak
 ○:ust python to learn sensorflow.
 
+TODO:
+4 review  1 day later:20200510 ⇒ 
+5 review  2 day later:20200511 ⇒ 
+6 review  4 day later:20200513 ⇒ 
+7 review  7 day later:20200516 ⇒ 
+8 review 15 day later:20200524 ⇒ 
+
+
 Fri May  8 10:32:26 CST 2020
     docker install:
     sudo apt install docker.io

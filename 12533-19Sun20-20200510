@@ -1,0 +1,45 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
+●:清理所有笔记,并加上复习日期 ⇒ DONE ✓
+●:坚持晨读,慢慢调整 ⇒ DONE ✓ 
+●:学习C++基本知识 ⇒ 
+●:八点钟与李向明讨论移民的事情⇒ DONE ✓
+
+TODO:@20200510 → ✓ → @20200510 → ✓ → @20200510 → ✓ → @20200511 → ? → 
+    :@20200512 → ? → @20200514 → ? → @20200517 → ? → @20200525 → ? ⇒ 
+mutt -s 12533-19Sun20-20200510 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12533-19Sun20-20200510
+
+
+Sun May 10 08:38:34 CST 2020
+    ■ 完成ss2blog.sh        
+    增加编辑截屏功能
+Sun May 10 15:22:39 CST 2020
+    mac 的shell非常不一样 → 放弃mac的shell适配.只用linux
+Sun May 10 17:31:40 CST 2020
+    ■ 移民相关问题:
+        1.在欧洲有没有什么找工作的渠道?
+        2.欧洲那个国家相对比较好移民?该国家的移民条件是怎么样的?
+        3.你在欧洲找工作的过程与移民过程?
+        4.job.de. monster.de. 领英. dolc.德国日线,开元网.kaiyuan.info. 
+Sun May 10 18:12:10 CST 2020
+
+
+Sun May 10 18:28:02 CST 2020
+    ■ Cpp:
+        ▶ g++ -E file1.cpp -o file1.i
+        ▶ g++ -S file1.i -o file1.s
+        ▶ g++ -c file1.s -o file1.o
+        ▶ g++ file2.o file1.o -o output
+Sun May 10 22:54:29 CST 2020
+        
+
+NOTE:
+    insert text in muti lines:ctrl+v -> shift+i -> input -> esc
+    hexdump -C file = xxd file
+    shell在引用值时,最好使用双引号
+    ✗ echo '<img src="'"$dpj/006-write/picture/$pngfilename"'" alt="'""'" />' >> $blogfile.html
+    ✓ echo '<img src="'"$dpj"'/006-write/picutre/'"$pngfilename"'" alt="'"$1"'" />' >> $blogfile
+    shutter 需要安装三个包才能使用编辑功能.
+    :help digraph-table :dig
+    ■   	fS	25A0	9632	BLACK SQUARE
+    ▶       PR      25B6    9654    BLACK RIGHT-POINTING TRIANGLE                                                                 
+    ◆       Db      25C6    9670    BLACK DIAMOND

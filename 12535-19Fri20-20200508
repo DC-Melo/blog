@@ -1,15 +1,10 @@
-TARGET:
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
 ○:learn agorithm
 ○:use python to make memleak
 ○:ust python to learn sensorflow.
-
-TODO:
-4 review  1 day later:20200510 ⇒ 
-5 review  2 day later:20200511 ⇒ 
-6 review  4 day later:20200513 ⇒ 
-7 review  7 day later:20200516 ⇒ 
-8 review 15 day later:20200524 ⇒ 
-
+TODO:@20200508 → ? → @20200508 → ? → @20200508 → ? → @20200509 → ? → 
+    :@20200510 → √ → @20200512 → ? → @20200515 → ? → @20200523 → ? ⇒ 
+mutt -s 12535-19Fri20-20200508 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12535-19Fri20-20200508
 
 Fri May  8 10:32:26 CST 2020
     docker install:

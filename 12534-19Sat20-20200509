@@ -1,13 +1,10 @@
-TARGET:
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
 ○:review
 了解测试工具链,常用linux运维命令
+TODO:@20200509 → ? → @20200509 → ? → @20200509 → ? → @20200510 → √ → 
+    :@20200511 → ? → @20200513 → ? → @20200516 → ? → @20200524 → ? ⇒ 
+mutt -s 12534-19Sat20-20200509 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12534-19Sat20-20200509
 
-TODO:
-4 review  1 day later on 20200510 ⇒ 
-5 review  2 day later on 20200511 ⇒ 
-6 review  4 day later on 20200513 ⇒ 
-7 review  7 day later on 20200516 ⇒ 
-8 review 15 day later on 20200524 ⇒ 
 
 
 Sat May  9 10:37:19 CST 2020
@@ -90,3 +87,4 @@ Sat May  9 16:17:53 CST 2020
         chkconfig --list | awk '{if ($5=="3:on") print $1}'
         40.查找/usr/local/apache/logs目录最后修改时间大于30天的文件，并删除。
         find  /usr/local/apache/logs -type f -mtime +30 -exec rm -f {} \;
+Sat May  9 23:59:49 CST 2020

@@ -4,7 +4,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●:学习C++基本知识 ⇒ 
 ●:八点钟与李向明讨论移民的事情⇒ DONE ✓
 
-TODO:@20200510 → ✓ → @20200510 → ✓ → @20200510 → ✓ → @20200511 → ? → 
+TODO:@20200510 → ✓ → @20200510 → ✓ → @20200510 → ✓ → @20200511 → ✓ → 
     :@20200512 → ? → @20200514 → ? → @20200517 → ? → @20200525 → ? ⇒ 
 mutt -s 12533-19Sun20-20200510 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12533-19Sun20-20200510
 
@@ -40,6 +40,6 @@ NOTE:
     ✓ echo '<img src="'"$dpj"'/006-write/picutre/'"$pngfilename"'" alt="'"$1"'" />' >> $blogfile
     shutter 需要安装三个包才能使用编辑功能.
     :help digraph-table :dig
-    ■   	fS	25A0	9632	BLACK SQUARE
+    ■   	fS	25A0	9632	full BLACK SQUARE
     ▶       PR      25B6    9654    BLACK RIGHT-POINTING TRIANGLE                                                                 
     ◆       Db      25C6    9670    BLACK DIAMOND

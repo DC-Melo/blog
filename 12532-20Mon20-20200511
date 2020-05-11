@@ -1,0 +1,49 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
+●:memory leak code debug,find a device to have a try. ⇒ 
+●:make clear understand linux Development and operation.make clear understand the DevOps tool chain. ⇒ 
+●: ⇒ 
+TODO:@20200511 → ? → @20200511 → ? → @20200511 → ? → @20200512 → ? → 
+    :@20200513 → ? → @20200515 → ? → @20200518 → ? → @20200526 → ? ⇒ 
+    learn C++ and oganize the agorithm,and what kind of problem it solve.
+mutt -s 12532-20Mon20-20200511 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12532-20Mon20-20200511
+
+Mon May 11 10:26:38 CST 2020
+    receive a phone call from sister.
+Mon May 11 12:22:40 CST 2020
+    go to lunch
+    
+
+
+NOTE:
+    ■ vim in nomal mode forcus next words.
+        1.move to next ? ⇒ f + ?
+        2.move word ⇒ w b e 
+        3.翻页（适合大范围移动）
+        ctrl+f表示向下翻页
+        ctrl+b表示向上翻页
+    ■ [DevOPs实践]:
+        个体和互动高于流程和工具,
+        工作的软件高于详尽的文档
+        呵护合作高于合同谈判
+        响应变化高于遵循计划
+        也就是说,尽管右项有其价值,我们更重视左项的价值.
+        scrum:迭代式增量软件开发
+        vagrant:基于vituralBox的,用于创建和部署虚拟化开发环境.
+        AWS:amanzon web service
+        开发人员 → 版本控制系统(git) →  构建服务器(jenkins) →  工件库(Sonatype Nexus) → 包管理器    测试环境   预发布/生成 发布管理   scrum,看板和交付流水线
+    ■ git
+        git checkout 
+
+
+    网络流量监控 – IPtraf
+    网络流量监控 – IFTop, iftop 是类似于 linux 下面 top 的实时流量监控工具。比 iptraf 直观些。
+    NMap 是 Linux 下的网络连接扫描和嗅探工具包用来扫描网上电脑开放的网络连接端。
+    Web 压力测试 – Httperf, Httperf 比 ab 更强大，能测试出 web 服务能承载的最大服务量及发现潜在问题；比如：内存使用、稳定性。最大优势：可以指定规律进行压力测试，模拟真实环境。
+    hping：网络扫描和检测工具，可以产生ICMP/TCP/UDP ping数据包。常常用于高级端口扫描，防火墙测试，手动MTU路径发现和碎片测试。Web 压力测试 – Httperf
+    traceroute：通过TTL限定的ICMP/UDP/TCP侦测包来发现从本地主机到远端目标主机之间的第三层转发路径。用来调试网络连接性和路由问题。 
+    mtr：traceroute的一个变种，能根据运行时统计数据整理出每一跳的包丢失/抖动。用来评估路由路径延时很不错。 
+    netcat/socat：TCP/IP网络里的瑞士军刀，可以读/写 TCP/UDP 协议字节流。用来调试防火墙策略和服务可用性很不错。 
+    dig：DNS调试工具，可以生成正向查询，反向查询，搜索域名服务器，检查CNAME，MX和其他DNS记录。可以在侦错的时候查询特定的DNS服务器。 
+    nslookup：另外一个DNS检查/调试工具。支持所有DNS查询和记录。可以查询特定DNS服务器。 
+    dnsyo：一个DNS测试工具，通过对全世界1500个不同网络中的大量开放解析器执行DNS查询来测试DNS传输。
+

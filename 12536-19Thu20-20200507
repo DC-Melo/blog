@@ -1,16 +1,11 @@
 TARGET:
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
 immgrate to Europe.
 buy books.
 jinkens test
-TODO:
-1.review  5 min   later @20200507 ⇒ 
-2.review 30 min   later @20200507 ⇒ 
-3.review 12 hours later @20200507 ⇒ 
-4.review  1 days  later @20200508 ⇒ 
-5.review  2 days  later @20200509 ⇒ 
-6.review  4 days  later @20200511 ⇒ 
-7.review  7 days  later @20200514 ⇒ 
-8.review 15 days  later @20200522 ⇒ 
+TODO:@20200507 → ? → @20200507 → ? → @20200507 → ? → @20200508 → ? → 
+    :@20200509 → ? → @20200511 → ✓ → @20200514 → ? → @20200522 → ? ⇒ 
+mutt -s 12536-19Thu20-20200507 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12536-19Thu20-20200507
 
 Thu May  7 05:26:58 CST 2020
     A.get up

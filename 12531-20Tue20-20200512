@@ -1,0 +1,344 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
+●:debug bipolar power control ⇒ ✗
+●:learn slam ⇒ ✓
+●: ⇒ 
+TODO:@20200512 → ✓✓✓ → @20200513 → ??? → @20200514 → ??? → @20200516 → ??? → @20200519 → ??? → @20200527 → ??? ⇒ 
+mutt -s 12531-20Tue20-20200512 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12531-20Tue20-20200512
+
+Tue May 12 10:27:33 CST 2020
+    ▣ debug bipolar power control
+        ▶ bug bipolar power control
+            <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-12-10-41-02.png" alt="" />
+            2020-05-12 10:38:09 车机0V b'\x13\x11+5.07747E-03\r\n'
+            Traceback (most recent call last):
+              File "/home/dc/.local/lib/python3.6/site-packages/serial/serialposix.py", line 501, in read
+                'device reports readiness to read but returned no data '
+            serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+            During handling of the above exception, another exception occurred:
+
+            Traceback (most recent call last):
+              File "bipolar_power_supply_control.py", line 106, in <module>
+                readBytes=ser0.read(60)
+              File "/home/dc/.local/lib/python3.6/site-packages/serial/serialposix.py", line 509, in read
+                raise SerialException('read failed: {}'.format(e))
+            serial.serialutil.SerialException: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+Tue May 12 12:25:18 CST 2020
+    ▣ <DevOps实践>
+    ▣ account:vivan password:a ip:10.1.21.240
+    ▣ pip install --upgrade --pre uiautomator2
+    ▣ [bug] Pangolin穿山甲 install → c++ 画图软件 
+        error: ‘PixelFormat’ does not name a type; did you mean ‘AVPixelFormat’?
+        * use pangolin: slambook/3rdpart/Pangolin or download it from github: https://github.com/stevenlovegrove/Pangolin
+    ▣ Sophus 李代数库
+        git clone http://github.com/strasdat/Sophus.git
+        编译问题:
+        <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-12-19-15-56.png" alt="" />
+        解决办法：修改so2.cpp文件
+        unit_complex_.real() = 1.;
+        unit_complex_.imag() = 0.;
+        修改成
+        unit_complex_.real(1.);
+        unit_complex_.imag(0.);
+
+
+NOTE:
+    ■	fS	25A0	9632	FULL BLACK SQUARE
+    ▣	Rr	25A3	9635	WHITE SQUARE CONTAINING BLACK SMALL SQUARE
+    ▶	PR	25B6	9654	BLACK RIGHT-POINTING TRIANGLE
+    ◆	Db	25C6	9670	BLACK DIAMOND
+    ▣ GDB: x /nfu <addr>
+        n, the repeat count
+            The repeat count is a decimal integer; the default is 1. It specifies how much memory (counting by units u) to display. If a negative number is specified, memory is examined backward from addr.
+        f, the display format
+            The display format is one of the formats used by print (‘x’, ‘d’, ‘u’, ‘o’, ‘t’, ‘a’, ‘c’, ‘f’, ‘s’), and in addition ‘i’ (for machine instructions). The default is ‘x’ (hexadecimal) initially. The default changes each time you use either x or print.
+            o - octal
+            x - hexadecimal
+            d - decimal
+            u - unsigned decimal
+            t - binary
+            f - floating point
+            a - address
+            c - char
+            s - string
+            i - instruction
+        u, the unit size
+            b - byte
+            h - halfword (two bytes 16-bit value)
+            w - word (four bytes 32-bit value)
+            g - giant word (eight bytes 64-bit value)
+    ▣ 字符串本质是一个数组指针.
+        复制整个字符串:strcpy(m_data, cstr);
+        对于类的最小单元未255位个内存byte
+            <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-12-17-10-21.png" alt="" />
+            <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-12-17-13-22.png" alt="" />
+            <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-12-17-20-12.png" alt="" />
+    ▣ shell redict to clipboard
+        echo "test"| xsel --clipboard
+        echo "test"| xsel -b
+        mkdir build;cd $_ 
+    ▣ gdb run shell:
+        shell echo "test"
+    ▣ cvim 
+        ctrl + i → head
+        ctrl + e → end
+        ctrl + b → back char
+        ctrl + f → foward char
+        ctrl + h 
+        ctrl + l
+    ▣ vim 替换空行
+        :g/^\s*$/d
+        :g 代表在全文档范围内
+        ^代表行的开始
+        \s*代表空白字符
+        &代表行的结束
+        d代表删除
+        用//将3段代码隔开
+    ▣ awk interview:
+        统计出apache的access.log中访问量最多的5个IP
+        cat access_log | awk  '{print $1}' | sort | uniq -c | sort -n -r | head -5
+        四、awk数组命令生产实战拓展
+            4.1统计apache日志单ip访问请求数排名（这个常用，考试也常考）
+            假设apache日志内容access.log内容为：
+            10.0.0.41 - - [03/Dec/2010:23:27:01 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.43 - - [03/Dec/2010:23:27:01 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.42 - - [03/Dec/2010:23:27:01 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.46 - - [03/Dec/2010:23:27:02 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.42 - - [03/Dec/2010:23:27:02 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.47 - - [03/Dec/2010:23:27:02 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.41 - - [03/Dec/2010:23:27:02 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.47 - - [03/Dec/2010:23:27:02 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.41 - - [03/Dec/2010:23:27:03 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            10.0.0.46 - - [03/Dec/2010:23:27:03 +0800] "HEAD /checkstatus.jsp HTTP/1.0" 200 -
+            4.1.1 给出3种解决方案
+            法一：
+            [root@oldboy /]# awk '{++S[$1]} END {for (oldboy in S) print oldboy ,S[oldboy]}' access.log |sort -rn -k2
+            10.0.0.41 3
+            10.0.0.47 2
+            10.0.0.46 2
+            10.0.0.42 2
+            10.0.0.43 1
+            #提示 $1为第一个域的内容。-k2 为对第二个字段排序，即对数量排序。
+            法2：
+            [root@oldboy /]# awk '{print $1}' access.log|sort|uniq -c |sort -rn -k1
+            3 10.0.0.41
+            2 10.0.0.47
+            2 10.0.0.46
+            2 10.0.0.42
+            1 10.0.0.43
+            提示：这个方法是容易想到的简单易用的方法，对于大多数同学来说，此法其实更适合大家，awk数组的方法看起来好，实际上对于初级运维来来说有点难度，经常记不住。
+            法3：
+            [root@oldboy /]# sed's/- -.*$//g' access.log|sort|uniq -c|sort -rn -k1
+            3 10.0.0.41
+            2 10.0.0.47
+            2 10.0.0.46
+            2 10.0.0.42
+            1 10.0.0.43
+            提示：sed管道后的第一个sort是让所有一样的IP挨着，因为uniq -c只能对相邻的IP行去重计数。
+            此题的解答可以有10几种，前面的课程我们已经带大家细讲了，这里就不一一讲解了。
+            4.1.2统计apache日志单ip访问请求数排名价值何在？
+            解答：通过前面的命令，我们可以找到什么IP的访问apache比较频繁，一般单个IP访问数量过百，就值得怀疑了，如果短时间内上万PV访问，说明就不正常了，可以采取相应的处理手段，比如封掉此IP，此法要慎重，否则，可能会有误封问题，因为，国内的大多数公司还是NAT上网的，出口一个IP。
+            4.2 统计服务器当前单IP连接数最大的IP地址前十
+            提示：这个命令可以查出遭受DOS攻击的客户端IP地址。待处理内容如下：
+            netstat -n >test.log的结果：
+            Active Internet connections (w/o servers)
+            Proto Recv-Q Send-Q Local AddressForeign AddressState
+            tcp00 124.123.3.79:80219.85.194.23:12004SYN_RECV
+            tcp00 124.123.3.77:80183.8.74.57:3276SYN_RECV
+            tcp00 124.123.3.77:80124.236.0.214:63191SYN_RECV
+            tcp00 124.123.3.77:80121.31.42.148:2338TIME_WAIT
+            tcp01023 124.123.3.77:8061.178.184.222:62683FIN_WAIT1
+            tcp00 124.123.3.77:80222.79.242.74:7416TIME_WAIT
+            tcp04839 124.123.3.77:80121.31.42.148:30638FIN_WAIT1
+            tcp00 124.123.3.77:80183.10.154.60:37282TIME_WAIT
+            tcp01 124.123.3.77:8059.49.174.176:26913CLOSING
+            tcp00 124.123.3.77:80121.31.42.148:1787TIME_WAIT
+            tcp0174 124.123.3.77:80183.8.74.57:1165CLOSING
+            4.2.1 问题解决方案
+            [root@OLDBOY ~]# awk-F '[ :]+' '{++S[$6]} END {for (a in S) print a ,S[a]}' test.log |sort -rn -k2
+            121.31.42.148 3
+            183.8.74.57 2
+            Foreign 1
+            61.178.184.222 1
+            59.49.174.176 1
+            222.79.242.74 1
+            219.85.194.23 1
+            183.10.154.60 1
+            124.236.0.214 1
+            提示：
+            1）结果中的字符等，你可以进一步过滤。
+            2) 对于多分隔符匹配的用法大家可以参考老男孩的博文
+            深入浅出三剑客之awk必杀技一例
+            http://oldboy.blog.51cto.com/2561410/950730
+            3)实际生产中，我们过滤出已经建立连接的状态ESTABLISHED，然后，应用上述命令处理，完整命令可能为：
+            netstat -an|awk-F '[ :]+' '{++S[$6]} END {for (a in S) print a ,S[a]}'|sort -rn -k2
+            4.2.2 生产环境案例
+            [leo@LVS-1-1 ~]$ netstat -an|grep EST|awk '{print $5}'|cut -d : -f 1|grep -v "^$"|awk '{++ETT[$1]} END {for (oldboy in ETT) print "ip:"oldboy "-----",ETT[oldboy] ''}'|sort -rn -k2|head -10
+            ip:220.181.125.69----- 51
+            ip:121.9.222.164----- 38
+            ip:121.9.222.158----- 38
+            ip:121.9.222.156----- 38
+            ip:121.9.222.161----- 36
+            ip:121.9.222.160----- 32
+            ip:121.9.222.159----- 32
+            ip:121.9.222.162----- 31
+            ip:61.163.7.200----- 29
+            ip:115.193.163.61----- 27
+            提示：这是早期的命令案例，我们看到命令虽然很简单，但是搞的很复杂。实际上可以用下面看起来简单，但是难度很大的命令替代之。
+            netstat -an|grep EST|awk-F '[ :]+' '{++S[$6]} END {for (key in S) print "ip:"key"----->",S[key]}'|sort -rn -k2
+            注意，这里过滤的是已经建立连接的的连接，即状态ESTABLISHED。
+            4.2.3 本案例解决的生产问题
+            netstat -an|grep EST|awk-F '[ :]+' '{++S[$6]} END {for (key in S) print "ip:"key"----->",S[key]}'|sort -rn -k2
+            注意，这里过滤的是已经建立连接的的连接，即状态ESTABLISHED。
+            对于命令结果中，单IP结尾的数大的，可以认为是不正常的访问。如 121.31.42.148 100 ，表示一个IP有100个连接
+            一般来说可以怀疑不正常，当网站压力大时，可以考虑限制或封掉这些冒似非法IP，当然，也不排除，企业里多个用户用一个出口IP访问。
+            壮士扼腕，有时也是必须的，否则，可能网站整体影响更大，甚至瘫痪。有时，各种搜索引擎的爬虫是很疯狂的，通过本例及上面的案例，我们可以再负载IO高时，能够进行临时应对，当然，这不是长久的方法，优化网络和服务器，部署大规模集群服务器才是较好的解决之道。
+            4.2.4 IDC机房带宽突然暴涨问题经典案例
+            见http://oldboy.blog.51cto.com/2561410/909696
+            一、生产服务器netstat tcp连接状态
+            1.1生产服务器某个业务LVS负载均衡上连接状态数量
+            [oldboy@LVS-1-1 ~]$ netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 9137
+            CLOSE_WAIT 207
+            FIN_WAIT1 547
+            ESTABLISHED 597
+            FIN_WAIT2 74
+            SYN_RECV 70
+            CLOSING 55
+            LAST_ACK 8
+            [root@lvs_nginx~]#netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 422
+            CLOSE_WAIT 590
+            FIN_WAIT1 56
+            FIN_WAIT2 28
+            ESTABLISHED 1731
+            1.2生产服务器某个业务web上连接状态数量
+            [root@web1 ~]# netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 418
+            FIN_WAIT1 7
+            FIN_WAIT2 3
+            ESTABLISHED 1097
+            LAST_ACK 2
+            [root@web2 ~]# netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 250
+            FIN_WAIT1 2
+            FIN_WAIT2 3
+            ESTABLISHED 1032
+            LAST_ACK 2
+            [root@old_web ~]# netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 342
+            CLOSE_WAIT 618
+            FIN_WAIT1 37
+            FIN_WAIT2 3
+            ESTABLISHED 1681
+            SYN_RECV 1
+            [root@K32_50718 ~]# netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 4146
+            FIN_WAIT1 352
+            FIN_WAIT2 1112
+            ESTABLISHED 8451
+            SYN_RECV 186
+            CLOSING 9
+            LAST_ACK 102
+            1.3 生产服务器某个业务db上连接状态数量
+            [root@web_slave ~]# netstat -n |awk '/^tcp/ {++oldboy[$NF]} END {for(a in oldboy) print a, oldboy[a]}'
+            TIME_WAIT 263
+            FIN_WAIT1 1
+            FIN_WAIT2 48
+            ESTABLISHED 918
+            二、tcp连接状态的描述说明(netstat输出)
+            2.1 执行netstat -n查看输出结果共6列
+            [root@OLDBOY ~]# netstat -n
+            Active Internet connections (w/o servers)
+            Proto Recv-Q Send-Q Local AddressForeign AddressState
+            tcp00 10.0.0.183:5058410.0.0.181:22ESTABLISHED
+            2.2 通过man netstat查看netstat输出结果信息
+            [root@oldboy ~]# man netstat
+            OUTPUT
+            Active Internet connections (TCP, UDP, raw)
+            Proto
+            The protocol (tcp, udp, raw) used by the socket.
+            第一列为socket使用的协议。
+            Recv-Q
+            The count of bytes not copied by the user program connected to this socket.
+            第二列为接到的但是还没处理的字节数。
+            Send-Q
+            The count of bytes not acknowledged by the remote host.
+            第三列为已经发送的但是没有被远程主机确认收到的字节数。
+            Local Address
+            Address and port number of the local end of the socket.Unless the --numeric(-n)
+            optionisspecified,thesocketaddress is resolved to its canonical host name
+            (FQDN), and the port number is translated into the corresponding service name.
+            第四列为 本地的地址及端口。
+            Foreign Address
+            Address and port number of the remote endofthesocket.Analogousto"Local Address."
+            第五列为外部的地址及端口。
+            State
+            Thestateofthesocket.Sincethere are no states in raw mode and usually no
+            states used in UDP, this column may be left blank. Normally this can be one of sev-
+            eral values:
+            第六列为socket的状态，通常仅仅有tcp的状态，状态值可能有ESTABLISHED，SYN_SENT，SYN_RECV FIN_WAIT1，FIN_WAIT2，TIME_WAIT等，详见下文。其中，最重要的是第六列。
+            2.3 netstat第六列State的状态信息
+            如果我们执行man netstat可以找到如下的帮助信息
+            State
+            Thestateofthesocket.Sincethere are no states in raw mode and usually no
+            states used in UDP, this column may be left blank. Normally this can be one of sev-
+            eral values:
+            第六列为socket的状态，通常仅仅有tcp的状态，状态值可能有ESTABLISHED，SYN_SENT，SYN_RECV FIN_WAIT1，FIN_WAIT2，TIME_WAIT等，详见下文。其中，最重要的是第六列。
+            ESTABLISHED
+            The socket has an established connection.
+            socket已经建立连接，表示处于连接的状态，一般认为有一个ESTABLISHED认为是一个服务的并发连接。这个连接状态在生产场景很重要，要重点关注。
+            SYN_SENT
+            The socket is actively attempting to establish a connection.
+            socket正在积极尝试建立一个连接，即处于发送后连接前的一个等待但未匹配进入连接的状态。
+            SYN_RECV
+            A connection request has been received from the network.
+            已经从网络上收到一个连接请求。
+            FIN_WAIT1
+            The socket is closed, and the connection is shutting down.
+            socket已关闭，连接正在或正要关闭。
+            FIN_WAIT2
+            Connectionisclosed,andthesocket is waiting for a shutdown from the remote end.
+            连接已关闭，并且socket正在等待远端结束。
+            TIME_WAIT
+            The socket is waiting after close to handle packets still in the network.
+            socket正在等待关闭处理仍在网络上的数据包，这个连接状态在生产场景很重要，要重点关注。
+            CLOSED The socket is not being used.| socket不在被占用了。
+            CLOSE_WAIT
+            The remote end has shutdown, waiting for the socket to close.
+            远端已经结束，等待socket关闭。
+            LAST_ACK
+            The remote end has shut down, and the socket is closed. Waiting for acknowl-edgement.|
+            远端已经结束，并且socket也已关闭，等待acknowl-edgement。
+            LISTEN Thesocketislisteningforincoming connections.Such sockets are not
+            included in the output unless you specify the --listening (-l) or --all (-a)
+            option.
+            socket正在监听连接请求。
+            CLOSING
+            Both sockets are shut down but we still don’t have all our data sent.
+            sockets关闭，但是我们仍旧没有发送数据。
+            UNKNOWN
+            The state of the socket is unknown
+            未知的状态。
+            2.4 netstat第六列State状态信息转换图表
+            TCP的状态图，这是一个看起来比较复杂的状态迁移图，因为它包含了两个部分---服务器的状态迁移和客户端的状态迁移，如果从某一个角度出发来看这个图，就会清晰许多，这里面的服务器和客户端都不是绝对的，发送数据的就是客户端，接受数据的就是服务器。
+            2.4.1 状态参考图一
+            见后续博文
+            2.4.2 状态参考图二
+            见后续博文
+            2.4.3 状态参考图三
+            见后续博文
+            2.4.4 客户端的状态变化描述
+            通过状态参考图三，客户端的状态可以用如下的流程来表示：
+            CLOSED->SYN_SENT->ESTABLISHED->FIN_WAIT_1->FIN_WAIT_2->TIME_WAIT->CLOSED
+            以上流程是在程序正常的情况下应该有的流程，在建立连接时，当客户端收到SYN报文的ACK以后，客户端就打开了数据交互地连接。而结束连接则通常是客户端主动结束的，客户端结束应用程序以后，需要经历FIN_WAIT_1，FIN_WAIT_2等状态，这些状态的迁移就是前面提到的结束连接的四次握手。
+            2.4.5 服务器的状态变化描述
+            通过状态参考图三，服务器的状态可以用如下的流程来表示：
+            CLOSED->LISTEN->SYN_RECVD->ESTABLISHED->CLOSE_WAIT->LAST_ACK->CLOSED
+            在建立连接的时候，服务器端是在第三次握手之后才进入数据交互状态，而关闭连接则是在关闭连接的第二次握手以后（注意不是第四次）。而关闭以后还要等待客户端给出最后的ACK包才能进入初始的状态。
+            2.4.6 其他的状态变化描述总结
+            针对服务器和客户端两方面的总结如下
+            1）LISTEN->SYN_SENT，对于这个解释就很简单了，服务器有时候也要打开连接的嘛。
+            2）SYN_SENT->SYN_RECVD，服务器和客户端在SYN_SENT状态下如果收到SYN数据报，则都会发送SYN的ACK数据报并把自身状态调整到SYN_RECVD，准备进入ESTABLISHED
+            3）SYN_SENT->CLOSED，在发送超时的情况下，会返回到CLOSED状态。
+            4）SYN_RECVD->LISTEN，如果受到RST包，会返回到LISTEN状态。
+            5）SYN_RECVD->FIN_WAIT_1，这个迁移是说，可以不用到ESTABLISHED状态，而可以直接跳转到FIN_WAIT_1状态并等待关闭。

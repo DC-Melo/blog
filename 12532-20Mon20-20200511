@@ -2,7 +2,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●:memory leak code debug,find a device to have a try. ⇒ 
 ●:make clear understand linux Development and operation.make clear understand the DevOps tool chain. ⇒ 
 ●: ⇒ 
-TODO:@20200511 → ? → @20200511 → ? → @20200511 → ? → @20200512 → ? → 
+TODO:@20200511 → ? → @20200511 → ? → @20200511 → ? → @20200512 →✓✓ → 
     :@20200513 → ? → @20200515 → ? → @20200518 → ? → @20200526 → ? ⇒ 
     learn C++ and oganize the agorithm,and what kind of problem it solve.
 mutt -s 12532-20Mon20-20200511 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12532-20Mon20-20200511
@@ -24,7 +24,7 @@ NOTE:
     ■ [DevOPs实践]:
         个体和互动高于流程和工具,
         工作的软件高于详尽的文档
-        呵护合作高于合同谈判
+        客户合作高于合同谈判
         响应变化高于遵循计划
         也就是说,尽管右项有其价值,我们更重视左项的价值.
         scrum:迭代式增量软件开发
@@ -33,8 +33,6 @@ NOTE:
         开发人员 → 版本控制系统(git) →  构建服务器(jenkins) →  工件库(Sonatype Nexus) → 包管理器    测试环境   预发布/生成 发布管理   scrum,看板和交付流水线
     ■ git
         git checkout 
-
-
     网络流量监控 – IPtraf
     网络流量监控 – IFTop, iftop 是类似于 linux 下面 top 的实时流量监控工具。比 iptraf 直观些。
     NMap 是 Linux 下的网络连接扫描和嗅探工具包用来扫描网上电脑开放的网络连接端。

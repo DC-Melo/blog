@@ -1,0 +1,53 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200513 → ??? → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
+mutt -s 12530-20Wed20-20200513 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12530-20Wed20-20200513
+
+Wed May 13 06:12:35 CST 2020
+    ▣ Termux
+        uname -a
+        pkg install vim curl wget git tree -y
+        pkg search <query>              # 搜索包
+        pkg install <package>           # 安装包
+        pkg uninstall <package>         # 卸载包
+        pkg reinstall <package>         # 重新安装包
+        pkg update                      # 更新源
+        pkg upgrade                     # 升级软件包
+        pkg list-all                    # 列出可供安装的所有包
+        pkg list-installed              # 列出已经安装的包
+        pkg show <package>              # 显示某个包的详细信息
+        pkg files <package>             # 显示某个包的相关文件夹路径
+        Ctrl + A -> 将光标移动到行首
+        Ctrl + C -> 中止当前进程
+        Ctrl + D -> 注销终端会话
+        Ctrl + E -> 将光标移动到行尾
+        Ctrl + K -> 从光标删除到行尾
+        Ctrl + U -> 从光标删除到行首
+        Ctrl + L -> 清除终端
+        Ctrl + Z -> 挂起（发送SIGTSTP到）当前进程
+        Ctrl + alt + C -> 打开新会话（仅适用于 黑客键盘）
+        音量加键也可以作为产生特定输入的特殊键.
+
+        音量加 + E -> Esc键
+        音量加 + T -> Tab键
+        音量加 + 1 -> F1（音量增加 + 2 → F2…以此类推）
+        音量加 + 0 -> F10
+        音量加 + B -> Alt + B，使用readline时返回一个单词
+        音量加 + F -> Alt + F，使用readline时转发一个单词
+        音量加 + X -> Alt+X
+        音量加 + W -> 向上箭头键
+        音量加 + A -> 向左箭头键
+        音量加 + S -> 向下箭头键
+        音量加 + D -> 向右箭头键
+        音量加 + L -> | （管道字符）
+        音量加 + H -> 〜（波浪号字符）
+        音量加 + U -> _ (下划线字符)
+        音量加 + P -> 上一页
+        音量加 + N -> 下一页
+        音量加 + . -> Ctrl + \（SIGQUIT）
+        音量加 + V -> 显示音量控制
+        音量加 + Q -> 切换显示的功能键视
+        音量加 + K -> 切换显示的功能键视图
+Wed May 13 06:16:11 CST 2020

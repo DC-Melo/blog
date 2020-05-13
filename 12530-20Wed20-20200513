@@ -2,7 +2,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●: slam exercies ⇒ ✓ DONE
 ●: bipolar power control ⇒ ✓ DONE
 ●: memory leak program debug ⇒ ✗ 
-TODO:@20200513 → ✓✓? → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
+TODO:@20200513 → ✓✓✓ → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
     :了解多视觉系统mono,stereo,omni.设计slam系统.了解ceres solver,g2o, gt-saml.
     :了解A*,D*,DWA,TEB全局和局部路径规划
 mutt -s 12530-20Wed20-20200513 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12530-20Wed20-20200513
@@ -95,6 +95,14 @@ Wed May 13 14:11:07 CST 2020
         shareimprove this answerfollow
 Wed May 13 14:38:05 CST 2020
     ▣ cmake 
-    
     ▣ man 7 ascii 查看ascii
 Wed May 13 20:06:23 CST 2020
+
+Wed May 13 22:07:59 CST 2020
+    ▣ git pull confilt
+        error: The following untracked working tree files would be overwritten by merge:
+        Please move or remove them before you merge.
+    ▲   git fetch --all
+        git reset --hard origin
+        git fetch
+Wed May 13 22:10:55 CST 2020

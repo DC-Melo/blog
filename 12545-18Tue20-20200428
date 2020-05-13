@@ -11,7 +11,7 @@ TODO:
 5.review  2 days  later @20200430 ⇒ 
 6.review  4 days  later @20200502 ⇒ 
 7.review  7 days  later @20200505 ⇒ 
-8.review 15 days  later @20200513 ⇒ 
+8.review 15 days  later @20200513 ⇒ ✓
 
 
 Tue Apr 28 12:26:52 CST 2020
@@ -59,6 +59,6 @@ Tue Apr 28 19:02:51 CST 2020
 
 
 MEMO:
-文件转换为html,添加换行符号:sed -i 's/$/&<br>/g' filename
-插入文件路径:ctrl+x then ctrl+f
-查找当前单词:shift+# or shift+*
+    文件转换为html,添加换行符号:sed -i 's/$/&<br>/g' filename
+    插入文件路径:ctrl+x then ctrl+f
+    查找当前单词:shift+# or shift+*

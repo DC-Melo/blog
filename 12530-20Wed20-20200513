@@ -1,53 +1,100 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
-●: ⇒ 
-●: ⇒ 
-●: ⇒ 
-TODO:@20200513 → ??? → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
+●: slam exercies ⇒ ✓ DONE
+●: bipolar power control ⇒ ✓ DONE
+●: memory leak program debug ⇒ ✗ 
+TODO:@20200513 → ✓✓? → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
+    :了解多视觉系统mono,stereo,omni.设计slam系统.了解ceres solver,g2o, gt-saml.
+    :了解A*,D*,DWA,TEB全局和局部路径规划
 mutt -s 12530-20Wed20-20200513 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12530-20Wed20-20200513
 
+SUNRISE:
 Wed May 13 06:12:35 CST 2020
     ▣ Termux
         uname -a
         pkg install vim curl wget git tree -y
-        pkg search <query>              # 搜索包
-        pkg install <package>           # 安装包
-        pkg uninstall <package>         # 卸载包
-        pkg reinstall <package>         # 重新安装包
-        pkg update                      # 更新源
-        pkg upgrade                     # 升级软件包
-        pkg list-all                    # 列出可供安装的所有包
-        pkg list-installed              # 列出已经安装的包
-        pkg show <package>              # 显示某个包的详细信息
-        pkg files <package>             # 显示某个包的相关文件夹路径
-        Ctrl + A -> 将光标移动到行首
-        Ctrl + C -> 中止当前进程
-        Ctrl + D -> 注销终端会话
-        Ctrl + E -> 将光标移动到行尾
-        Ctrl + K -> 从光标删除到行尾
-        Ctrl + U -> 从光标删除到行首
-        Ctrl + L -> 清除终端
-        Ctrl + Z -> 挂起（发送SIGTSTP到）当前进程
-        Ctrl + alt + C -> 打开新会话（仅适用于 黑客键盘）
-        音量加键也可以作为产生特定输入的特殊键.
-
-        音量加 + E -> Esc键
-        音量加 + T -> Tab键
-        音量加 + 1 -> F1（音量增加 + 2 → F2…以此类推）
-        音量加 + 0 -> F10
-        音量加 + B -> Alt + B，使用readline时返回一个单词
-        音量加 + F -> Alt + F，使用readline时转发一个单词
-        音量加 + X -> Alt+X
-        音量加 + W -> 向上箭头键
-        音量加 + A -> 向左箭头键
-        音量加 + S -> 向下箭头键
-        音量加 + D -> 向右箭头键
-        音量加 + L -> | （管道字符）
-        音量加 + H -> 〜（波浪号字符）
-        音量加 + U -> _ (下划线字符)
-        音量加 + P -> 上一页
-        音量加 + N -> 下一页
-        音量加 + . -> Ctrl + \（SIGQUIT）
-        音量加 + V -> 显示音量控制
-        音量加 + Q -> 切换显示的功能键视
-        音量加 + K -> 切换显示的功能键视图
 Wed May 13 06:16:11 CST 2020
+
+MORNING:
+Wed May 13 10:23:00 CST 2020
+    ▣ vim 大小写转换
+        2.2 只转化某个单词
+        guw、gue
+        gUw、gUe
+        gu5w：转换 5 个单词
+        gU5w
+        2.3 转换行
+        gU0 ：从光标所在位置到行首，都变为大写
+        gU$ ：从光标所在位置到行尾，都变为大写
+        gUG ：从光标所在位置到文章最后一个字符，都变为大写
+        gU1G ：从光标所在位置到文章第一个字符，都变为大写
+    ▣ cmake 可以不用删除老文件,直接从新编译.
+        1 cmake中要特别注意命令和变量的大小写
+        2 cmake的内置命令是不区分大小写的
+        3 cmake内置变量是区分大小写的，或者干脆就说，cmake的所有变量都是区分大小写的
+    ▣ 使用Ceres(谷神星；色列斯橙色;)求解非线性优化问题，一共分为三个部分：
+        download: git clone https://github.com/ceres-solver/ceres-solver
+        1、 第一部分：构建cost fuction，即代价函数，也就是寻优的目标式。这个部分需要使用仿函数（functor）这一技巧来实现，做法是定义一个cost function的结构体，在结构体内重载（）运算符，具体实现方法后续介绍。
+        2、 第二部分：通过代价函数构建待求解的优化问题。
+        3、 第三部分：配置求解器参数并求解问题，这个步骤就是设置方程怎么求解、求解过程是否输出等，然后调用一下Solve方法。
+    ▣ g2o:General Graph Optimization！
+    ▣ <chrono>(慢性的；长期的;) C++ 标准库头文件 此头文件是日期和时间库的一部分
+    ▣ 查找当前单词:shift+# or shift+*
+Wed May 13 12:20:04 CST 2020
+
+NOON:
+Wed May 13 12:20:16 CST 2020
+    ▣ [bug]pose_estimation
+        -- Could NOT find CSPARSE (missing: CSPARSE_INCLUDE_DIR CSPARSE_LIBRARY) 
+        CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+        Please set them or make sure they are set and tested correctly in the CMake files:
+        CSPARSE_INCLUDE_DIR
+    ▲ sudo apt-get install libsuitesparse-dev
+    ▲	UT	25B2	9650	BLACK UP-POINTING TRIANGLE
+    ▣ No such file or directory  #include "g2o/solvers/cholmod/linear_solver_cholmod.h"
+Wed May 13 14:10:52 CST 2020
+
+AFTERNOON:
+Wed May 13 14:11:07 CST 2020
+    ▣ format u disk
+        lsblk - list block devices 
+        ls - list directory contents
+        df - report file system disk space usage
+        $ sudo fdisks -l
+        基本功，格式化命令，以格式化 /dev/sdb4 分区为例：
+        $ sudo umount /dev/sdb4    # 必须先卸载该分区
+        # 格式化为 FAT 分区
+        $ sudo mkfs.vfat -F 32 /dev/sdb4       # -F 参数必须大写，参数有 12，16 和 32，分别对应 FAT12，FAT16，FAT32。
+        # 格式化为 NTFS 分区，先要安装ntfsprogs，以 Ubuntu / Debian 为例：
+        $ sudo apt-get install ntfsprogs
+        #然后执行格式化命令，以格式化 /dev/sda1 分区为例：
+        $ sudo umount /dev/sda1       # 必须先卸载该分区
+        $ sudo mkfs.ntfs /dev/sda1        # 格式化为ntfs速度有点慢。
+        # 格式化为ext4/3/2 ， 以格式化 /dev/sda1 分区为例：
+        $ sudo umount /dev/sda1       # 必须先卸载该分区
+        $ sudo mkfs.ext4 /dev/sda1    # 格式化为ext4分区
+        $ sudo mkfs.ext3 /dev/sda1    # 格式化为ext3分区
+        $ sudo mkfs.ext2 /dev/sda1    # 格式化为ext2分区
+    ▣ make u boot disk
+        <img src="/home/dc/2P/006-write/picutre/screenshot-2020-05-13-14-32-49.png" alt="" />
+        You can use dd.
+        sudo umount /dev/sd<?><?>
+        where <?><?> is a letter followed by a number, look it up by running lsblk.
+        It will look something like
+        sdb      8:16   1  14.9G  0 disk
+        ├─sdb1   8:17   1   1.6G  0 part /media/username/usb volume name
+        └─sdb2   8:18   1   2.4M  0 part
+        I would dismount sdb1.
+        Then, next (this is a destructive command and wipes the entire USB drive with the contents of the iso, so be careful):
+        sudo dd bs=4M if=path/to/input.iso of=/dev/sd<?> conv=fdatasync  status=progress
+        where input.iso is the input file, and /dev/sd<?> is the USB device you're writing to (run lsblk to see all drives to find out what <?> is for your USB).
+        This method is fast and has never failed me.
+        EDIT: for those on a Mac ending up here, use lowercase for bs=4m:
+        sudo dd if=inputfile.img of=/dev/disk<?> bs=4m && sync
+        EDIT: If USB drive does not boot (this happened to me), it is because the target is a particular partition on the drive instead of the drive. So the target needs to be /dev/sdc and not dev/sdc <?> For me it was /dev/sdb .
+        Reference: https://superuser.com/a/407327 and https://askubuntu.com/a/579615/669976
+        shareimprove this answerfollow
+Wed May 13 14:38:05 CST 2020
+    ▣ cmake 
+    
+    ▣ man 7 ascii 查看ascii
+Wed May 13 20:06:23 CST 2020

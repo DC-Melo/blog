@@ -2,7 +2,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●:make slam  ⇒ 
 ●:make shell adapt for phone ⇒  ✓ DONE
 ●:bipolar power contrlo debug and commit ⇒ 
-TODO:@20200514 → ✓?? → @20200513 → ??? → @20200512 → ??? → @20200510 → ??? → @20200507 → ??? → @20200429 → ??? → 
+TODO:@20200514 → ✓✓? → @20200513 → ??? → @20200512 → ??? → @20200510 → ??? → @20200507 → ??? → @20200429 → ??? → 
 mutt -s 12529-20Thu20-20200514 melo.dachor@gmail.com < /Users/dc/2P/006-write/blog/12529-20Thu20-20200514
 
 Thu May 14 08:21:51 CST 2020
@@ -146,3 +146,43 @@ NOTE:
         target_link_libraries(project_name g2o_core g2o_stuff)
     cmake --help-module-list 查看已知cmake库
     find . -iname "*xxx*"
+    ▣ git 工作区覆盖
+    git 强制覆盖本地工作区的修改，方法如下：
+    git fetch --all
+    git reset --hard origin/master
+    git pull
+    在使用Git的过程中，有的时候，我们修改了一些文件，我们也将一些文件做了git add，不过都还没有commit。这时可能突然意识到了有什么问题，想把所有的修改都删除，即回退到什么都该都没有做的状态。可以使用如下两个Git命令：
+    git reset .
+    git checkout .
+    先用reset，将所有已经add到staged状态的文件撤回；
+    然后checkout，用git仓库中的文件，来覆盖所有工作区的文件。
+    这样，就一切回到最开始了。
+    注意，git checkout后，你的一切修改都会丢失。
+    git reset HEAD file
+    这个命令将某一个文件从staged状态撤回；
+    git checkout -- file
+    这个命令将某一个文件重新checkout。
+
+    ▣ LinearSolverCSparse
+        [bug]CMakeFiles/Makefile2:215: recipe for target 'CMakeFiles/pose_estimation_3d2d.dir/all' failed
+        [debug]可能g2o在编译时没有加入CSparse。请安装CSparse库后再编译安装g2o
+        https://github.com/gaoxiang12/slambook/pull/85/files#diff-b7faa252ada2bcf8b1f084b2b8287dfe
+        从新安装cpsarce
+        # Cmake
+        $ sudo apt-get install cmake
+        # google-glog + gflags
+        $ sudo apt-get install libgoogle-glog-dev
+        # BLAS & LAPAC
+        $ sudo apt-get install libatlas-base-dev
+        # Eigen3  已用安装包安装过
+        $ sudo apt-get install libeigen3-dev
+        # SuiteSparse和CXSparse(可选)
+        # - 如果您希望将Ceres构建为*static*库(默认)，则可以在Ubuntu主包repository中使用SuiteSparse包
+        #20200220采用了这个命令 后续需要的话再修改
+        $ sudo apt-get install libsuitesparse-dev
+        # - 但是，如果您要将Ceres构建为* shared *库，则必须添加以下PPA：
+        $ sudo add-apt-repository ppa:bzindovic/suitesparse-bugfix-1319687
+        $ sudo apt-get update
+        $ sudo apt-get install libsuitesparse-dev
+Thu May 14 18:55:04 CST 2020
+

@@ -1,12 +1,58 @@
-
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
-●: ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:make slam  ⇒ 
+●:make shell adapt for phone ⇒  ✓ DONE
+●:bipolar power contrlo debug and commit ⇒ 
 TODO:@20200514 → ??? → @20200513 → ??? → @20200512 → ??? → @20200510 → ??? → @20200507 → ??? → @20200429 → ??? → 
 mutt -s 12529-20Thu20-20200514 melo.dachor@gmail.com < /Users/dc/2P/006-write/blog/12529-20Thu20-20200514
 
-
 Thu May 14 08:21:51 CST 2020
-	坐车去公司
+	A.坐车去公司
 	每天每个时间段都要有输出，具体做什么，要看这个时间做什么的输出比较好。
+Thu May 14 11:31:51 CST 2020
+    TODO:jenkins服务器维护
+    TODO:自动提交bug问题反馈
+Thu May 14 12:16:26 CST 2020
+    A.go to lunch
+    ▣ read slam
+
+
+NOTE:
+    ▣ 并发;单道程序设计;多道程序设计;进程控制块;进程控制块.
+        当道程序:早期dos就是只能一个程序执行完才能执行下一个程序.程序间排队执行
+        多道程序设计:通过时钟中断,在不通的程序来回切换轮流执行
+    ▣ 环境变量
+    ▣ 进程控制原语
+        fork function:循环创建子进程
+        exec函数族:各个函数的参数和使用方法
+        wait;waitpid:回收子进程的一般方式
+    程序:是指编译好的二进制文件,在磁盘上,不占用系统资源.(cpu,内存,打开的文件,设备,锁) 相当于剧本
+    进程:需要使用到系统资源,在内存中执行.相当于舞台
+    并发:并行执行
+    mmu:是在cpu内部的一个硬件.MMU是Memory Management Unit的缩写，中文名是内存管理单元，有时称作分页内存管理单元
+    ▣ ./a.out
+        内存布局:
+        kerrel
+        environmeun shell parameter
+        stack
+        sharelib
+        heap
+        bss   rw 未初始化区域
+        .data  rw
+        .rodata ro
+        .text ro
+    ▣ 进程描述符,进程控制块PCB 本质是结构体 task_struct
+        进程id
+        进程状态
+        进程切换时需要保存和恢复一些cpu的信息
+        描述虚拟地址空间信息
+        描述控制终端的信息:那个终端运行了程序
+        环境变量:$SHELL $TERM,环境变量与命令行参数类似.只是在使用环境变量时,需要引用环境变量表,extern char **environment
+        当前工作目录
+        umask 保护文件创建修改默认权限的
+        文件描述符表:包含很多指向file结构体的指针
+        和信号相关的信息
+        用户id和组id
+        回话session 和进程组 回话相当于组联
+        进程可以使用的资源上限, 如:stack,命令: ulimit -a
+        
+

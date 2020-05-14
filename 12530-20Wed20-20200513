@@ -2,10 +2,10 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●: slam exercies ⇒ ✓ DONE
 ●: bipolar power control ⇒ ✓ DONE
 ●: memory leak program debug ⇒ ✗ 
-TODO:@20200513 → ✓✓✓ → @20200514 → ??? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
+TODO:@20200513 → ✓✓✓ → @20200514 → ✓?? → @20200515 → ??? → @20200517 → ??? → @20200520 → ??? → @20200528 → ??? ⇒ 
     :了解多视觉系统mono,stereo,omni.设计slam系统.了解ceres solver,g2o, gt-saml.
     :了解A*,D*,DWA,TEB全局和局部路径规划
-mutt -s 12530-20Wed20-20200513 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12530-20Wed20-20200513
+mutt -s 12530-20Wed20-20200513 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12530-20Wed20-20200513 ⇒ ✓ DONE
 
 SUNRISE:
 Wed May 13 06:12:35 CST 2020

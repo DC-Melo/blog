@@ -76,3 +76,7 @@ NOTE:
         分解目标：量化，实用，节点，积极，规划，挑战。
         时间管理，情绪管理，目标管理，知识管理。
         A/B测试，
+    ▣ git 冲突解决
+        先 git fetch origin 
+        然后git merge origin/master, 和本地分支合并, 之后再push。
+        git pull = git fetch + git merge

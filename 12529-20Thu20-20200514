@@ -2,33 +2,35 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●:make slam  ⇒ 
 ●:make shell adapt for phone ⇒  ✓ DONE
 ●:bipolar power contrlo debug and commit ⇒ 
-TODO:@20200514 → ??? → @20200513 → ??? → @20200512 → ??? → @20200510 → ??? → @20200507 → ??? → @20200429 → ??? → 
+TODO:@20200514 → ✓?? → @20200513 → ??? → @20200512 → ??? → @20200510 → ??? → @20200507 → ??? → @20200429 → ??? → 
 mutt -s 12529-20Thu20-20200514 melo.dachor@gmail.com < /Users/dc/2P/006-write/blog/12529-20Thu20-20200514
 
 Thu May 14 08:21:51 CST 2020
 	A.坐车去公司
 	每天每个时间段都要有输出，具体做什么，要看这个时间做什么的输出比较好。
 Thu May 14 11:31:51 CST 2020
+    ▣ meeting:
     TODO:jenkins服务器维护
     TODO:自动提交bug问题反馈
 Thu May 14 12:16:26 CST 2020
     A.go to lunch
-    ▣ read slam
+    ▣ read linux slam
+Thu May 14 15:53:16 CST 2020
 
 
 NOTE:
     ▣ 并发;单道程序设计;多道程序设计;进程控制块;进程控制块.
-        当道程序:早期dos就是只能一个程序执行完才能执行下一个程序.程序间排队执行
-        多道程序设计:通过时钟中断,在不通的程序来回切换轮流执行
+    当道程序:早期dos就是只能一个程序执行完才能执行下一个程序.程序间排队执行
+    多道程序设计:通过时钟中断,在不通的程序来回切换轮流执行
     ▣ 环境变量
     ▣ 进程控制原语
-        fork function:循环创建子进程
-        exec函数族:各个函数的参数和使用方法
-        wait;waitpid:回收子进程的一般方式
-    程序:是指编译好的二进制文件,在磁盘上,不占用系统资源.(cpu,内存,打开的文件,设备,锁) 相当于剧本
-    进程:需要使用到系统资源,在内存中执行.相当于舞台
-    并发:并行执行
-    mmu:是在cpu内部的一个硬件.MMU是Memory Management Unit的缩写，中文名是内存管理单元，有时称作分页内存管理单元
+    fork function:循环创建子进程
+    exec函数族:各个函数的参数和使用方法
+    wait;waitpid:回收子进程的一般方式
+    ▣ 程序:是指编译好的二进制文件,在磁盘上,不占用系统资源.(cpu,内存,打开的文件,设备,锁) 相当于剧本
+    ▣ 进程:需要使用到系统资源,在内存中执行.相当于舞台
+    ▣ 并发:并行执行
+    ▣ mmu:是在cpu内部的一个硬件.MMU是Memory Management Unit的缩写，中文名是内存管理单元，有时称作分页内存管理单元
     ▣ ./a.out
         内存布局:
         kerrel
@@ -67,9 +69,9 @@ NOTE:
         UGC模式：user generate content.
         拉来流量-沉淀流量-运营流量
         用户成长有两大目标：用户利益和产品利益
-        有效流量池：用户获得感
         用户利益：回报和满足感。物质，精神
         产品利益：日活，存留，用户沉淀，精准运营
+        有效流量池：用户获得感
         内容的作用：产品也许不是高频的，但是内容一定是高频的。
         内容消费目标：打发时间，学点东西，参考决策。
         运营需要三个产品：流量产品，利润产品，和形象产品。
@@ -80,3 +82,5 @@ NOTE:
         先 git fetch origin 
         然后git merge origin/master, 和本地分支合并, 之后再push。
         git pull = git fetch + git merge
+
+    ▣ cmake package

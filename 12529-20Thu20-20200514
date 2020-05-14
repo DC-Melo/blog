@@ -82,5 +82,67 @@ NOTE:
         先 git fetch origin 
         然后git merge origin/master, 和本地分支合并, 之后再push。
         git pull = git fetch + git merge
-
+        git  checkout master 1、首先切换到master分支上
+        git pull origin master 2、如果是多人开发的话 需要把远程master上的代码pull下来
+        git  merge dev 3、然后我们把dev分支的代码合并到master上
+        git status 4、然后查看状态及执行提交命令
+            On branch master
+            Your branch is ahead of 'origin/master' by 12 commits.
+              (use "git push" to publish your local commits)
+            nothing to commit, working tree clean
+        //上面的意思就是你有12个commit，需要push到远程master上
+        最后执行下面提交命令
+        git push origin master
+        5其他命令
+        git remote update origin --prune 更新远程分支列表
+        git branch -a 查看所有分支
+        git push origin --delete Chapater6 删除远程分支Chapater6
+        git branch -d  Chapater6 删除本地分支 Chapater6
     ▣ cmake package
+    1.添加Eigen头文件,[ˈaɪgən]adj.本（特）征的；固有的;
+        Eigen是一个高层次的C ++库，有效支持线性代数，矩阵和矢量运算，数值分析及其相关的算法
+        Eigen通过apt-get安装之后，我们要怎么使用这个依赖库呢？Eigen有一点很奇怪，Eigen库只有头文件，所以我们在CMakeLists.txt中是不需要写target_link_libraries，因为我们是通过apt安装的，所以很容易的知道Eigen库的位置就是在/usr/include/eigen3
+        添加头文件
+        include_directories("/usr/include/eigen3")
+        因为我们已经知道Eigen具体的位置，就不用使用find_package来寻找了，虽然有些粗暴，但是简单有效。
+    2.添加Pangolin依赖
+        Pangolin的安装也很简单，功能主要就是做三维的可视化显示，主要依赖库是OpenGL，通过apt也很好安装。
+        find_package(Pangolin)
+        include_directories(${Pangolin_INCLUDE_DIRS})
+        add_executable(project_name filename.cpp)
+        target_link_libraries(project_name ${Pangolin_LIBRARIES})
+    3.添加Sophus依赖
+        Sophus实际上是Eigen库的扩展模块，Eigen中虽然有几何模块，但是没有提供李代数的支持，所以Sophus算是一个比较好的李代数库，安装参考之前博文。
+        find_package(Sophus REQUIRED)
+        include_directories(${Sophus_INCLUDE_DIRS})
+        add_executable(project_name project_name.cpp)
+        target_link_libraries(project_name ${Sophus_LIBRARIES})
+    4.添加OpenCV依赖
+        OpenCV经常会出现版本不兼容的问题，LZ同时安装了OpenCV2和OpenCV3两个版本，所以在CMakeLists.txt要指定OpenCV的版本。
+        指定OpenCV的版本是3.1
+        find_package(OpenCV 3.1 REQUIRED)
+        include_directories(${OpenCV_INCLUDE_DIRS})
+        add_executable(project_name filename.cpp)
+        target_link_libraries(project_name ${OpenCV_LIBS})
+        添加OpenCV要注意一个问题，大小写！很重要！大小写！
+    5.添加PCL依赖The Point Cloud Library (PCL)
+        这个点云库在SLAM应用中还是蛮重要的，通常情况下好像也都有安装，安装很简单，这里还是讲一下CMakeLists.txt中怎么写：
+        find_package(PCL REQUIRED COMPONENT common io)
+        include_directories(${PCL_INCLUDE_DIRS})
+        add_definitions(${PCL_DEFINITIONS})
+        target_link_libraries(project_name ${PCL_LIBRARIES})
+    6.添加Ceres依赖
+        Ceres是Google出品的一个优化库，安装编译都在LZ之前写过一个SLAM安装大全里都有。因为Ceres不是常用的库，所以需要添加一个cmake_modules。LZ这里把对应的cmake_modules文件夹中的文件分享给小伙伴，有需要的可以自行下载。链接: http://pan.baidu.com/s/1o8dTy8i 密码: zmiv
+        这行代码就是添加查找Ceres的一个文件
+        list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+        find_package(Ceres REQUIRED)
+        include_directories(${CERES_INCLUDE_DIRS})
+        target_link_libraries(project_name ${CERES_LIBRARIES})
+    7添加G2O的依赖
+        其实这个也是千篇一律，换汤不换药。这里也是要注意几个问题，第一个，要在cmake_module中假如findG2O的文件，链接: http://pan.baidu.com/s/1kVp4Ul5 密码: yeu4，又需要的小伙伴可以自行下载。第二个，注意大小写问题，还有数字0和字母0，这个还是要注意的。
+        list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+        find_package(G2O REQUIRED)
+        include_directories(${G20_INCLUDE_DIRS})
+        target_link_libraries(project_name g2o_core g2o_stuff)
+    cmake --help-module-list 查看已知cmake库
+    find . -iname "*xxx*"

@@ -1,10 +1,17 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200515 → ??? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 ●: ⇒ 
-TODO:@20200515 → ??? → @20200516 → ??? → @20200517 → ??? → @20200519 → ??? → @20200522 → ??? → @20200530 → ??? ⇒ 
-mutt -s 12528-20Fri20-20200515 melo.dachor@gmail.com < /data/data/com.termux/files/home/blog/12528-20Fri20-20200515
+TODO:@20200516 → ??? → @20200517 → ??? → @20200519 → ??? → @20200522 → ??? → @20200530 → ??? ⇒ @20200615 → ??? ⇒ 
+mutt -s 12528-20Fri20-20200515 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12528-20Fri20-20200515
 
+SUNRISE:
+MORNING:
+NOON:
+AFTERNOON:
+SUNSET:
+EVENING:
+NOTE:
 SUNRISE:
 Fri May 15 05:21:42 CST 2020
 	A.getup

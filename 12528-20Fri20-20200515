@@ -28,6 +28,7 @@ Fri May 15 07:58:36 CST 2020
 	fork之后，父子进程那个先执行，取决于进程调度算法。
 	fork后，0-3G的用户空间是相同的，系统空间不同。
 	gdb在调试时需要给定进程ID，默认调试父进程。set follow-fork-mode child，子进程的跟踪，通过断点来跟踪。设置条件断点。
+Fri May 15 10:27:18 CST 2020
 
 MORNING:
 NOON:

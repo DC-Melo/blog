@@ -46,19 +46,3 @@ MEMO:
     gn<*>	在新标签页中打开quickmark <*>	openQuickMarkTabbed
     gw<*>	在新窗口中打开quickmark <*>	openQuickMarkWindowed
     文本框
-    <C-i>	将光标移动到行的开头	beginningOfLine
-    <C-e>	将光标移动到行尾	行结束
-    <C-u>	删除到行的开头	deleteToBeginning
-    <C-o>	删除到行尾	deleteToEnd
-    <C-y>	删除一个字	deleteWord
-    <C-p>	删除一个字	deleteForwardWord
-    未映射	删除一个字符	deleteChar
-    未映射	删除一个字符	deleteForwardChar
-    <C-h>	将光标移回一个字	backwardWord
-    <C-l>	将光标向前移动一个字	forwardWord
-    <C-f>	将光标向前移动一个字母	forwardChar
-    <C-b>	将光标移回一个字母	backwardChar
-    <C-j>	将光标向前移动一行	forwardLine
-    <C-k>	将光标移回一行	backwardLine
-    未映射	选择输入文本（相当于<C-a>）	全选
-    未映射	在终端中使用Vim进行编辑（需要运行该工作的cvim_server.py脚本以及该脚本中的VIM_COMMAND集）	editWithVim

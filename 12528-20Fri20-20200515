@@ -33,6 +33,21 @@ Fri May 15 10:27:18 CST 2020
 MORNING:
 NOON:
 AFTERNOON:
+Fri May 15 20:59:25 CST 2020
+	调用exec不会创建新进程。将原来fork的进程的代码，替换成心得main代码，从main开始执行。
+	execlp：exec list path，在编写程序时，可以跳转函数原型定义。
+	execl：讲没有环境变量，需要用程序名来运行。
+	文件描述符从上到下三个指针分别指向：stdin，stdout，stderror
+	dup2 函数？
+	exec族没有成功返回，只有失败返回。
+	孤儿进程与僵尸进程，子进程死亡，父进程没有回收子进程的资源，子进程进入僵尸进程。wait 和waitpid进行回收子进程资源。阻塞等待进程回收，回收子进程资源pcb，获取子进程的结束状态。
+	kill -l：kill -11 pid，kill -9 进程组。
+	ipc进程间通讯：inter process communication。主要有管道，信号，共享映射区，本地套接字。pipe：匿名管道，fifo：有名管道，用于非血源关系间通讯。mmap：共享映射
+	把管道实现为一个伪文件。
+	linux有七种文件类型，包括文件，目录，套接字，软连接，
+	ulimit -a 查看管道文件大小。有512byte，相当于一个扇区大小。一共8个扇区，管道是借助缓冲区，以环形队列实现的。
+	pipe的作用：创建管道伪文件，打开文件描述符的两端，以供写读
+	守护进程：周期性的等到或执行任务使用回话功能创建守护进程。
 SUNSET:
 EVENING:
 NOTE:

@@ -1,5 +1,5 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200515 → ??? ⇒ 
-●: ⇒ 
+●:debug memory leak ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 TODO:@20200516 → ??? → @20200517 → ??? → @20200519 → ??? → @20200522 → ??? → @20200530 → ??? ⇒ @20200615 → ??? ⇒ 
@@ -28,10 +28,29 @@ Fri May 15 07:58:36 CST 2020
 	fork之后，父子进程那个先执行，取决于进程调度算法。
 	fork后，0-3G的用户空间是相同的，系统空间不同。
 	gdb在调试时需要给定进程ID，默认调试父进程。set follow-fork-mode child，子进程的跟踪，通过断点来跟踪。设置条件断点。
-Fri May 15 10:27:18 CST 2020
 
 MORNING:
+Fri May 15 10:27:18 CST 2020
+    增加启动自动创建明模板
+Fri May 15 13:24:45 CST 2020
+
 NOON:
+Fri May 15 13:24:58 CST 2020
+    ▣ uptrade ubuntu18 - 20.04
+    sudo apt update
+    sudo apt full-upgrade
+    sudo apt autoremove
+    sudo systemctl reboot
+    sudo apt install update-manager-core
+    sudo do-release-upgrade -m desktop
+    # sudo do-release-upgrade -m desktop -d
+    ▣ jenkins config git password
+    Failed to connect to repository : Command "git ls-remote -h http://10.1.120.4/gerrit/WTT1_MonkeyTool HEAD" returned status code 128:
+    stdout:
+    stderr: remote: Unauthorized
+    fatal: Authentication failed for 'http://10.1.120.4/gerrit/WTT1_MonkeyTool/'
+    ▲ 
+
 AFTERNOON:
 SUNSET:
 EVENING:

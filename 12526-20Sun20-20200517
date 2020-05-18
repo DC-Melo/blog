@@ -1,0 +1,26 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200517 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+mutt -s 12526-20Sun20-20200517 melo.dachor@gmail.com < /home/dc/2P/006-write/blog/12526-20Sun20-20200517
+
+SUNRISE:
+Sun May 17 07:11:34 CST 2020
+at zhenzhou
+
+Sun May 17 13:18:17 CST 2020
+go to zhenzhou railway station!
+plan:buy a computer table.
+	ctrl z:put vim in to background.
+
+	raise:give a signal to hisself.
+	alarm:give a signal to hisself after N second later.
+	setitimer:也是一个定时器，可以精确到微秒。可以实现周期性定时。
+	cvim：Side note: I've migrated to use the 'vimium' extension - it provides an equivalent set of functionality and seems to be more actively maintained.
+
+MORNING:
+NOON:
+AFTERNOON:
+SUNSET:
+EVENING:
+NOTE:

@@ -1,11 +1,16 @@
+
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200518 → ??? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 TODO:@20200519 → ??? → @20200520 → ??? → @20200522 → ??? → @20200525 → ??? → @20200602 → ??? ⇒ @20200618 → ??? ⇒ 
-mutt -s 12525-21Mon20-20200518 melo.dachor@gmail.com < /data/data/com.termux/files/home/blog/12525-21Mon20-20200518
+mutt -s 12525-21Mon20-20200518 melo.dachor@gmail.com < $dbg/12525-21Mon20-20200518
 
 SUNRISE:
+Mon May 18 09:51:06 CST 2020
+A.go to work on the bus.
+I.everyday blog should be create by you phone. and edit by computer.
+A.after you review the blog. make sure write and save.and push to github.
 MORNING:
 NOON:
 AFTERNOON:

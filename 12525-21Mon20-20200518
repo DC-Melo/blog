@@ -1,7 +1,7 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200518 → ✓✓✓ ⇒ 
 ●:make off on off device code and update to jenkins ⇒ ✓ 
 ●:research grafana and metabase ⇒  ✓ 
-TODO:@20200519 → ??? → @20200520 → ??? → @20200522 → ??? → @20200525 → ??? → @20200602 → ??? ⇒ @20200618 → ??? ⇒ 
+TODO:@20200519 → ?✓? → @20200520 → ??? → @20200522 → ??? → @20200525 → ??? → @20200602 → ??? ⇒ @20200618 → ??? ⇒ 
 mutt -s 12525-21Mon20-20200518 melo.dachor@gmail.com < $dbg/12525-21Mon20-20200518
 
 SUNRISE:
@@ -13,7 +13,7 @@ MORNING:
 NOON:
 AFTERNOON:
 Mon 18 May 2020 05:25:24 PM CST
-    sudo docker exec -it mysql bash
+    ▣ sudo docker exec -it mysql bash
     mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASSWORD"
     mysql account:root password:root
     jenkins node -> mysql -> grafana,metabase
@@ -21,6 +21,6 @@ Mon 18 May 2020 05:25:24 PM CST
 Mon 18 May 2020 06:57:10 PM CST
 SUNSET:
 Mon May 18 20:06:35 CST 2020
-	the theft was the one unforgivable sins. when you kill a man.you sreal a life.you steal his wife's right to a husband.rob his children of a father.when you tell a lie.you steal someone's right to the truth.when you cheat.you steal the right to fainess. there is no act more wretched than stealing.
+	the theft was the one unforgivable sins. when you kill a man.you steal a life.you steal his wife's right to a husband.rob his children of a father.when you tell a lie.you steal someone's right to the truth.when you cheat.you steal the right to fainess. there is no act more wretched than stealing.
 EVENING:
 NOTE:

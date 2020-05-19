@@ -1,4 +1,4 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200519 → ??? ⇒ 
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200519 → ?✓? ⇒ 
 ●:config grafana,metabase picture ⇒ 
 ●: ⇒ 
 TODO:@20200520 → ??? → @20200521 → ??? → @20200523 → ??? → @20200526 → ??? → @20200603 → ??? ⇒ @20200619 → ??? ⇒ 
@@ -17,10 +17,48 @@ Tue 19 May 2020 10:16:25 AM CST
 
 MORNIG:
 Tue 19 May 2020 10:16:42 AM CST
-    
+    ▣ wifi account:WTCLguestWIFI
+    wifi password:201810-5F
+    wifi account:WTCLofficeWIFI
+    wifi password:AUTOpai5F
+    ▣ vimium:copy text. > v:visual mode > c caret mode
+    xrandr  xrandr
+    xrandr --output HDMI-1 --same-as eDP-1 --auto
+    解释一下，HDMI-1 是连接的第二个显示屏端口，–same-as我就不说了，都知道啥意思，eDP-1 是主显示屏幕的端口， --auto 是自动设置最佳分辨率，需要注意的是这里的HDMI-1 和eDp-1需要换成你电脑对应的名称，否则命令无效。否则命令无效
+    extend mode:xrandr --output HDMI-1 --right-of eDP-1 --auto
+    only external screen:xrandr  --output  eDP-1 --off
+    open main screen:xrandr --output eDP-1 --auto
+    特别注意：当主屏幕是关闭的状态下，不能开启复制或者扩展模式，所以当执行了
+    xrandr --output eDP-1 --off
+    之后（当前为仅第二屏幕）不能直接转换到复制或者扩展模式，需要先执行
+    xrandr --output eDP-1 --auto
+    ▣ docker install grafana
+    docker search grafana
+    docker run -d -p 3000:3000 --name=grafana -v /data/grafana:/var/lib/grafana grafana/grafana
+    docker logs -f grafana
+    GF_PATHS_DATA='/var/lib/grafana' is not writable.
+    You may have issues with file permissions, more information here: http://docs.grafana.org/installation/docker/#migration-from-a-previous-version-of-the-docker-container-to-5-1-or-later
+    mkdir: cannot create directory '/var/lib/grafana/plugins': Permission denied
+    发现报错，对'/var/lib/grafana/plugins'没有权限创建目录，那么就赋予权限：
+    chmod 777 /data/grafana
+    重启grafana
+    docker restart grafana
+    ioa:卸载密码：common888
+Tue 19 May 2020 12:18:46 PM CST
 
 NOON:
-AFTERNOON:
+Tue 19 May 2020 12:18:58 PM CST
+    A.go to lunch
+
+AFTE:NOON:
+Tue 19 May 2020 01:50:05 PM CST
+    ▣ docker save image:
+    sudo docker save -o metabase.tar metabase/metabase
+    sudo docker load < metabase.tar
+    sudo docker ps -a 
+    Error response from daemon: conflict: unable to remove repository reference "mysql" (must force) - container 519ec274a5f5 is using its referenced image 94dff5fab37f
+    sudo docker rm 容器id
+    sudo docker rmi 镜像id
 SUNSET:
 EVENING:
 NOTE:

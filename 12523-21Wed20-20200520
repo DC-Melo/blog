@@ -1,17 +1,51 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200520 → ??? ⇒ 
-●: ⇒ 
-●: ⇒ 
-●: ⇒ 
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200520 → ✓?? ⇒ 
+●:patent money send to me check ⇒ ✓ DONE
+●:make metabase web ⇒ 
+●:learn slam ⇒ 
 TODO:@20200521 → ??? → @20200522 → ??? → @20200524 → ??? → @20200527 → ??? → @20200604 → ??? ⇒ @20200620 → ??? ⇒ 
 mutt -s 12523-21Wed20-20200520 melo.dachor@gmail.com < $dbg/12523-21Wed20-20200520
 
 SUNRISE:
 Wed May 20 06:02:42 CST 2020
 	A.get up.
+Wed 20 May 2020 09:58:29 AM CST
 	
 MORNING:
+    ▣ mutt config gmail
+    https://unix.stackexchange.com/questions/226936/how-to-install-setup-mutt-with-gmail-on-centos-and-ubuntu
+    Gmail Setup
+    For authentication, you'll have to do either of two things:
+    Generate an application-specific password for your Google Account (your only option if you're using 2FA),
+    Turn on less-secure app access (not an option with 2FA)
+    https://myaccount.google.com/lesssecureapps
+    In gmail, go click the gear icon, go to Settings, go to the tab Forwarding POP/IMAP, and click the Configuration instructions link in IMAP Access row.
+    Then click I want to enable IMAP. At the bottom of the page, under the paragraph about configuring your mail client, select Other. Note the mail server information and use that information for further settings as shown in the next section.
+
 NOON:
+Wed 20 May 2020 01:25:06 PM CST
+    A.have a rest
+
 AFTERNOON:
+Wed 20 May 2020 02:24:48 PM CST
+    {"installed":{"client_id":"935566796782-tihv0snrcomouirms399fphgb9g3iouo.apps.googleusercontent.com","project_id":"navigiation-map","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"ritAgqzpxkXIWF1yD2HYNkJB","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
+    python2 oauth2.py --user=melodachor@gmail.com \
+    --client_id=935566796782-tihv0snrcomouirms399fphgb9g3iouo.apps.googleusercontent.com \
+    --client_secret=ritAgqzpxkXIWF1yD2HYNkJB --generate_oauth2_token
+
+    Enter verification code: 4/zwFGVRyYVzAlIcebxvWA4QAY-P3KTYp3SLRLCGx76-AjZhQZNgU9G8Y
+    Refresh Token: 1//0e_-klhO0sQQMCgYIARAAGA4SNwF-L9IraRn8S0eP6YG83pdYs1A_dx5P9HRhsCRo5xkjJhZvYmLm8Y6bGc1SxnDTE03M4BjWC2A
+    Access Token: ya29.a0AfH6SMB6EUmCNFDBoYDIglmdIKdgyEgk4gD1yi43S-XphZ-80romBnKUv_OW4Q5eRDKYg-EzjL6m--5dBL7rizbZGGnQM-9Za2Wgv-bAq3P8slA7xB_RyiX7lmYIHvifR66V6n3-LbyFCHI9xODcVfWtLpTkvsJyqlU
+    Access Token Expiration Seconds: 3599
+
+    sudo docker ps 
+    docker exec -it  mysql_server mysqldump -uroot -proot test_db > /opt/sql_bak/test_db.sql
+Wed 20 May 2020 06:17:17 PM CST
+
+
+
 SUNSET:
 EVENING:
 NOTE:
+    shell lock:
+    原因：你按下了CTRL+S ，关闭了输入流
+    解决方案：在xhsell中，按下CTRL+Q

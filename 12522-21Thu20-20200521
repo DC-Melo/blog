@@ -1,0 +1,26 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200521 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200522 → ??? → @20200523 → ??? → @20200525 → ??? → @20200528 → ??? → @20200605 → ??? ⇒ @20200621 → ??? ⇒ 
+mutt -s 12522-21Thu20-20200521 melo.dachor@gmail.com < $dbg/12522-21Thu20-20200521
+
+SUNRISE:
+Thu May 21 06:12:23 CST 2020
+A.get up
+Thu May 21 08:15:59 CST 2020
+泛型编程GP:使用模板作为主要编程工具。
+this:the hidden parameters.
+函数是类的函数，变量是对象的变量。
+变量空间在进入大括号就分配了，但是构造函数是要到定义之后才执行。
+cpp的structure和class是一样的。
+vitural：运行时在确定调用函数类型，确定调用那个函数。
+绑定分为静态绑定和动态绑定。vitural是动态绑定。
+所有带有vitural的类，都带有一个隐藏的vptr指针。
+A.on the bus
+MORNING:
+NOON:
+AFTERNOON:
+SUNSET:
+EVENING:
+NOTE:

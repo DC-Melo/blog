@@ -1,26 +1,45 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200521 → ??? ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:make metabase graph ⇒ 
+●:learn math, slam ⇒ 
 ●: ⇒ 
 TODO:@20200522 → ??? → @20200523 → ??? → @20200525 → ??? → @20200528 → ??? → @20200605 → ??? ⇒ @20200621 → ??? ⇒ 
 mutt -s 12522-21Thu20-20200521 melo.dachor@gmail.com < $dbg/12522-21Thu20-20200521
 
 SUNRISE:
 Thu May 21 06:12:23 CST 2020
-A.get up
+    A.get up
 Thu May 21 08:15:59 CST 2020
-泛型编程GP:使用模板作为主要编程工具。
-this:the hidden parameters.
-函数是类的函数，变量是对象的变量。
-变量空间在进入大括号就分配了，但是构造函数是要到定义之后才执行。
-cpp的structure和class是一样的。
-vitural：运行时在确定调用函数类型，确定调用那个函数。
-绑定分为静态绑定和动态绑定。vitural是动态绑定。
-所有带有vitural的类，都带有一个隐藏的vptr指针。
-A.on the bus
+    A.on the bus
+    泛型编程GP:使用模板作为主要编程工具。
+    this:the hidden parameters.
+    函数是类的函数，变量是对象的变量。
+    变量空间在进入大括号就分配了，但是构造函数是要到定义之后才执行。
+    cpp的structure和class是一样的。
+    vitural：运行时在确定调用函数类型，确定调用那个函数。
+    绑定分为静态绑定和动态绑定。vitural是动态绑定。
+    所有带有vitural的类，都带有一个隐藏的vptr指针。
+Thu 21 May 2020 09:54:47 AM CST
+
 MORNING:
+Thu 21 May 2020 09:55:26 AM CST
+   research sql.
+   SELECT `Test`.`osVersion` AS `osVersion`,
+    count(case when `monkey_error_table`.`packageName`="com.tencent.wecarmas" then `Test`.`osVersion` end) AS "小程序",
+    count(case when `monkey_error_table`.`packageName`="com.tencent.wecarnavi" then `Test`.`osVersion` end) AS "导航",
+    count(case when `monkey_error_table`.`packageName`="com.tencent.wecarnews" then `Test`.`osVersion` end) AS "电台",
+    count(case when `monkey_error_table`.`packageName`="com.wt.airconditioner" then `Test`.`osVersion` end) AS "空调",
+    count(case when `monkey_error_table`.`packageName`="com.wt.music" then `Test`.`osVersion` end) AS "音乐",
+    count(case when `monkey_error_table`.`packageName`="com.tencent.wecarspeech" then `Test`.`osVersion` end) AS "语音"
+    FROM
+    `monkey_error_table`
+    LEFT JOIN `monkey_test` `Test` ON `monkey_error_table`.`testId` = `Test`.`id`
+    [[where `Test`.`project`={{Project_name}}]]
+    GROUP BY `Test`.`osVersion`
+    ORDER BY `Test`.`osVersion` asc
 NOON:
 AFTERNOON:
+Thu 21 May 2020 07:22:24 PM CST
+    A.go home
 SUNSET:
 EVENING:
 NOTE:

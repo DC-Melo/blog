@@ -18,6 +18,25 @@ plan:buy a computer table.
 	setitimer:也是一个定时器，可以精确到微秒。可以实现周期性定时。
 	cvim：Side note: I've migrated to use the 'vimium' extension - it provides an equivalent set of functionality and seems to be more actively maintained.
 
+    # ERROR: Unable to find executable 'cmake'. CMake is required to build ycmd
+    sudo apt-get install cmake -y
+    # CMake Error at ycm/CMakeLists.txt:330 (message):
+    # Using Clang completer, but no libclang found. Try setting
+    # EXTERNAL_LIBCLANG_PATH or revise your configuration
+    sudo apt-get install libclang-dev -y
+    # handle vim system clipboard
+    sudo apt-get install vim vim-scripts vim-gtk # vim-gnome
+    # vim-gnome has been removed from the repositories for 19.10. However, the gtk3 version is available and is pretty much the same package.
+    sudo apt install vim-gtk3
+    # fatal error: Python.h: No such file or directory
+    # compilation terminated.
+    # ycm/CMakeFiles/ycm_core.dir/build.make:182: recipe for target 'ycm/CMakeFiles/ycm_core.dir/ClangCompleter/ClangHelpers.cpp.o' failed
+    # A: 安装python开发库
+    sudo apt-get install libpython-dev -y
+    sudo apt-get update
+    sudo apt-get install -y build-essential
+
+
 MORNING:
 NOON:
 AFTERNOON:

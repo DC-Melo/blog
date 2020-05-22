@@ -1,8 +1,7 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200521 → ??? ⇒ 
-●:make metabase graph ⇒ 
-●:learn math, slam ⇒ 
-●: ⇒ 
-TODO:@20200522 → ??? → @20200523 → ??? → @20200525 → ??? → @20200528 → ??? → @20200605 → ??? ⇒ @20200621 → ??? ⇒ 
+●:make metabase graph ⇒ ✓ DONE
+●:learn math, slam ⇒ ✗ 
+TODO:@20200522 → ✓✓? → @20200523 → ??? → @20200525 → ??? → @20200528 → ??? → @20200605 → ??? ⇒ @20200621 → ??? ⇒ 
 mutt -s 12522-21Thu20-20200521 melo.dachor@gmail.com < $dbg/12522-21Thu20-20200521
 
 SUNRISE:

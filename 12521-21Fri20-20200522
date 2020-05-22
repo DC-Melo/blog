@@ -1,4 +1,4 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200522 → ??? ⇒ 
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200522 → ✓✓? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 ●: ⇒ 
@@ -16,8 +16,78 @@ A.go to work
 轴角
 四元素
 MORNING:
+    make monkey figure
+    ▣ Eigen:sudo apt-get install libeigen3-dev
+    ▣ vim red cross. 
+    vim ~/.vimplus/.ycm_extra_conf.py 
+    '-isystem',
+    '/usr/include/eigen3',
+    ▣ gdb layout src chinese character
+    ▣ wutong OA account:OAlil01518747
+    
 NOON:
+
 AFTERNOON:
+Fri 22 May 2020 06:01:08 PM CST
+    ▣ docker command
+    sudo apt-get install -y docker.io
+    等待安装完毕，现在我们使用下面的命令启动 Docker：
+    systemctl start docker
+    运行系统引导时启用 docker，命令：
+    systemctl enable docker
+    镜像相关
+    搜索
+    docker search *image_name*
+    下载
+    docker pull *image_name*
+    查看
+    docker images
+    docker image ls
+    删除
+    docker rmi *image_name*
+    docker image rm *image_name*
+    导出docker镜像
+    docker save *image_name* > /save/image/path/name.tar.gz
+    导入docker镜像
+    docker load < /save/image/path/name.tar.gz
+    提交创建的自定义的镜像
+    docker commit *container_id* *镜像名称*
+    打标签时的注意事项：
+    docker tag bac2 gandoufu/centos7-wget
+    bac2 是镜像的id
+    gandoufu/centos7-wget 镜像的名称必须是自己的id名称/镜像名称
+    latest 默认版本号，可以不用加
+    新建容器
+    docker create image_name
+    docker create -t -i image_name bash
+    docker run image_name
+    docker run image_name /bin/echo “haha”
+    docker run -it -d image_name
+    docker run -it -d –rm –name mydo image_name
+
+    使用create创建的容器，在使用时需要先start对应的容器；
+    使用run创建的容器，直接运行；如果指定的image_name不存在，则会去镜像仓库下载镜像，然后根据镜像创建容器。
+
+    参数说明：
+    i 进入交互模式
+    t 创建一个虚拟终端
+    d 后台运行
+    rm 退出后自动删除容器
+    name 创建的容器使用自定义的名字
+    注：i和t参数一起指定（-it），在实际操作时发现只指定i参数时，attach到实例时会出现卡死的情况。
+
+    进入容器
+    docker attach *container_id|container_name*
+    根据容器的id或名字进入指定的容器；如果容器处于未运行状态，需要先启动容器docker start container_id
+    install tensorflow
+    docker pull daocloud.io/daocloud/tensorflow:latest 
+    3，启动镜像
+    启动命令，设置端口，同时配置volume 数据卷，用于永久保存数据。加上 –rm 在停止的时候删除镜像。
+    sudo mkdir -p /data/tensorflow/notebooks
+    docker run -it --rm --name myts -v /data/tensorflow/notebooks:/notebooks -p 8888:8888 daocloud.io/daocloud/tensorflo
+Fri 22 May 2020 06:45:51 PM CST
+
+
 SUNSET:
 EVENING:
 NOTE:

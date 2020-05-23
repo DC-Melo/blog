@@ -7,6 +7,164 @@ mutt -s 12520-21Sat20-20200523 melo.dachor@gmail.com < $dbg/12520-21Sat20-202005
 
 SUNRISE:
 Sat May 23 05:21:21 CST 2020
+    A.get up
+    ▣ vimium shortcut
+      Navigating the current page:
+
+      ?       show the help dialog for a list of all available keys
+      h       scroll left
+      j       scroll down
+      k       scroll up
+      l       scroll right
+      gg      scroll to top of the page
+      G       scroll to bottom of the page
+      d       scroll down half a page
+      u       scroll up half a page
+      f       open a link in the current tab
+      F       open a link in a new tab
+      r       reload
+      gs      view source
+      i       enter insert mode -- all commands will be ignored until you hit Esc to exit
+      yy      copy the current url to the clipboard
+      yf      copy a link url to the clipboard
+      gf      cycle forward to the next frame
+      gF      focus the main/top frame
+
+  Navigating to new pages:
+
+      o       Open URL, bookmark, or history entry
+      O       Open URL, bookmark, history entry in a new tab
+      b       Open bookmark
+      B       Open bookmark in a new tab
+
+  Using find:
+
+      /       enter find mode
+                -- type your search query and hit enter to search, or Esc to cancel
+      n       cycle forward to the next find match
+      N       cycle backward to the previous find match
+
+  For advanced usage, see [regular expressions](https://github.com/philc/vimium/wiki/Find-Mode) on the wiki.
+
+  Navigating your history:
+
+      H       go back in history
+      L       go forward in history
+
+  Manipulating tabs:
+
+      J, gT   go one tab left
+      K, gt   go one tab right
+      g0      go to the first tab
+      g$      go to the last tab
+      ^       visit the previously-visited tab
+      t       create tab
+      yt      duplicate current tab
+      x       close current tab
+      X       restore closed tab (i.e. unwind the 'x' command)
+      T       search through your open tabs
+      W       move current tab to new window
+      <a-p>   pin/unpin current tab
+
+  Using marks:
+
+      ma, mA  set local mark "a" (global mark "A")
+      `a, `A  jump to local mark "a" (global mark "A")
+      ``      jump back to the position before the previous jump
+                -- that is, before the previous gg, G, n, N, / or `a
+
+  Additional advanced browsing commands:
+
+      ]], [[  Follow the link labeled 'next' or '>' ('previous' or '<')
+                - helpful for browsing paginated sites
+      <a-f>   open multiple links in a new tab
+      gi      focus the first (or n-th) text input box on the page
+      gu      go up one level in the URL hierarchy
+      gU      go up to root of the URL hierarchy
+      ge      edit the current URL
+      gE      edit the current URL and open in a new tab
+      zH      scroll all the way left
+      zL      scroll all the way right
+      v       enter visual mode; use p/P to paste-and-go, use y to yank
+      V       enter visual line mode
+
+    Vimium supports command repetition so, for example, hitting `5t` will open 5 tabs in rapid succession. `<Esc>` (or
+    `<c-[>`) will clear any partial commands in the queue and will also exit insert and find modes.
+
+    There are some advanced commands which aren't documented here; refer to the help dialog (type `?`) for a full
+    list.
+    ▣ buy some c++ book ⇒ ✓ 
+    ▣ 数学
+    exp(x)=e^x=(1+x/n)^n
+    e= ∑(n=0,∞)1/(n!)
+    等角螺线：ae^(bθ)
+    e进制效率最高
+    数轴上的点都是有理数:一个线段可以一分二,二分三,三分无穷.
+    学霸：毕达哥加斯学派有个西帕索斯发现了√2不是有理数.这件事是第一次数学危机.于是把西帕索斯绑在石头上,扔到爱情海里.所以毕达哥拉斯被成为学术界的恶棍.就叫学霸.
+
+    质素有无穷多个：证明方法：
+    设质素有限：q=1*2*3*5*7*11*...*p+1
+    那么：
+    如果q是质素，那么q>p,p将不是最大的质素。
+    如果q是合数，那么有m是q的约数，q%m=0,那么m一定属于之前质数中的一个,又有q%m=1
+    质数筛选法：埃及埃拉脱色尼方法，1.求出square(n) 2.删除所有小于square(n)质数的倍数
+    欧拉：ξ(s)=1/1^s + 1/2^s + 1/3^s ...
+    ξ(s)=Π(1-p^(-s))^(-1) p:全体质数,该函数解析延拓就是黎曼函数。
+    π(x)≈x/ln(x),小于x的质数的个数
+    高斯：质数的密度≈1/ln(x)
+    质数定理：勒让德π(x)=∫(0,x)dt/ln(t)+C 余项C≈√xln(x)
+
+    斐波那契:兔子数列：
+    month:  1 2 3 4 5 6 7 8
+    小兔子: 1 0 1 1 2 3 5 8
+    大兔子: 0 1 1 2 3 5 8 13
+    a_n=a_(n-1) + a_(n-2)
+    斐波那契:每次走一阶或两阶,你要上第n阶的方法数,既是:a_n=a_(n-1) + a_(n-2)
+    不同种类的花,花瓣不一样,但是都是斐波拉切数.在比如说树枝:每个阶段都是斐波拉切数.又例如向日葵:有顺时针和逆时针两条线,但是这两条线均是斐波拉切数,这样的排布才能使得种子的堆积效率最高,自然界的进化的结果.而斐波拉切的比例最终接近黄金分割.
+
+    第二类永动机:麦克斯韦妖,赛选气缸左侧的快分子,赛选右侧的满分子.这样的话,最终会导致左侧分子慢,右侧分子运动快,所有导致左侧高温,右侧低温.
+    开尔文:不能从单一热源吸热使之转化为功.
+    克劳修斯:低温物体不会自发地向高温物体传热.
+    热力学第二定律:代表了自然界的前进方向
+    
+    三角形的费马点:应用是在三角形三个角均挂上质量为m的重物,三根线系在一个点上,重心最低,最终平衡下来就是在费马点.
+    在三角形中找到一点P,使得PA+PB+PC 最小.其实是对三角形三个边画正三角形,链接正三角形顶点和三角形的定点,交点就是费马点.
+
+    帝王为啥总要杀有功之臣？
+    幸存者偏差
+    饮水鸟问题:原因是世界的不均匀性,在鸟饮水过程中,墒是增大的,当所有水和水蒸气混合在一起,那么就不会存再饮水了.
+    雪花的周长是无穷长,
+
+    身份证校验方法:a_1=(12-Ξ(i=2,18)a_i*w_imod11)mod11
+    w_i = 2^(i-1)mod11
+
+    本福特定律：首位为n的概率P_n=log(10)((n+1)/n),非人为规律，跨度大。
+    P_1=30%
+    P_2=17%
+    例如：国家人口，视频播放量，国家GDP，国土面积,放射性元素半衰期,斐波拉切数列.
+    很多数据的增长量正比于存量.consttant=△N/(N△t)
+    N=N_0exp(Ct)
+    t=Clg(N2/N1)
+    在首数的时间大概是30%.
+    拉开两本叠着的书要多大力气？太阳和地球间的引力都不够！
+
+    sudo add-apt-repository ppa:fcitx-team/nightly
+    sudo apt-get update
+    sudo apt-get install fcitx
+    sudo add-apt-repository ppa:fcitx-team/nightly
+    sudo apt-get install fcitx-config-gtk
+    fcitx-config-gtk3 #配置输入法
+    sudo apt -get install fcitx-table-all
+    sudo apt-get install fcitx-table-all
+    sudo apt-get install im-switch
+    sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb 
+    shutdown now
+    下载地址： https://gitee.com/laomocode/fcitx-sogouimebs/releases](https://gitee.com/laomocode/fcitx-sogouimebs/releases)
+    安装搜狗输入
+    sudo dpkg -i sogouimebs.deb
+    解决依赖
+    sudo apt --fix-broken install
+    
 
 MORNING:
 NOON:
@@ -14,3 +172,70 @@ AFTERNOON:
 SUNSET:
 EVENING:
 NOTE:
+    因为论坛的讨论经常要用到数学，但用文本方式只能表达左右结构的数学公式，上下结构、根式、指数等都很难表达。为了便于广大网友在讨论中有一种统一的相互能共通的用文本方式表达数学公式的方法，经过研究后，在本论坛提出以下的用文本方式表达（原非文本结构的）数学公式的初步的标准（希望可以给大家一个参考，另如果有什么不合理的或者补充的清在本贴后回复，我们将不断地对此进行修正，直到有更好的办法解决这一问题为止）
+    x^n 　　                        表示 x 的 n 次方，如果 n 是有结构式，n 应外引括号；（有结构式是指多项式、多因式等表达式）
+    x^(n/m)                         表示 x 的 n/m 次方；
+    SQR(x)                          表示 x 的开方；
+    sqrt(x)                         表示 x 的开方；
+    √(x) 　                         表示 x 的开方,如果 x 为单个字母表达式， x 的开方可简表为√x ；
+    x^(-n)                          表示 x 的 n 次方的倒数；
+    x^(1/n)                         表示 x 开 n 次方；
+    log_a,b                         表示以 a 为底 b 的对数;
+    x_n 　　                        表示 x 带足标 n ;
+    ∑(n=p,q)f(n)                    表示f(n)的n从p到q逐步变化对f(n)的连加和，如果f(n)是有结构式，f(n)应外引括号；
+    ∑(n=p,q;r=s,t)f(n,r)            表示 ∑(r=s,t)[∑(n=p,q)f(n,r)],如果f(n，r)是有结构式，f(n，r)应外引括号；
+    ∏(n=p,q)f(n)                    表示f(n)的n从p到q逐步变化对f(n)的连乘积,如果f(n)是有结构式，f(n)应外引括号；
+    ∏(n=p,q ; r=s,t)f(n,r)          表示 ∏(r=s,t)[∏(n=p,q)f(n,r)],如果f(n，r)是有结构式，f(n，r)应外引括号；
+    lim(x→u)f(x)                    表示 f(x) 的 x 趋向 u 时的极限,如果f(x)是有结构式，f(x)应外引括号；
+    lim(y→v ; x→u)f(x,y)            表示 lim(y→v)[lim(x→u)f(x,y)],如果f(x，y)是有结构式，f(x，y)应外引括号；
+    ∫(a,b)f(x)dx                    表示对 f(x) 从 x=a 至 x=b 的积分,如果f(x)是有结构式，f(x)应外引括号；
+    ∫(c,d ; a,b)f(x,y)dxdy          表示∫(c,d)[∫(a,b)f(x,y)dx]dy,如果f(x，y)是有结构式，f(x，y)应外引括号；
+    ∫(L)f(x,y)ds                    表示 f(x,y) 在曲线 L 上的积分,如果f(x，y)是有结构式，f(x，y)应外引括号；
+    ∫∫(D)f(x,y,z)dσ                 表示 f(x,y,z) 在曲面 D 上的积分,如果f(x，y，z)是有结构式，f(x，y，z)应外引括号；
+    ∮(L)f(x,y)ds                    表示 f(x,y) 在闭曲线 L 上的积分,如果f(x，y)是有结构式，f(x，y)应外引括号；
+    ∮∮(D)f(x,y,z)dσ 表示 f(x,y,z)   在闭曲面 D 上的积分,如果f(x，y)是有结构式，f(x，y)应外引括号；
+    ∪(n=p,q)A(n)                    表示n从p到q之A(n)的并集，如果A(n)是有结构式，A(n)应外引括号；
+    ∪(n=p,q ; r=s,t)A(n,r)          表示 ∪(r=s,t)[∪(n=p,q)A(n,r)],如果A(n，r)是有结构式，A(n，r)应外引括号；
+    ∩(n=p,q)A(n)                    表示n从p到q逐步变化对A(n)的交集,如果A(n)是有结构式，A(n)应外引括号；
+    ∩(n=p,q ; r=s,t)A(n,r)          表示 ∩(r=s,t)[∩(n=p,q)A(n,r)],如果A(n，r)是有结构式，A(n，r)应外引括号；当文本格式表达找不到表达符的表达代替字符初步标准有：
+    a (≤ A                          表示a为A的子集；
+    A ≥) a 表示A包含a；
+    a (< A 表示a为A的真子集；
+    A >) a 表示a为A的真子集；
+    注：
+    顺序结构的表达式是按以下的优先级决定运算次序：
+    1. 函数；
+    2. 幂运算；
+    3. 乘、除；
+    4. 加、减。
+    复合函数的运算次序为由内层至外层。
+    在表达式中如果某有结构式对于前面部分应作整体看待时，
+    应将作整体看待的部分外加括号。例如，相对论运动质量公式
+    可表为：
+    m = m0 / SQR(1 - v^2/c^2 )
+    = m0 / SQR[1 - (vv)/(cc) ]；
+    但不能表为
+    m = m0 / SQR(1 - vv/cc )；
+    因上式中的 vv/cc 会让人误解为 v 平方除 c 再乘 c 。
+    连加连乘式中的∑∏等字符须用全角字符。如果使用了
+    半角的ASCII字符，虽然公式紧凑了，有可能会因不同电脑、
+    不同的软件、不同的设置中使用了不同ASCII字符集(ASCII
+    扩展字符，最高位为1)会显不同的字符。结果会引起对方的误解。
+
+
+    自己选择了方向和路途就不要抱怨了,一个人只有承担得起狂风暴雨,才能最终守得住彩虹满天.
+    人生布满荆棘,我所知道的唯有迅速踏过,我们对自己的不幸想的越多,他对我们的伤害也就越大.
+    这是人的一种本能,追逐从他身边飞走的东西,却逃避追逐他的东西.
+    每个人都有属于自己的那片深林,也许我们从来不曾去过,但是他在哪里,总会在哪里,迷失的人迷失了,相逢的人总会相逢.
+    我们一直寻找的却是自己原本早已拥有的,我们总是东张希望,唯独漏了自己想要的,这就是我们至今难以如愿以偿的原因
+    相逢好似初相识,到老终无怨恨心.在第一次见面的时候,我们都会小心翼翼的克制自己包容对方,我们都会相敬如宾,把最好的一面给对方.但是随着时间的推移,随着各种事情的发生,我们就慢慢的失去了耐心,我们就慢慢地忘记了相互的分寸.我们就慢慢露出了本来的面目.
+    相爱是容易的,相处是困难的,人与人之间应该保持界限,守好自己的界限,尊重别人的界限.
+    你总是想要取悦别人,却忘了首先要取悦的是自己,你总是想要活成别人想要的样子,却忘了首先要活成自己想要的样子.
+    每天读三页书,写三行字,跑三百米.
+    
+
+
+
+
+
+

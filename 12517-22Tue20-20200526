@@ -5,6 +5,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 TODO:@20200527 → ??? → @20200528 → ??? → @20200530 → ??? → @20200602 → ??? → @20200610 → ??? ⇒ @20200626 → ??? ⇒ 
 mutt -s 12517-22Tue20-20200526 melo.dachor@gmail.com < $dbg/12517-22Tue20-20200526
 
+
 SUNRISE:
 Tue May 26 05:23:06 CST 2020
 每一座山都有通向顶峰的道路，只是但你人在山谷的时候，未必能看见，但是它就在哪儿，一定在哪儿，只要你相信，他就会出现，只要你寻找，你就会看见。
@@ -12,7 +13,170 @@ Tue May 26 05:23:06 CST 2020
 非洲祝福举牌
 什么是举牌祝福视频？就是在黑板上写上你想说的话，然后让非洲朋友帮你喊出来。
 团队成员拥有非洲猛男秀肌肉，非洲小孩，黑美女，埃及，乌克兰人等。
+https://bugs.launchpad.net/ubuntu/+source/gdb/+bug/1866604
+In Ubuntu 20.04, I discovered that the gdb 9 TUI source code window doesn't display properly the UTF-8 characters (Chinese, Cyrillic, etc.) but displays correctly only the ASCII ones. For example, the following source code
+printf("Здравей, свят!\n");
+appears in the source code window as
+printf("^^P^ ^P^ ^Q^┗↑@^^P^ ^P^ ^P^ ^P^ ^^Q^┗↑╝^^P^ ^Q^ ^Q^ \n");
+The command windows is not affected (when I type non-ASCII characters into it, they appear OK).
+Additionally, I found out the following:
+(1) This bug was introduced in version 8.3;
+(2) It affects only some CPU architectures.
+In more detail, I tested version "Debian 8.3.1-1" on two 64-bit machines with the same version of Debian (bullseye/sid), one with PowerPC, and the other with SPARC. The bug shows up only on the SPARC machine, not the PowerPC one. I then built the generic version 8.3.1 on a 64-bit ARM machine. The bug didn't show up there. And then, I built it on a 64-bit MIPS (big endian) machine, where the bug did show up. Repeated this with version 8.3. The bug showed up again. When I built the generic version 8.2.1 on the same MIPS machine, the bug didn't show up. A "diff -u gdb-8.2.1/gdb/tui gdb-8.3/gdb/tui" shows a lot of changes made in the TUI code of version 8.3 to add some colourisation to the TUI, and the bug was probably introduced during this process. Sorry that I can't help more to isolate the bug. But it's quite strange that it manifests itself only on x86-64 (as I had found out previously using Ubuntu 20-04), SPARC and MIPS, but not on ARM and PowerPC. I suppose that because of this, it will be rather hard to pinpoint.
+This bug is similar to the already fixed bug 1275210 where I also described it but then realised that it has a different origin and is therefore a different bug, so I report it as a new one now. Someone already reported this bug as bug 25296 in the gdb Bugzilla which I confirmed there.
+Tags: gdb gdbtui utf-8 Edit Tag help
+ayout：用于分割窗口，可以一边查看代码，一边测试。主要有以下几种用法：
+layout src：显示源代码窗口
+layout asm：显示汇编窗口
+layout regs：显示源代码/汇编和寄存器窗口
+layout split：显示源代码和汇编窗口
+layout next：显示下一个layout
+layout prev：显示上一个layout
+Ctrl + L：刷新窗口
+Ctrl + x，再按1：单窗口模式，显示一个窗口
+Ctrl + x，再按2：双窗口模式，显示两个窗口
+Ctrl + x，再按a：回到传统模式，即退出layout，回到执行layout之前的调试窗口。
 
+1 TUI Overview 
+在TUI模式中，可以显示以下几个窗口：
+命令窗口
+用于GDB调试时的命令输入和命令结果输出显示，与普通GDB窗口无异。
+源代码窗口
+用于显示程序源代码，包括当前运行行、中断以中断标识等。
+汇编窗口
+显示当前程序的汇编代码。
+寄存器窗口
+显示处理器的寄存器内容，当寄存器内容发生改变时会高亮显示。
+源代码窗口和汇编窗口会高亮显示程序运行位置并以'>'符号标记。有两个特殊标记用于标识断点，第一个标记用于标识断点类型：
+B
+程序至少有一次运行到了该断点
+b
+程序没有运行到过该断点
+H
+程序至少有一次运行到了该硬件断点
+h
+程序没有运行到过该硬件断点 
+第二个标记用于标识断点使能与否:
++
+断点使能Breakpointis enabled. 
+-
+断点被禁用Breakpointis disabled. 
+当调试程序时，源代码窗口、汇编窗口和寄存器窗口的内容会自动更新。
+TUI运行时，命令窗口是一直可见不可隐藏的，而源代码窗口、汇编窗口和寄存器窗口则不能同时显示，只能显示一个或两个窗口，但不能只显示寄存器窗口。
+在命令窗口上方有一行状态栏，显示效果如下图所示，主要显示内容有：
+目标
+Indicatesthe current GDB target. (see section Specifyinga Debugging Target). 
+进程
+Givesthe current process or thread number. When no process is beingdebugged, this field is set to No process.
+函数
+Givesthe current function name for the selected frame. The name isdemangled if demangling is turned on (see section 8.7Print Settings). When there is no symbol corresponding to thecurrent program counter, the string ??is displayed. 
+行号
+Indicatesthe current line number for the selected frame. When the currentline number is not known, the string ??is displayed. 
+pc指针
+Indicatesthe current program counter address. 
+2  TUI快捷键TUIKey Bindings 
+TheTUI installs several key bindings in the readline keymaps (seesection 27.Command Line Editing). The following key bindings are installedfor both TUI mode and the GDB standard mode. 
+C-x C-a
+C-x a
+C-x A (按住Ctrl+x后松开再按a，以下快捷键操作方式相同)
+进入或退出TUI模式。
+C-x 1
+使TUI只显示一个窗口。Usea TUI layout with only one window. The layout will either be`source' or `assembly'.When the TUI mode is not active, it will switch to the TUI mode.Think of this key binding as the Emacs C-x 1binding. 
+C-x 2
+使TUI显示两个窗口，连接使用此快捷键可在三种窗口组合(只能同时显示两个，共3种组合)中不断切换。
+Usea TUI layout with at least two windows. When the current layoutalready has two windows, the next layout with two windows is used.When a new layout is chosen, one window will always be common to theprevious layout and the new one. Think of it as the Emacs C-x2 binding. 
+C-x o
+更换激活窗口
+Changethe active window. The TUI associates several key bindings (likescrolling and arrow keys) with the active window. This command givesthe focus to the next TUI window. Think of it as the Emacs C-xo binding. 
+C-x s
+在TUI模式和TUISingleKey模式之间切换
+Switchin and out of the TUI SingleKey mode that binds single keys to GDBcommands (see section 22.3TUI Single Key Mode). 
+下列快捷键只在TUI模式才能有效：
+PgUp
+激活窗口的内容向上滚动一页Scroll the active window one page up. 
+PgDn
+激活窗口的内容向下滚动一页Scroll the active window one page down. 
+Up
+激活窗口的内容向上滚动一行Scroll the active window one line up. 
+Down
+激动窗口的内容向下滚动一行Scroll the active window one line down. 
+Left
+激活窗口的内容向左移动一列Scroll the active window one column left. 
+Right
+激活窗口的内容向右移动一列Scroll the active window one column right. 
+C-L
+更新屏幕Refresh the screen. 
+当源代码和汇编窗口同时显示时，以上快捷键会同步更新两个窗口的内容。
+Becausethe arrow keys scroll the active window in the TUI mode, they are notavailable for their normal use by readline unless the command windowhas the focus. When another window is active, you must use otherreadline key bindings such as C-p, C-n,C-b and C-f tocontrol the command window. 
+3 TUI Single Key Mode 
+TheTUI also provides a SingleKey mode, which bindsseveral frequently used GDB commands to single keys. Type C-xs to switch into this mode, where the following key bindingsare used: 
+c
+continue
+d
+down
+f
+finish运行到当前函数返回
+n
+next
+q
+exitthe SingleKey mode. 退出SingleKey模式
+r
+run
+s
+step
+u
+up
+v
+infolocals 
+w
+where
+Otherkeys temporarily switch to the GDB command prompt. The key that waspressed is inserted in the editing buffer so that it is possible totype most GDB commands without interaction with the TUI SingleKey mode. Once the command is entered the TUI SingleKey mode is restored.The only way to permanently leave this mode is by typing qor C-x s.
+4 TUI-specific Commands 
+TheTUI has specific commands to control the text windows. These commandsare always available, even when GDB is not in the TUI mode. When GDBis in the standard mode, most of these commands will automaticallyswitch to the TUI mode. 当处理GDB标准模式时，下列的大多数命令会自动切换到TUI模式。
+info win：显示正在显示的窗口大小信息
+Listand give the size of all displayed windows. 
+layout next：显示下一个窗口
+Displaythe next layout. 
+layout prev：显示上一个窗口
+Displaythe previous layout. 
+layout src：显示源代码窗口
+Displaythe source window only. 
+layout asm：显示汇编窗口
+Displaythe assembly window only. 
+layout split：显示源代码和汇编窗口
+Displaythe source and assembly window. 
+layout regs：显示寄存器窗口
+Displaythe register window together with the source or assembly window. 
+focus next：将一个窗口置为激活状态
+Make the next window active for scrolling. 
+focus prev：将上一个窗口置为激活状态
+Make the previous window active for scrolling. 
+focus src：将源代码窗口置为激活状态
+Make the source window active for scrolling. 
+focus asm：将汇编窗口置为激活状态
+Make the assembly window active for scrolling. 
+focus regs：将寄存器窗口置为激活状态
+Make the register window active for scrolling. 
+focus cmd：将命令行窗口置为激活状态
+Make the command window active for scrolling. 
+refresh：更新窗口，与C-L快捷键同
+Refresh the screen. This is similar to typing C-L.
+tuireg float：寄存器窗口显示内容为浮点寄存器
+Showthe floating point registers in the register window. 
+tuireg general：寄存器窗口显示内容为普通寄存器
+Show the general registers in the register window. 
+tuireg next：显示下一组寄存器
+Show the next register group. The list of register groups as well astheir order is target specific. The predefined register groups are the following:
+general, float,system, vector,all, save,restore. 
+tuireg system ：显示上一组寄存器
+Show the system registers in the register window. 
+update ：更新源代码窗口到当前运行点
+Update the source window and the current execution point. 
+winheight winname +count：增加指定窗口的高度
+winheight winname -count：减小指定窗口的高度
+Changethe height of the window name by count lines.Positive counts increase the height, while negative counts decreaseit. 
+tabset nchars
+Set the width of tab stops to be nchars characters. 
 MORNING:
 NOON:
 AFTERNOON:

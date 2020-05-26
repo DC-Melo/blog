@@ -184,6 +184,9 @@ Set the width of tab stops to be nchars characters. 
 MORNING:
 NOON:
 AFTERNOON:
+Tue 26 May 2020 02:48:35 PM CST
+    
+
 SUNSET:
 EVENING:
 NOTE:
@@ -248,8 +251,7 @@ $	匹配行尾
 在正则式中以\(和\)括起来的正则表达式，在后面使用的时候可以用\1、\2等变量来访问\(和\)中的内容。
 
 例子
-删除行尾空格：:%s/\s+$//g
-删除行首多余空格：%s/^\s*// 或者 %s/^ *//
+删除行尾空格：:%s/\s+$//g   
 删除沒有內容的空行：%s/^$// 或者 g/^$/d
 删除包含有空格组成的空行：%s/^\s*$// 或者 g/^\s*$/d
 删除以空格或TAB开头到结尾的空行：%s/^[ |\t]*$// 或者 g/^[ |\t]*$/d
@@ -257,3 +259,75 @@ $	匹配行尾
 
 :%s/abc\(.*\)xyz/xyz\1abc/g
 :%s/\(abc\)\(.*\)\(xyz\)/\3\2\1/g
+
+先说一下  一边要用到算法的东西一般要加#include<algorithm>头文件
+一、栈和队列
+1 栈 ：一种线性表
+特点  后进先出
+头文件  #include<stack>
+声明  stack< 类型 > sk(变量)；  注意  这里的类型  如果是char只能是单个字符 如果要存字符串要用string
+sk.push();           向里存  写在括号里
+sk.pop();             出栈 把最上面的出栈（即所谓的先进后出  注意  这里的不能赋值给别的变量 括号里也不能写东西
+data = sk.top();   取出栈顶的元素赋值给一个变量 （不出栈
+size = sk.size();  栈里元素的个数
+sk.empty();         判定栈是否为空
+注意 要清空栈  没有函数 要自己写
+2 队列
+特点   先进先出  (类似于排队买饭
+头文件  #include<queue>
+声明  queue< 类型 > q(变量);
+q.push();             向里存  写在括号里
+q.pop();               出队列 把队首的出队列（即所谓的先进先出  注意  这里的不能赋值给别的变量 括号里也不能写东西
+data = q.front();   获得队列首的元素赋值给一个变量 （不出队列
+q.back();              获得队尾的值 同q.front();
+size = q.size();     队列里元素的个数
+q.empty();            判定队列是否为空
+q.clear();              清空队列
+3 双端队列
+特点  两端都可以进出
+头文件  #include<deque>
+声明  deque< 类型 > dq(变量);
+dq.push_front();           向双端队列首存  写在括号里
+dq.push_back();           向双端队列尾存  写在括号里
+dq.pop_front();             将双端队列的队首元素出双端队列
+dq.pop_back();             将双端队列的队尾元素出双端队列
+data = dq.front();          获得双端队列首的元素赋值给一个变量 （不出双端队列
+q.back();                       获得双端队列尾的值 同q.front();
+dq.empty();                  判定双端队列是否为空
+dq.clear();                      清空双端队列
+4 优先队列(暂时不会。。
+特点 自动按升降序排序
+头文件 #include<queue>
+priority_queue < 类型 > q;                                                      默认大小排序从大到小
+priority_queue < 类型 ，vector <类型>, greater<类型> > q;   默认大小排序从小到大
+priority_queue < 类型 ，vector <类型>, less<类型> > q;        默认大小排序  从大到小
+q.push();           向里存  写在括号里
+q.pop();             出队列  队首
+data = q.top();   取出队首的元素赋值给一个变量 （不出栈
+size = q.size();  队列里元素的个数
+q.empty();         判定队列是否为空
+5 unique(     ,     )    去重       lower_bound()   upper_bound()
+6 set
+set <  类型 > q; 集合   自带排序   迭代器
+q.insert();  插入
+q.erase();  插入
+q.lower_bound();
+迭代器   set  <  类型  >  :: iterator it;
+it = q.begain();
+for(it = q.begain() ; it ! = q.end() ; it++)
+*it
+两个查询
+it=q.find();  返回迭代器
+q.count();  返回0或1
+运算符重载
+6 map
+map< 类型,类型 > m；   相当于将离散的数连续的排列在一个数组中   map< , >::iterator it;   (*it).first;是键  (*it).second; 是值;
+键     值
+查找  m.find();
+m.count();
+注意  if(m[6]!=0)  是可以的  但是  这样写如果没有会往m里存  可能会将原来的数给压下去
+map可以是好几个键对应一个值
+对于遍历    正着遍历（从小到大） for(it=m.begin();it!=m.end();it++)
+反着遍历（从大到小） for(it=m.rbegin();it!=m.rend();it++)
+这里的it无论正反好像只支持++, - -的操作不支持+1,-1这样的操作
+7 pair   可以重

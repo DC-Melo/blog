@@ -1,0 +1,459 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200527 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200528 → ??? → @20200529 → ??? → @20200531 → ??? → @20200603 → ??? → @20200611 → ??? ⇒ @20200627 → ??? ⇒ 
+mutt -s 12516-22Wed20-20200527 melo.dachor@gmail.com < $dbg/12516-22Wed20-20200527
+
+SUNRISE:
+MORNING:
+NOON:
+AFTERNOON:
+SUNSET:
+EVENING:
+NOTE:
+cvLoadImage：将图像文件加载至内存；
+cvNamedWindow：在屏幕上创建一个窗口；
+cvShowImage：在一个已创建好的窗口中显示图像；
+cvWaitKey：使程序暂停，等待用户触发一个按键操作；
+cvReleaseImage：释放图像文件所分配的内存；
+cvDestroyWindow：销毁显示图像文件的窗口；
+cvCreateFileCapture：通过参数设置确定要读入的AVI文件；
+cvQueryFrame：用来将下一帧视频文件载入内存；
+cvReleaseCapture：释放CvCapture结构开辟的内存空间；
+cvCreateTrackbar：创建一个滚动条；
+cvSetCaptureProperty：设置CvCapture对象的各种属性；
+cvGetCaptureProperty：查询CvCapture对象的各种属性；
+cvGetSize：当前图像结构的大小；
+cvSmooth：对图像进行平滑处理；
+cvPyrDown：图像金字塔，降采样，图像缩小为原来四分之一；
+cvCanny：Canny边缘检测；
+cvCreateCameraCapture：从摄像设备中读入数据；
+cvCreateVideoWriter：创建一个写入设备以便逐帧将视频流写入视频文件；
+cvWriteFrame：逐帧将视频流写入文件；
+cvReleaseVideoWriter：释放CvVideoWriter结构开辟的内存空间；
+CV_MAT_ELEM：从矩阵中得到一个元素；
+cvAbs：计算数组中所有元素的绝对值；
+cvAbsDiff：计算两个数组差值的绝对值；
+cvAbsDiffS：计算数组和标量差值的绝对值；
+cvAdd：两个数组的元素级的加运算；
+cvAddS：一个数组和一个标量的元素级的相加运算；
+cvAddWeighted：两个数组的元素级的加权相加运算(alpha运算)；
+cvAvg：计算数组中所有元素的平均值；
+cvAvgSdv：计算数组中所有元素的绝对值和标准差；
+cvCalcCovarMatrix：计算一组n维空间向量的协方差；
+cvCmp：对两个数组中的所有元素运用设置的比较操作；
+cvCmpS：对数组和标量运用设置的比较操作；
+cvConvertScale：用可选的缩放值转换数组元素类型；
+cvCopy：把数组中的值复制到另一个数组中；
+cvCountNonZero：计算数组中非0值的个数；
+cvCrossProduct：计算两个三维向量的向量积(叉积)；
+cvCvtColor：将数组的通道从一个颜色空间转换另外一个颜色空间；
+cvDet：计算方阵的行列式；
+cvDiv：用另外一个数组对一个数组进行元素级的除法运算；
+cvDotProduct：计算两个向量的点积；
+cvEigenVV：计算方阵的特征值和特征向量；
+cvFlip：围绕选定轴翻转；
+cvGEMM：矩阵乘法；
+cvGetCol：从一个数组的列中复制元素；
+cvGetCols：从数据的相邻的多列中复制元素；
+cvGetDiag：复制数组中对角线上的所有元素；
+cvGetDims：返回数组的维数；
+cvGetDimSize：返回一个数组的所有维的大小；
+cvGetRow：从一个数组的行中复制元素值；
+cvGetRows：从一个数组的多个相邻的行中复制元素值；
+cvGetSize：得到二维的数组的尺寸，以CvSize返回；
+cvGetSubRect：从一个数组的子区域复制元素值；
+cvInRange：检查一个数组的元素是否在另外两个数组中的值的范围内；
+cvInRangeS：检查一个数组的元素的值是否在另外两个标量的范围内；
+cvInvert：求矩阵的逆；
+cvMahalonobis：计算两个向量间的马氏距离；
+cvMax：在两个数组中进行元素级的取最大值操作；
+cvMaxS：在一个数组和一个标量中进行元素级的取最大值操作；
+cvMerge：把几个单通道图像合并为一个多通道图像；
+cvMin：在两个数组中进行元素级的取最小值操作；
+cvMinS：在一个数组和一个标量中进行元素级的取最小值操作；
+cvMinMaxLoc：寻找数组中的最大最小值；
+cvMul：计算两个数组的元素级的乘积(点乘)；
+cvNot：按位对数组中的每一个元素求反；
+cvNormalize：将数组中元素进行归一化；
+cvOr：对两个数组进行按位或操作；
+cvOrs：在数组与标量之间进行按位或操作；
+cvReduce：通过给定的操作符将二维数组简为向量；
+cvRepeat：以平铺的方式进行数组复制；
+cvSet：用给定值初始化数组；
+cvSetZero：将数组中所有元素初始化为0；
+cvSetIdentity：将数组中对角线上的元素设为1，其他置0；
+cvSolve：求出线性方程组的解；
+cvSplit：将多通道数组分割成多个单通道数组；
+cvSub：两个数组元素级的相减；
+cvSubS：元素级的从数组中减去标量；
+cvSubRS：元素级的从标量中减去数组；
+cvSum：对数组中的所有元素求和；
+cvSVD：二维矩阵的奇异值分解；
+cvSVBkSb：奇异值回代计算；
+cvTrace：计算矩阵迹；
+cvTranspose：矩阵的转置运算；
+cvXor：对两个数组进行按位异或操作；
+cvXorS：在数组和标量之间进行按位异或操作；
+cvZero：将所有数组中的元素置为0；
+cvConvertScaleAbs：计算可选的缩放值的绝对值之后再转换数组元素的类型；
+cvNorm：计算数组的绝对范数， 绝对差分范数或者相对差分范数；
+cvAnd：对两个数组进行按位与操作；
+cvAndS：在数组和标量之间进行按位与操作；
+cvScale：是cvConvertScale的一个宏，可以用来重新调整数组的内容，并且可以将参数从一种数据类型转换为另一种；
+cvT：是函数cvTranspose的缩写；
+cvLine：画直线；
+cvRectangle：画矩形；
+cvCircle：画圆；
+cvEllipse：画椭圆；
+cvEllipseBox：使用外接矩形描述椭圆；
+cvPolyLine：画多边形；
+cvPutText：在图像上输出一些文本；
+cvInitFont：采用一组参数配置一些用于屏幕输出的基本个特定字体；
+cvSave：矩阵保存；
+cvLoad：矩阵读取；
+cvOpenFileStorage：为读/写打开存储文件；
+cvReleaseFileStorage：释放存储的数据；
+cvStartWriteStruct：开始写入新的数据结构；
+cvEndWriteStruct：结束写入数据结构；
+cvWriteInt：写入整数型；
+cvWriteReal：写入浮点型；
+cvWriteString：写入字符型；
+cvWriteComment：写一个XML或YAML的注释字串；
+cvWrite：写一个对象；
+cvWriteRawData：写入多个数值；
+cvWriteFileNode：将文件节点写入另一个文件存储器；
+cvGetRootFileNode：获取存储器最顶层的节点；
+cvGetFileNodeByName：在映图或存储器中找到相应节点；
+cvGetHashedKey：为名称返回一个惟一的指针；
+cvGetFileNode：在映图或文件存储器中找到节点；
+cvGetFileNodeName：返回文件的节点名；
+cvReadInt：读取一个无名称的整数型；
+cvReadIntByName：读取一个有名称的整数型；
+cvReadReal：读取一个无名称的浮点型；
+cvReadRealByName：读取一个有名称的浮点型；
+cvReadString：从文件节点中寻找字符串；
+cvReadStringByName：找到一个有名称的文件节点并返回它；
+cvRead：将对象解码并返回它的指针；
+cvReadByName：找到对象并解码；
+cvReadRawData：读取多个数值；
+cvStartReadRawData：初始化文件节点序列的读取；
+cvReadRawDataSlice：读取文件节点的内容；
+cvGetModuleInfo：检查IPP库是否已经正常安装并且检验运行是否正常；
+cvResizeWindow：用来调整窗口的大小；
+cvSaveImage：保存图像；
+cvMoveWindow：将窗口移动到其左上角为x,y的位置；
+cvDestroyAllWindow：用来关闭所有窗口并释放窗口相关的内存空间；
+cvGetTrackbarPos：读取滑动条的值；
+cvSetTrackbarPos：设置滑动条的值；
+cvGrabFrame：用于快速将视频帧读入内存；
+cvRetrieveFrame：对读入帧做所有必须的处理；
+cvConvertImage：用于在常用的不同图像格式之间转换；
+cvErode：形态腐蚀；
+cvDilate：形态学膨胀；
+cvMorphologyEx：更通用的形态学函数；
+cvFloodFill：漫水填充算法，用来进一步控制哪些区域将被填充颜色；
+cvResize：放大或缩小图像；
+cvPyrUp：图像金字塔，将现有的图像在每个维度上都放大两倍；
+cvPyrSegmentation：利用金字塔实现图像分割；
+cvThreshold：图像阈值化；
+cvAcc：可以将8位整数类型图像累加为浮点图像；
+cvAdaptiveThreshold：图像自适应阈值；
+cvFilter2D：图像卷积；
+cvCopyMakeBorder：将特定的图像轻微变大，然后以各种方式自动填充图像边界；
+cvSobel：图像边缘检测，Sobel算子；
+图像边缘检测；
+cvHoughLines2：霍夫直线变换；
+cvHoughCircles：霍夫圆变换；
+cvRemap：图像重映射，校正标定图像，图像插值；
+cvWarpAffine：稠密仿射变换；
+cvGetQuadrangleSubPix：仿射变换；
+cvGetAffineTransform：仿射映射矩阵的计算；
+cvCloneImage：将整个IplImage结构复制到新的IplImage中；
+cv2DRotationMatrix：仿射映射矩阵的计算；
+cvTransform：稀疏仿射变换；
+cvWarpPerspective：密集透视变换(单应性)；
+cvGetPerspectiveTransform：计算透视映射矩阵；
+cvPerspectiveTransform：稀疏透视变换；
+cvCartToPolar：将数值从笛卡尔空间到极坐标(极性空间)进行映射；
+cvPolarToCart：将数值从极性空间到笛卡尔空间进行映射；
+cvLogPolar：对数极坐标变换；
+cvDFT：离散傅里叶变换；
+cvMulSpectrums：频谱乘法；
+cvDCT：离散余弦变换；
+cvIntegral：计算积分图像；
+cvDistTransform：图像的距离变换；
+cvEqualizeHist：直方图均衡化；
+cvCreateHist：创建一新直方图；
+cvMakeHistHeaderForArray：根据已给出的数据创建直方图；
+cvNormalizeHist：归一化直方图；
+cvThreshHist：直方图阈值函数；
+cvCalcHist：从图像中自动计算直方图；
+cvCompareHist：用于对比两个直方图的相似度；
+cvCalcEMD2：陆地移动距离(EMD)算法；
+cvCalcBackProject：反向投影；
+cvCalcBackProjectPatch：图块的方向投影；
+cvMatchTemplate：模板匹配；
+cvCreateMemStorage：用于创建一个内存存储器；
+cvCreateSeq：创建序列；
+cvSeqInvert：将序列进行逆序操作；
+cvCvtSeqToArray：复制序列的全部或部分到一个连续内存数组中；
+cvFindContours：从二值图像中寻找轮廓；
+cvDrawContours：绘制轮廓；
+cvApproxPoly：使用多边形逼近一个轮廓；
+cvContourPerimeter：轮廓长度；
+cvContoursMoments：计算轮廓矩；
+cvMoments：计算Hu不变矩；
+cvMatchShapes：使用矩进行匹配；
+cvInitLineIterator：对任意直线上的像素进行采样；
+cvSampleLine：对直线采样；
+cvAbsDiff：帧差；
+cvWatershed：分水岭算法；
+cvInpaint：修补图像；
+cvGoodFeaturesToTrack：寻找角点；
+cvFindCornerSubPix：用于发现亚像素精度的角点位置；
+cvCalcOpticalFlowLK：实现非金字塔的Lucas-Kanade稠密光流算法；
+cvMeanShift：mean-shift跟踪算法；
+cvCamShift：camshift跟踪算法；
+cvCreateKalman：创建Kalman滤波器；
+cvCreateConDensation：创建condensation滤波器；
+cvConvertPointsHomogenious：对齐次坐标进行转换；
+cvFindChessboardCorners：定位棋盘角点；
+cvFindHomography：计算单应性矩阵；
+cvRodrigues2：罗德里格斯变换；
+cvFitLine：直线拟合算法；
+cvCalcCovarMatrix：计算协方差矩阵；
+cvInvert：计算协方差矩阵的逆矩阵；
+cvMahalanobis：计算Mahalanobis距离；
+cvKMeans2：K均值；
+cvCloneMat：根据一个已有的矩阵创建一个新矩阵；
+cvPreCornerDetect：计算用于角点检测的特征图；
+cvGetImage：CvMat图像数据格式转换成IplImage图像数据格式；
+cvMatMul：两矩阵相乘；
+
+
+
+数学表达式解析工具 muParser
+muParser 是一个快速的数学表达式的解析器，可将数学表达式转成字节码并预先计算常数表达式的部分。muParser更多muParser信息
+
+计算几何算法库 CGAL
+CGAL ，计算几何算法库，是一个大型C + +库的几何数据结构和算法，如Delaunay三角网，网格生成，布尔运算的多边形，以及各种几何处理算法。 CGAL是用来在各个领域：计算机图形学，科学可视化，计算机辅助设计与建模，地理信息系统，分子生物学，医学影像学...CGAL更多CGAL信息
+
+最近更新： CGAL 4.0 发布，计算几何算法库 发布于 1年前
+数学软件包 Octave
+Octave 是一个类似matlab和Scilab的数学软件包，可以进行各种运算，编程。它还有丰富的C++接口可以让用户编程时调用。它绘图使用gnuplot。 Octave的使用也是基于字符终端模式的，当需要绘图时，将会调用Gnuplot进行数据绘图，并显示出来。 Octave是用C++编...Octave更多Octave信息
+最近更新： Octave 3.4.3 发布，数学软件包 发布于 2年前
+C 科学计算库 GSL
+GNU Scientific Library (GSL) 是一个用于科学计算的 C 语言类库。有超过1000个函数。 该类库提供了关于数学计算的很多方面，包括： Complex Numbers Roots of Polynomials Special Functions Vectors and Matrices Permutations Sorting BLAS Support Li...更多GSL信息
+数学、信号处理、通讯类C++库 IT++
+IT++是一个数学，信号处理和通信类功能的C++库。它的主要用途是模拟通信系统，并进行研究相关领域的通信。它综合了Matlab的功能和C的速度，适合于信号处理等领域。 功能和特点 模板阵列和堆叠的集装箱类 命令和文件的论点分析器 模板向量和矩阵类 稀疏向量...更多IT++信息
+C++ 线性代数库 Armadillo C++ Library
+Armadillo C++ Library 是一种C++的线性代数库（矩阵数学）以取得良好的平衡速度与易用性。整数，浮点，而复杂的数字支持，以及一个子集，三角和统计功能。各种矩阵分解是通过可选的集成 与LAPACK和Atlas图书馆。延迟评价方法，基于模板元编程，使用（在编...Armadillo C++ Library更多Armadillo C++ Library信息
+最近更新： Armadillo C++ Library 3.930 发布 发布于 11天前
+有限元分析软件 OpenFEM
+有限元分析，即使用有限元方法来分析静态或动态的物体或系统。在这种方法中一个物体或系统被分解为由多个相互联结的、简单、独立的点组成的几何模型。在这 种方法中这些独立的点的数量是有限的，因此被称为有限元。由实际的物理模型中推导出来得平衡方程式...OpenFEM更多OpenFEM信息
+金融计算库 QuantLib
+QuantLib 是一个专注于 Quantitative Finance 计算与开发的 C++ 库。。 QuantLib是自由和开放源码。更多QuantLib信息
+线性算术的C++模板库 Eigen
+Eigen 是一个线性算术的C++模板库，包括：vectors, matrices, 以及相关算法。功能强大、快速、优雅以及支持多平台。 示例代码： #include <iostream> #include <Eigen/Dense> using namespace Eigen; int main() { Matrix2d a; a << 1, 2, 3, 4; MatrixXd...更多Eigen信息
+最近更新： Eigen 3.1.4/3.0.7 发布，线性算术的C++模板库 发布于 4个月前
+C++信号处理库 SP++
+TSPL(Template Signal Processing Library) 是一个 C++ 的信号处理库，主要包括滤波器设计、时频分析和小波变换，同时还包含一些关于向量和矩阵的基本算法，所有的算法基于 C++ 模板类编写而成。更多SP++信息
+最近更新： SP++3.0 发布，欢迎大家使用 发布于 2年前
+高精度数学计算 GMP
+Gnu MP 是一个任意精度的数学计算库。 operating on signed integers, rational numbers, and floating point numbers. There is no limit to the precision, except for the ones implied by available memory. It has a rich set of functions, and the...更多GMP信息
+最近更新： Gnu MP 5.0.5 发布，任意精度数学计算库 发布于 1年前
+C++ 数学计算库 TooN
+TooN 是一个C++ 数学计算库，其目的是有效运作的大量小型矩阵，并提供方便一些算法包括矩阵分解和优化。更多TooN信息
+最近更新： TooN 2.2 发布，C++ 数学计算库 发布于 2个月前
+C/C++数值计算库 myGSL
+mygsl是一个基于GSL库的个性化开源数值计算项目. 该类库提供了关于数学计算的很多方面，包括： Complex Numbers Roots of Polynomials Special Functions Vectors and Matrices Permutations Sorting BLAS Support Linear Algebra Eigensystems Fast Fouri...更多myGSL信息
+最近更新： C/C++数值计算库myGSL v4.0 发布 发布于 2年前
+C++符号计算库 GiNaC
+GiNaC（GiNaC 不是一个 CAS 计算机代数系统））是一个用于符号计算的C++库。它的设计允许集成系统创造，象征性的操作嵌入与更成熟的计算机科学（如计算密集型，图形界面等），数字应用领域。相对于其他情况下，它不会尝试代数提供广泛的功能和简单的编程语...更多GiNaC信息
+有限元计算框架 OOFEM
+OOFEM是一个开源多物理并行有限元程序的面向对象的架构。这个项目的目的是提供高效率和强大的有限元计算工具，以及提供高度模块化和可扩展性的发展环境。 关于有限元的一些概念 有限元分析，即使用有限元方法来分析静态或动态的物体或系统。在这种方法中一...更多OOFEM信息
+人工智能应用框架 Into
+Into 是一个用 C++ 开发的跨平台的机器智能应用框架。Into 提供一种不同于其他的、快速的方法用以构建高性能图像分析、机器视觉效果、模式识别和人工智能应用。分层的 API 一起超过 20 个完全可互操作的插入式模块用来访问图像和各种数据源等。...Into更多Into信息
+C语言快速傅立叶变换库 FFTW
+FFTW 是一个C语言的快速傅立叶变换库。它包括复杂的，真实，对称的，多层面的，和并行转换，并且可以处理任意大小的efficiently.It阵列通常比其他免费提供的FFT实现更快，更与供应商的调整库（基准可在网页查阅）竞争。为了实现这一性能，它使用新的代码生...更多FFTW信息
+最近更新： FFTW 3.3.3 发布，快速傅立叶变换库 发布于 1年前
+高性能多核 BLAS 库 OpenBLAS
+OpenBLAS 是一个优化的 BLAS 库，基于 GotoBLAS2 1.13 BSD 版本。 BLAS（Basic Linear Algebra Subprograms 基础线性代数程序集）是一个应用程序接口（API）标准，用以规范发布基础线性代数操作的数值库（如矢量或矩阵乘法）。该程序集最初发布于1979年，并...更多OpenBLAS信息
+最近更新： OpenBLAS 0.2.8 版本发布 发布于 4个月前
+类C的数学专用语言 EngLab
+EngLab是一个类C的数学专用语言。它语法简单，关键字很少，工程师和那些只会少许编程知识的人便能很好的掌握。 更多的屏幕截图：http://englab.bugfest.net/Screenshots.htmlEngLab更多EngLab信息
+最近更新： EngLab 0.3.0 发布 发布于 4年前
+C++数值计算核心库 Zero
+Zero是一个功能丰富的C++数值计算核心库,不仅可取代clapack或者cblas, 还具备求根,拟合,插值,积分,随机数,统计,全局和局部的约束以及无约束优化,常微分方程求解等多项功能。 在线性计算方面: 可取代clapack或者cblas,以功能完整的复数计算为基础. 在非线性...更多Zero信息
+最近更新： C++数值计算核心库Zero V1.0 发布 发布于 2年前
+单词转换成向量形式 word2vec
+word2vec（word to vector）是一个将单词转换成向量形式的工具。可以把对文本内容的处理简化为向量空间中的向量运算，计算出向量空间上的相似度，来表示文本语义上的相似度。word2vec为计算向量词提供了一种有效的连续词袋（bag-of-words）和skip-gram架构...更多word2vec信息
+bitmap索引压缩处理 FastBit
+Fastbit是一个追随 NoSQL(Not Only SQL) 运动精神的开源的数据处理程序库，它提供了一系列的用压缩的 bitmap 索引支持的查询函数。在这里，我们关注的关键词是“bitmap 索引”。Fastbit 使用的是按列存储方式，其 bitmap 索引也是在按列存储的数据上建立起...FastBit更多FastBit信息
+偏微分方程求解工具箱 DUNE
+DUNE (Distributed and Unified Numerics Environment)，分布和统一数值解环境，是一种求解偏微分方程的基于网格的方法（PDE）的模块化的工具箱。DUNE是所有这些体现了科学计算的概念从抽象的接口设置第一次。现代C + +编程技术使同样的概念非常不同的实现...DUNE更多DUNE信息
+计算机代数系统 Maxima
+Maxima是一种用Common Lisp开发的计算机代数系统（或符号计算系统），用于公式推导、符号计算、数值计算等。 类似的商业产品有美国Wolfram Research公司的Mathematica、加拿大滑铁卢大学的Maple（其计算机代数系统核心作为Matlab的符号计算系统）等等。...Maxima更多Maxima信息
+GNU线性编程工具 GLPK
+GLPK (GNU Linear Programming Kit:GNU线性编程工具)用于建立线性规划LP和混合型整数规划MIP问题的建模语言，并对模型进行最优化求解。 类似的商业产品是美国Lindo公司的Lindo和Lingo软件，相比之下求解运筹问题能力较弱。...更多GLPK信息
+C语言共享库 libease
+libease 是一个C语言的共享库，包含一些图像处理效果库和多种算术计算方法。 easeNone easeIn easeOut easeIo easeOi easeBounceIn easeBounceOut easeBackIn easeBackOut easeBackIo...libease更多libease信息
+数据阵列可视化工具 UDAV
+UDAV 是一个基于 MathGL库的跨平台的数据阵列可视化工具。它支持广泛的图形，简单的脚本语言，可视化数据处理和编辑。它有一个窗口界面，数据查 看，更改和策划。它可以执行MGL脚本，建立和旋转图形，导出到向量和位图（EPS或SVG ）文件，绘制类似TeX的公式...UDAV更多UDAV信息
+高性能计算软件工具包 DAKOTA
+DAKOTA (Design Analysis Kit for Optimization and Terascale Applications) 是一种用于执行系统的分析和高性能计算机的设计通用软件工具包。它提供了设计优化，不确定性量化，参数估计，实验设计，灵敏度分析，以及连接服务的计算和模拟的并行算法范围。...DAKOTA更多DAKOTA信息
+libmv
+libmv 是一个通过运动计算结构的库，期望有朝一日能够从连续镜头或者照片中获得全部相机标定信息并建立3D模型。更多libmv信息
+C++科学计算库 O2scl
+一个面向对象的 C++科学计算库，可用于解方程，最小化，微分，积分，插值，优化，逼近，分析，拟合等。许多类可操作于通用的函数和向量类型。可用于O2scl在Linux，Mac和Windows（Cygwin的）平台，拥有丰富的文档，并已经积极发展三年多。 数组，向量，矩阵...更多O2scl信息
+NCBI C++ Toolkit
+NCBI C++ Toolkit 提供可移植的库和应用用来协助基因科学计算，包括网络、SQL 和 BerkeleyDB 访问、CGI、HTML处理，ASN.1 和 XML 处理、序列对齐引擎、BLAST 数据库引擎、FLTK 和 OpenGL 图形工具包。...更多NCBI C++ Toolkit信息
+最近更新： NCBI C++ Toolkit 9.0 发布 发布于 1年前
+数论库 FLINT
+FLINT 是一个数论库，用C语言编写，它包括一个非常快的多项式算法库。更多FLINT信息
+Genetic Algorithm Utility Library
+A flexible programming library for evolutionary computation. Steady-state, generational and island model genetic algorithms are supported, using Darwinian, Lamarckian or Baldwinian evolution. Includes support for multiprocessor and distr...更多Genetic Algorithm Utility Library信息
+SuiteSparse
+SuiteSparse 是一组C、Fortran 和 MATLAB 函数集用来生成空间稀疏矩阵数据。更多SuiteSparse信息
+最近更新： SuiteSparse 3.7.0 发布 发布于 1年前
+LM优化算法的C语言实现 levmar
+levmar是一个强大的和高效率的C/C++的实施采用Levenberg - 马奎德（LM）优化算法。 LM解决非线性最小二乘问题，即配备了一个模型，是非线性的未知参数（M>= N）在N米观测。 levmar包括双人和单精度LM变种，分析和有限差分近似雅可比矩阵。它也有一些约束非...更多levmar信息
+快速傅立叶转换库 FFTW++
+FFTW++ 是 FFTW 快速傅立叶转换库的 C++ 头文件封装类，提供自动内存分配、调整、规划和智能处理。在2D和3D中，隐含的反折叠的回旋大大减少了内存的使用量和计算时间。更多FFTW++信息
+最近更新： FFTW++ 1.13 发布，快速傅立叶转换库 发布于 1年前
+数学表达式解析器 muParserX
+muParserX 是一个用 C++ 编写的数学表达式解析器，基于 muParser 引擎，但对其进行扩展支持多种数据类型包括：strings, complex numbers and matrices.更多muParserX信息
+复杂网络处理包 igraph
+igraph是免费的复杂网络（graphs）处理包，可以处理百万级节点的网络（取决于机器内存）。igraph提供了R和C语言程序包，以及Python和Ruby语言扩展，它包括的功能包括： 网络可视化 传统图论算法：最小生成树，网络流等 复杂网络处理算法：随机网络模型，网...igraph更多igraph信息
+多精度整数和有理数 MPIR
+MPIR 是一个开源的多精度的整数和有理数计算库，基于 GMP 库开发。更多MPIR信息
+计算算术模型标准 FEniCS
+FEniCS 旨在推出一个新的计算算术模型 Computational Mathematical Modeling (CMM) 的新标准，相当于自动化 CMM 。用于简化算术方法学、实现和应用工具。包含了一些子项目和组件：DOLFIN, FErari, FFC, FIAT, Instant, SyFi, UFC, UFL, and Viper....更多FEniCS信息
+最近更新： FEniCS 1.2.0 发布，计算算术模型标准 发布于 8个月前
+C++有限元库 libMesh
+libMesh 用来处理六面体,四面体,四边形,三角形网格。拉格朗日、层次化和单项有限元素。接口来PETSc动力学、自适应网格加密,以及极端portablility。更多libMesh信息
+数学计算库 Ne10
+ARM官方刚刚公布了一个开源库---Ne10。里面提供了大量的浮点运算、矢量计算，和矩阵操作函数，可以帮助开发者快速创建Neon应用更多Ne10信息
+数值计算系统 Euler
+类似Matlab、Octave、Scilab的数值计算系统。 EULER is a program for quickly and interactively computing with real and complex numbers and matrices, or with intervals, in the style of MatLab, Octave,... It can draw and animate your function...更多Euler信息
+离散时间模拟开发包 adevs
+Adevs (A Discrete EVent System simulator) 是一个C++库（同时也提供Java的版本），用来开发离散事件模拟程序，基于 Parallel DEVS 和 Dynamic DEVS formalisms.更多adevs信息
+最近更新： adevs 2.8 发布，离散时间模拟开发包 发布于 1个月前
+Hypre
+Hypre是一个高性能的预处理器的功能并行多重网格方法为结构化和非结构化网格问题库。它是一个项目，旨在开发可扩展的算法和软件，为解决大，稀疏线性方程组并行计算机的一部分。Hypre更多Hypre信息
+偏微分方程求解框架 Overture
+Overture 是一种求解偏微分方程的面向对象的代码框架。它提供了一种便携式，灵活的应用程序，涉及复杂的移动几何物理过程的模拟软件的开发环境。序曲是专为解决问题上的结构性网格或结构网格的集合。特别是，它可以使用曲线网格，自适应网格细化，复合重叠...更多Overture信息
+物理仿真库 PhysBAM
+PhysBAM 是斯坦福大学针的物理仿真库，能够模拟刚性 & 形变、 可压缩和不可压缩流体、 耦合的固体 & 流体、 耦合的刚性及变形固体、 铰接式刚性机构 & 人类、 骨折、 火、 烟、 头发、 布、 肌肉，以及其他许多自然现象。这些算法常被用于国外物理仿真与三...更多PhysBAM信息
+哈希算法计算 Generic Hash and HMAC Program
+FEHASHMAC是公开已知的哈希算法集成到一个命令行实用工具的集合。目前，42属于12个算法的家庭的哈希算法支持，包括五SHA-3决赛的贡献，加上每个算法的HMAC。 FEHASHMAC包含超过540个已知的测试向量和每个算法的正确实施，为每个硬件平台和编译器版本，可以...更多Generic Hash and HMAC Program信息
+几何数学库 OpenGL Mathematics
+  由于C/C++标准库中没有几何数学库，这样造成在开发一个三维系统之初往往都需要自行实现一个实用的几何数学库，这样太费时费力了。GLM的出现可以很好的解决这个问题。     GLM设计上遵照OpenGL Shading Language风格，使用开放的MIT授权协议。会GLSL的...更多OpenGL Mathematics信息
+可编程计算器 Canola
+Canola 是佳能 Canola 1614P 可编程桌面计算器的仿真器。该计算器是佳能在 1971 年的产品。Canola更多Canola信息
+自动化计算数学建模 DOLFIN
+DOLFIN 是 FEniCS 项目的 C++ 接口，用于实现自动化的计算数学建模 (ACMM) providing a consistent PSE (Problem Solving Environment) for solving ordinary and partial differential equations. Key features include a simple, consistent and intuiti...DOLFIN更多DOLFIN信息
+最近更新： DOLFIN 1.2.0 发布，自动化的计算数学建模 发布于 8个月前
+3D交互建模和仿真算法库 OpenTissue
+OpenTissue是一个优秀的3D交互建模和仿真算法库，使用C++的模板实现，支持各种常用3D数学算法，建模与三角化，碰撞检测，基于GPU的动画角色蒙皮，动力学等等。支持OpenGL与NVIDIA Cg。它是基于ZLib协议开源发布的，可以用作商业目的。编译时需要Boost库支持...更多OpenTissue信息
+Chombo
+Chombo开发包提供了一系列工具，用于在自适应精确直角坐标方格中，实现偏微分方程式解决方案的有限差分法，包括椭椭圆及时变模块。支持并联平台及标准化的自描述文件格式。更多Chombo信息
+最近更新： Chombo 3.1 发布，数学计算工具包 发布于 1年前
+Libnabo
+libnabo 是一个快速为低维度空间提供K最近邻居算法库。它提供了一个干净的，传统的无标量类型无关的C ++模板API。 示例代码： #include "nabo/nabo.h" using namespace Nabo; using namespace Eigen; ... NNSearchF* nns = NNSearchF::createKDTreeLinear...更多Libnabo信息
+最近更新： Libnabo 1.0.4 发布，K最近邻居算法库 发布于 3个月前
+librangetree
+librangetree 是一个c++模板,实现一个2d范围树，用于计数和报告查询。librangetree更多librangetree信息
+最近更新： librangetree 1.2 发布，C++ 2D 范围树 发布于 11个月前
+数值解开发库 FLENS
+FLENS是灵活高效的数值解开发库。这个C++可以作为实施其他（高级）数字库或数字应用的一个builing块。它是一个C ++库（需要一个C ++11符合编译器）。安装方便，FLENS头只。它给你的稠密线性代数的矩阵/矢量类型的一个通用的BLAS（即模板）的实施，以及一个...更多FLENS信息
+有限元求解器 GetDP
+GetDP是一个通用的有限元求解器，采用混合元素离散在一个，两个，三个尺寸的的德拉姆型复合物。 GetDP主要特征的是定义离散问题（填写ASCII数据文件中的用户）和符号的这些问题的数学表达式的输入数据之间的接近程度。GetDP更多GetDP信息
+最近更新： GetDP 2.4.0 发布，有限元求解器 发布于 5个月前
+OpenLB
+OpenLB是一个c++库，实现了晶格玻尔兹曼模拟这一地址广泛的计算流体动力学问题。主要是打算作为一个编程库支持研究人员和工程师模拟流体流动通过晶格玻尔兹曼方法。OpenLB更多OpenLB信息
+The Parma Polyhedra Library
+The Parma Polyhedra Library 是一个用户友好的、全动态的，采用标准 C++ 编写的、异常安全的、高效而且文档完善的数值抽象库。更多The Parma Polyhedra Library信息
+【免费】天体力学的计算机代数系统 TRIP
+TRIP是一个普遍的天体力学的计算机代数系统。它包括一个数字内核和接口gnuplot和xmgrace。计算可以进行双倍，四倍，或者多精度。用户可以动态加载外部库，用C写的，C++或Fortran。多元多项式可以进行并行计算更多TRIP信息
+SUNDIALS
+SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers)提供了强健的时间积分器和非线性solvers，它们可以很容易和已经存在的模拟编码合成。它从用户那获得最小的信息，就可以很容易的提供在solvers下面的资料数据。并且预先考虑到了...更多SUNDIALS信息
+球面谐波转换库 SHTns
+SHTns 是一个高性能的球面谐波转换库。它的目的是在球面几何图形上进行各种数值模拟（流体流动，MHD等）。通过细致的向量化处理和运行时调整可达到很高的性能。使用 OpenMP 支持多线程转换。提供标量和矢量变换、合成和分析，灵活截断，规范化。包含一个P...更多SHTns信息
+最近更新： SHTns 2.4 发布，高性能球面谐波转换库 发布于 4个月前
+并行处理数学库 clBLAS
+clBLAS 是 BLAS 的 OpenCL 实现更多clBLAS信息
+最近更新： AMD 发布 APPML 源码，创建 clMath 库 发布于 21天前
+FADBAD++
+FADBAD++ 利用 C++ 的模板和操作符重载的方法实现了 forward, backward and Taylor 方法。 These AD-templates enable the user to differentiate functions that are implemented in arithmetic types, such as doubles and intervals. One of the major ...FADBAD++更多FADBAD++信息
+常用 C++ 数学模板定义 libefgy
+libefgy 包含一组 C++ 头文件，包含大量的跟数学相关的模板定义，包括分数算术、大整数、计算 n、e 数值等等。更多libefgy信息
+最近更新： libefgy 4 发布，常用 C++ 数学模板定义 发布于 昨天(10:16)
+ScalaBLAST
+ScalaBLAST 是 NCBI BLAST 库的一个高性能的多处理器实现。它支持所有5个主要类型：BLASTN，BLASTP，TBLASTN，tblastx和Blastx和多种输出格式（pairwise, tabular和XML）。 它运行在大多数已安装的MPI的多处理器系统，可以运行在一个互连的种类繁多，包括I...更多ScalaBLAST信息
+最近更新： ScalaBLAST 2.0.1 发布 发布于 1年前
+GATLAS
+GPU的自动调整线性代数软件更多GATLAS信息
+评估初等函数的SIMD库 SLEEF
+SLEEF（评估初等函数的SIMD库）是一个有利于与SIMD指令的编程。它实现了无查表三角函数，反三角函数，指数和双精度对数函数，散射，或收集到SIMD寄存器，或有条件的分支机构。更多SLEEF信息
+Clifford 代数领域模型 GluCat
+GluCat 是一个库、模板类的模型通用Clifford 代数领域的实数，任意尺寸和任意签名。它实现的模型对应于每个非退化的二次形式由用户到最大设定每个Clifford代数。 GluCat类被设计成作为其他模板库的模板的参数可以使用。 GluCat包括的PyClical的扩展模块为P...更多GluCat信息
+gNumerator
+gNumerator 实现了在 Mac/GNUStep 平台上的各种计算物理项目更多gNumerator信息
+并行处理数学库 clFFT
+clFFT 是 FFT 的 OpenCL 实现更多clFFT信息
+AnallogicA
+AnallogicA是一个基于逻辑命题生成逻辑表的应用程序。有可能比较逆等价或逻辑值。结果可以保存在文本文件,CSV格式,和一个内部格式。程序支持多达15个不同的变量,在组合将超过32000的可能性。它显示了在分析一步一步完成更换,一个特殊的函数为学生。...AnallogicA更多AnallogicA信息
+ibdeco-ostc
+libdeco-ostc 提供了用于潜水减压计算的开发库。库函数使用 OSTC 潜水计算器固件并反悔减压调度信息。减压模型使用带梯度因素的 Buhlmann (ZH-L16C)，提供 C 和 Python API。更多ibdeco-ostc信息 
+
+
+
+Vi/Vim查找替换使用方法
+vi/vim 中可以使用 ：s 命令来替换字符串。该命令有很多种不同细节使用方法，可以实现复杂的功能，记录几种在此，方便以后查询。
+：s/vivian/sky/ 替换当前行第一个 vivian 为 sky
+：s/vivian/sky/g 替换当前行所有 vivian 为 sky
+：n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
+：n，$s/vivian/sky/g 替换第 n 行开始到最后一行中每一行所有 vivian 为 sky
+n 为数字，若 n 为 .，表示从当前行开始到最后一行
+：%s/vivian/sky/（等同于 ：g/vivian/s//sky/） 替换每一行的第一个 vivian 为 sky
+：%s/vivian/sky/g（等同于 ：g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
+可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符
+：s#vivian/#sky/# 替换当前行第一个 vivian/ 为 sky/
+：%s+/oradata/apras/+/user01/apras1+ （使用+ 来 替换 / ）： /oradata/apras/替换成/user01/apras1/
+1.：s/vivian/sky/ 替换当前行第一个 vivian 为 sky
+：s/vivian/sky/g 替换当前行所有 vivian 为 sky
+2. ：n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
+：n，$s/vivian/sky/g 替换第 n 行开始到最后一行中每一行所有 vivian 为 sky
+（n 为数字，若 n 为 .，表示从当前行开始到最后一行）
+3. ：%s/vivian/sky/（等同于 ：g/vivian/s//sky/） 替换每一行的第一个 vivian 为 sky
+：%s/vivian/sky/g（等同于 ：g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
+4. 可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符
+：s#vivian/#sky/# 替换当前行第一个 vivian/ 为 sky/
+5. 删除文本中的^M
+问题描述：对于换行，window下用回车换行（0A0D）来表示，linux下是回车（0A）来表示。这样，将window上的文件拷到unix上用时，总会有个^M.请写个用在unix下的过滤windows文件的换行符（0D）的shell或c程序。
+。 使用命令：cat filename1 | tr -d “^V^M” > newfile；
+。 使用命令：sed -e “s/^V^M//” filename > outputfilename.需要注意的是在1、2两种方法中，^V和^M指的是Ctrl+V和Ctrl+M.你必须要手工进行输入，而不是粘贴。
+。 在vi中处理：首先使用vi打开文件，然后按ESC键，接着输入命令：%s/^V^M//.
+。 ：%s/^M$//g
+如果上述方法无用，则正确的解决办法是： [Page]
+。 tr -d \"\\r\" < src >dest
+。 tr -d \"\\015\" dest
+。 strings A>B
+6. 替换确认
+我们有很多时候会需要某个字符(串)在文章中某些位置出现时被替换，而其它位置不被替换的有选择的操作，这就需要用户来进行确认，vi的查找替换同样支持
+例如
+：s/vivian/sky/g 替换当前行所有 vivian 为 sky
+在命令后面加上一个字母c就可以实现，即：s/vivian/sky/gc
+顾名思意，c是confirm的缩写
+7. 其它
+利用 ：s 命令可以实现字符串的替换。具体的用法包括：
+：s/str1/str2/ 用字符串 str2 替换行中首次出现的字符串 str1
+：s/str1/str2/g 用字符串 str2 替换行中所有出现的字符串 str1
+：。，$ s/str1/str2/g 用字符串 str2 替换正文当前行到末尾所有出现的字符串 str1
+：1，$ s/str1/str2/g 用字符串 str2 替换正文中所有出现的字符串 str1
+：g/str1/s//str2/g 功能同上
+从上述替换命令可以看到：g 放在命令末尾，表示对搜索字符串的每次出现进行替换；不加 g，表示只对搜索
+字符串的首次出现进行替换；g 放在命令开头，表示对正文中所有包含搜索字符串的行进行替换操作

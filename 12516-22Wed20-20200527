@@ -2,10 +2,7 @@ TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENIN
 ●:data structure,sql,metabase ⇒ 
 ●:slam ⇒ 
 TODO:@20200528 → ??? → @20200529 → ??? → @20200531 → ??? → @20200603 → ??? → @20200611 → ??? ⇒ @20200627 → ??? ⇒ 
-1.link backup file to install folder.
-file.profile._bashrc.ycm_file.ssh.mutt.start_up file.history.
-Linux: ~/.config/google-chrome/Default
-
+1.link backup file to install folder. file.profile._bashrc.ycm_file.ssh.mutt.start_up file.history. Linux: ~/.config/google-chrome/Default
 mutt -s 12516-22Wed20-20200527 melo.dachor@gmail.com < $dbg/12516-22Wed20-20200527
 
 SUNRISE:

@@ -180,6 +180,132 @@ winheight winname -count：减小指定窗口的高度
 Changethe height of the window name by count lines.Positive counts increase the height, while negative counts decreaseit. 
 tabset nchars
 Set the width of tab stops to be nchars characters. 
+Contents
+
+GDB
+Controlling Execution
+ASM
+Stack
+Machine instructions
+Data
+Memmory
+Misc
+Tricks
+Run program reverse
+GDB command options
+Install from source
+Links
+GDB
+Controlling Execution
+run
+set args test1 test2
+show args
+
+next
+step
+finish - takes you out of the function call, if you are already inside one
+return - returns to the caller of the current frame in the stack. This means that you can return from a function without actually completing the function code execution.
+continue
+
+quit
+kill - stops debugging but does not quit the debugger
+Break Points
+break function_name
+break file.c:n
+info break
+disa/enable *m* - disable/enable break
+del *m*
+
+!!!!! condition bp_number [expression]
+condition 2 *p1 != *p2
+condition 2 - deletes condition
+
+!!!!! watch expression - The debugger stops the program when the value of expression changes.
+!!!!! rwatch expression - The debugger stops the program whenever the program reads the value of any object involved in the evaluation of expression.
+!!!!! awatch expression - The debugger stops the program whenever the program reads or modifies the value of any object involved in the evaluation of expression.
+
+info locals - print all local variables
+
+list n - lists lines in the source code file
+list n, m
+
+print expr
+p 2*circularArea($2) - $i - refer to previous output
+!!! p main::radius - access variable in other stack frame
+ptype var - prints structure or union
+display expr - (disp)
+undisplay
+info display
+enable/disable display
+show path
+pwd
+Modifying Variables
+print var1
+set var1=22
+print var1
+
+show environment - displays environment variables
+set/unset env
+Stack
+frame - shows the current frame of execution for the program
+info frame
+info locals
+info reg
+info all-reg - including math registers
+backtrace
+up - takes you one level up in the stack
+down
+Files and Shared Libraries
+info files
+info share
+Macroses
+Compile with options gcc -gdwarf-4 -g3 sample.c -o sample
+
+info macro ADD
+macro expand ADD(x)
+TUI
+TUI-Keys
+
+C-x C-a - enter or leave the TUI mode
+C-x 2 - change layout (1 or 2 windows)
+C-x o - change active window
+C-x s - switch TUI SingleKey mode
+C-L - refresh
+
+info win (i win) - current window info
+focus winname - (fs) - set focus to "SRC", "CMD", "ASM", or "REG" or by position "next" or "prev"
+layout type - set layout "src", "asm", "split", or "reg"
+tui reg type - set the register window layout "general", "float", "system", or "next"
+winheight val - (wh) - set the window height (either an absolute value, or a relative value prefaced with "+" or "-")
+
+C-p - previous command in history
+C-n - next command in history
+C-f - move cursor forward
+C-b - move cursor backward
+M-f - move cursor forward word
+M-b - move cursor backward word
+C-a - move to the start of the line
+C-e - move to the end of the line
+C-d - delete the character underneath the cursor
+C-_ or C-x C-u - undo the last editing command
+C-l - clear the screen
+C-k - kill to the end of the line
+M-d - kill to the end of the current word
+M-<DEL> - kill from the cursor the start of the current word
+C-w - kill from the cursor to the previous whitespace
+C-y - yank the most recently killed text back
+M-y - rotate the kill-ring, and yank the new top. You can only do this if the prior command is C-y or M-y
+Disassembly
+set disassembly-flavor flavor - set the look-and-feel of the disassembly. On Intel machines, valid flavors are intel and att
+set disassemble-next-line on
+ASM
+(gdb) break *label+offset
+(gdb) break *_start
+(gdb) break *_start+1
+(gdb) x/d 0x100001018
+0x100001018 <natural_generator.b>:  -1
+(gdb) x/d &b
+0x100001018 <natural_generator.b>:  -1
 MORNING:
 NOON:
 AFTERNOON:

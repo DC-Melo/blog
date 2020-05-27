@@ -17,12 +17,21 @@ Wed 27 May 2020 10:38:57 AM CST
        24 | 
           | ^
     vimdiff -b file.1 file.2
-    sed -i 's'
+    sed -i 's/\o32//g' file.1
     gcc -finput-charset=UTF-8 -fextended-identifiers -fexec-charset=UTF-8 -o xxx xxx.c
     iconv -f gbk -t utf8 fu.c |sed 's/\o32//g' >> xxx.c
+    unzip -O cp936
+    
 
 NOON:
 AFTERNOON:
+Wed 27 May 2020 04:53:54 PM CST
+    ▣ SQL get the last item in a group
+    方法：mysql取分组后最新的一条记录,下面两种方法.一种是先筛选 出最大和最新的时间,在连表查询.一种是先排序,然后在次分组查询(默认第一条),就是最新的一条数据了
+    #select * from t_assistant_article as a, (select max(base_id) as base_id, max(create_time) as create_time from t_assistant_article as b group by base_id ) as b where a.base_id=b.base_id and a.create_time = b.create_time
+    #select base_id,max(create_time), max(article_id) as article_id from t_assistant_article as b group by base_id
+    select * from (select * from t_assistant_article order by create_time desc) as a group by base_id order by create_time desc
+    UPDATE ReturnRate_SKU SET codenumber = (case WHEN 款号 LIKE "%" THEN right(left(款号,7),2) ELSE NULL END)
 SUNSET:
 EVENING:
 NOTE:

@@ -1,4 +1,4 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200528 → ??? ⇒ 
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200528 → ?✓? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 ●: ⇒ 
@@ -9,8 +9,34 @@ SUNRISE:
 ▣ 双系统  vitualbox kernel driver not install rc=-1908
 try:bios 中把Secure Boot Enable设置成Disabled，重启就可以了。
 MORNING:
+Thu 28 May 2020 09:51:04 AM CST
+    ▣ Failed to restart network.service: Unit network.service not found
+    ▲ How to enable access to VirtualBox via SSH NAT ?
+    https://bobcares.com/blog/virtualbox-ssh-nat/
+    client: sudo apt-get install -y openssh-server
+    check:  ps -e |grep ssh
+    host:   vboxmanage modifyvm "ubuntu18-desktop" --natpf1 "guestssh,tcp,,2222,,22"
+    check:  vboxmanage showvminfo "ubuntu18-desktop" |grep NIC
+    client: service network-manager restart,or restart
+    host:   ssh -p 2222 vb@127.0.0.1
 NOON:
+Thu 28 May 2020 01:27:17 PM CST
+    ▣ install opencv
+    sudo apt-get install cmake
+    sudo apt-get install build-essential libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
+    sudo apt-get install libgtk2.0-dev
+    sudo apt-get install pkg-config
+    sudo apt-get install libcanberra-gtk-module
+    更新系统库：
+    sudo ldconfig
+    sudo updatedb 
+    g++ `pkg-config opencv --cflags` opencv.cpp  -o opencv `pkg-config opencv --libs`
+
 AFTERNOON:
+Thu 28 May 2020 04:38:32 PM CST
+    rename 's/ch4_ex4_(\d).cppbak/ch4_ex4_$1.cpp/g' *
+    ctrl + u: page up half page
+    ctrl + d: page down half page
 SUNSET:
 EVENING:
 NOTE:

@@ -1,0 +1,16 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200528 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200529 → ??? → @20200530 → ??? → @20200601 → ??? → @20200604 → ??? → @20200612 → ??? ⇒ @20200628 → ??? ⇒ 
+mutt -s 12515-22Thu20-20200528 melo.dachor@gmail.com < $dbg/12515-22Thu20-20200528
+
+SUNRISE:
+▣ 双系统  vitualbox kernel driver not install rc=-1908
+try:bios 中把Secure Boot Enable设置成Disabled，重启就可以了。
+MORNING:
+NOON:
+AFTERNOON:
+SUNSET:
+EVENING:
+NOTE:

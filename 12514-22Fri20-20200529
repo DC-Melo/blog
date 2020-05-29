@@ -1,17 +1,138 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200529 → ??? ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:system backup config,make clear ⇒ 
 ●: ⇒ 
 TODO:@20200530 → ??? → @20200531 → ??? → @20200602 → ??? → @20200605 → ??? → @20200613 → ??? ⇒ @20200629 → ??? ⇒ 
 mutt -s 12514-22Fri20-20200529 melo.dachor@gmail.com < $dbg/12514-22Fri20-20200529
 
 SUNRISE:
-cout  *vec.end() endl is very dangerous.
-
-set and map are associate container.
+Fri 29 May 2020 10:10:06 AM CST
+    ▣ cout  *vec.end() endl is very dangerous.
+    set and map are associate container.
+    ▣ How do you mute the sound system from the command line?
+    Assuming you're using ALSA driver, run:
+    amixer set Master mute
+    amixer set Master unmute
+    Or, you can just use:
+    amixer set Master toggle
+    amixer -q -D pulse sset Master toggle
 MORNING:
+Fri 29 May 2020 10:49:48 AM CST
+    ▣ google-chrome --no-proxy-server
+    chroium %U  --no-proxy-server
+    Check the current proxy server settings:
+    $ env | grep -i proxy
+    Check your public IP address from the Linux command-line:
+    $ wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+    Compare the difference in the response time with the configured proxy and without it:
+    $ time wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+    Check the Internet download speed through the proxy:
+    $ wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip
+    Unset Linux Proxy Variables
+    Use the following commands to disable proxy:
+    $ unset http_proxy
+    $ unset https_proxy
+    $ unset ftp_proxy
+    ▣  think you want to keep using managed interface (by NetworkManager). nmcli is a command‐line tool for controlling NetworkManager.
+    iwconfig:iwconfig - configure a wireless network interface
+    sudo grep psk= /etc/NetworkManager/system-connections/*
+    To see list of saved connections, use (<SavedWiFiConn>)
+    nmcli c
+    To see list of available WiFi hotspots (<WiFiSSID>)
+    nmcli d wifi list
+    or:
+    sudo iwlist <WifiInterface> scanning
+    To see list of interfaces (<WifiInterface>)
+    ifconfig -a
+    Just change <WifiInterface>, <WiFiSSID>, <WiFiPassword> in the following commands to reflect your setup. If WiFi info already saved, easier way using <SavedWiFiConn> name of connection as it was saved in NetworkManager.
+    Ubuntu 16.04
+    ##disconnect
+    nmcli d disconnect <WifiInterface>
+    ##connect
+    nmcli d connect <WifiInterface>
+    Another way:
+    ##disconnect
+    nmcli c down <SavedWiFiConn>
+    ##connect
+    nmcli c up <SavedWiFiConn>
+    Ubuntu 15.10 & previous
+    ##disconnect
+    nmcli d disconnect iface <WifiInterface>
+    ##connect
+    nmcli d wifi connect <WiFiSSID> password <WiFiPassword> iface <WifiInterface>
+    Another way:
+    ##disconnect:
+    nmcli c down id <SavedWiFiConn>
+    ##connect:
+    nmcli c up id <SavedWiFiConn>
+    If your password isn't automatically recognized type this:
+    nmcli -a c up <SavedWiFiConn>
+    ▣ before reinstall.
+    1.wifi config.sudo grep psk= /etc/NetworkManager/system-connections/*
+    2.chromium config
+    Linux
+    The default location is in ~/.config:
+    [Chrome Stable] ~/.config/google-chrome
+    [Chrome Beta] ~/.config/google-chrome-beta
+    [Chrome Dev] ~/.config/google-chrome-unstable
+    [Chromium] ~/.config/chromium
+    3.email mutt config
+    4.ssh key,knows host
+    ssh-copy-id hduser@192.168.157.146
+    ssh-copy-id hduser@Cloud12
+    5.vim config
+    6.start up config
+    7.auto hidden dock:
+    gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+    gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+
+
 NOON:
+    sudo vim /etc/systemd/system/rc-local.service
+    sudo vim /etc/rc.local
+    sudo chmod 755 /etc/rc.local
+    sudo systemctl enable rc-local
+    sudo systemctl start rc-local.service
+    sudo systemctl status rc-local.service
+    /etc/rc.local
+
+    bash
+    #!/bin/sh -e
+    #/etc/rc.local
+    #
+    # This script is executed at the end of each multiuser runlevel.
+    # Make sure that the script will "exit 0" on success or any other
+    # value on error.
+    #
+    # In order to enable or disable this script just change the execution
+    # bits.
+    #
+    # By default this script does nothing.
+    echo "测试脚本执行成功" > /usr/local/test.log
+
+    echo nvidia | sudo -S nvpmodel -m 0
+    echo nvidia | sudo -S jetson_clocks --show
+
+    cd /home/jetbot/Notebooks/collision_avoidance
+    python3 demo_collision_avoidance.py &
+    exit 0
+    jetbot@jetbot:~$ sudo cat /etc/systemd/system/rc-local.service
+    [Unit]
+    Description=/etc/rc.local Compatibility
+    ConditionPathExists=/etc/rc.local
+
+    [Service]
+    Type=forking
+    ExecStart=/etc/rc.local start
+    TimeoutSec=0
+    StandardOutput=tty
+    RemainAfterExit=yes
+    SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
 AFTERNOON:
 SUNSET:
 EVENING:
 NOTE:
+
+

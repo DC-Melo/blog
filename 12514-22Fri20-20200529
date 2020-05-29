@@ -35,6 +35,28 @@ Fri 29 May 2020 10:49:48 AM CST
     ▣  think you want to keep using managed interface (by NetworkManager). nmcli is a command‐line tool for controlling NetworkManager.
     iwconfig:iwconfig - configure a wireless network interface
     sudo grep psk= /etc/NetworkManager/system-connections/*
+    nmcli connection delete eth0 
+    nmcli connection add type ethernet con-name dhcp ifname enp1s0
+    nmcli connection down eth0
+    nmcli connection up eth0
+    给eth0添加一个IP（IPADDR）
+    # nmcli connection modify eth0 ipv4.addresses 192.168.0.58
+    给eth0添加一个子网掩码（NETMASK）
+    # nmcli connection modify eth0 ipv4.addresses 192.168.0.58/24
+    IP获取方式设置成手动（BOOTPROTO=static/none）
+    # nmcli connection modify eth0 ipv4.method manual
+    To get a list of connections:
+    nmcli connection
+    To get informations about a connection:
+    nmcli connection show connection-name
+    You can pip it to grep to look for specific info:
+    nmcli connection show connection-name | grep ipv4.dns
+    To modify a connection:
+    nmcli connection modify connection-name config-name new-alue
+    Example:
+    nmcli connection modify HomeNetwork ipv4.dns 8.8.8.8
+    To delete a connection
+    nmcli connection delete connection-name
     To see list of saved connections, use (<SavedWiFiConn>)
     nmcli c
     To see list of available WiFi hotspots (<WiFiSSID>)
@@ -84,7 +106,18 @@ Fri 29 May 2020 10:49:48 AM CST
     7.auto hidden dock:
     gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
     gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-
+    ▣ 阿里云配置
+    实例ID
+    IP地址
+    付费方式
+    实例状态
+    i-uf653trdqtvmmdi2qa3w
+    DC-Ali-ECS
+    106.14.166.241(公网)
+    172.19.3.33(私网)
+    包年包月
+    2020年8月3日 00:00:00到期
+    运行中
 
 NOON:
     sudo vim /etc/systemd/system/rc-local.service
@@ -127,10 +160,16 @@ NOON:
     StandardOutput=tty
     RemainAfterExit=yes
     SysVStartPriority=99
-
-[Install]
-WantedBy=multi-user.target
+    [Install]
+    WantedBy=multi-user.target
 AFTERNOON:
+Fri 29 May 2020 04:03:08 PM CST
+    two method to set static ip.
+    service network-manager stop
+    service network-manager restart
+    重新启停以太网卡：
+   sudo ifconfig eth0 down
+   sudo ifconfig eth0 up
 SUNSET:
 EVENING:
 NOTE:

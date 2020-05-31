@@ -1,0 +1,31 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200530 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200531 → ??? → @20200601 → ??? → @20200603 → ??? → @20200606 → ??? → @20200614 → ??? ⇒ @20200630 → ??? ⇒ 
+mutt -s 12513-22Sat20-20200530 melo.dachor@gmail.com < $dbg/12513-22Sat20-20200530
+
+SUNRISE:
+Sat 30 May 2020 08:20:10 AM CST
+    ▣ about lantern config 
+    dc@dc-HP-ProBook-440-G6:lantern2$ md5sum -c md5
+    global.yaml: OK
+    lantern.yaml: OK
+    masquerade_cache: FAILED
+    masquerade_cache.cloudfront: FAILED
+    proxies.yaml: FAILED
+    proxystats.csv: FAILED
+    settings.yaml: FAILED
+    tls_session_states: OK
+    md5sum: WARNING: 5 computed checksums did NOT match
+    ▣ Turmux PATH config at /usr/etc/bash.bashrc
+MORNING:
+NOON:
+AFTERNOON:
+Program received signal SIGSEGV, Segmentation fault.
+内存申请太多
+但在调试前还有一步，如何让GDB识别新的程序（因为程序已经重新编译）？只要再次运行run就可以了。因为GDB没有关闭，所以之前设置的断点、运行run时传入的命令行参数等还保留着，不需要重新输入。很好用吧！
+GDB自动检测到程序发生改变，重新加载符号
+SUNSET:
+EVENING:
+NOTE:

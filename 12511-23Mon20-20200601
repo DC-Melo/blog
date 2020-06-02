@@ -8,10 +8,47 @@ mutt -s 12511-23Mon20-20200601 melo.dachor@gmail.com < $dbg/12511-23Mon20-202006
 SUNRISE:
 Mon Jun  1 06:46:39 CST 2020
 get up
-
 MORNING:
+Mon 01 Jun 2020 10:33:38 AM CST
+    move workplace.
+    deploy company server
+
 NOON:
+Mon 01 Jun 2020 01:59:52 PM CST
+    ▣ history -n:update history in terminal
+    -N: 显示历史记录中最近的N个记录；
+    -c：清空当前历史命令；
+    -a：将历史命令缓冲区中命令写入历史命令文件中；
+    -r：将历史命令文件中的命令读入当前历史命令缓冲区；
+    -w：将当前历史命令缓冲区命令写入历史命令文件中;
+    -d<offset>：删除历史记录中第offset个命令
+    -n<filename>：读取指定文件
+
 AFTERNOON:
+    ▣ sed -n '5,10p' filename 这样就可以只查看文件的第属5行到第10行。
+    sed '2d'
+    sed的用法
+    $ sed [-nefr] [动作]
+    参数:
+    -n : 使用安静模式。在一般sed用法中，所有来自STDIN的数据一般都会被列出到屏幕上。但如果加上-n参数后，则只有经过sed特殊处理的那一行（或者操作）才会被列出来。
+    -e : 直接在命令行模式上进行sed的动作编辑。（默认）
+    -f : 直接将sed的动作写在一个文件内， -f filename则可以执行filename内的sed动作。
+    -r : sed的动作支持的是扩展型正则表达式的语法（默认是基础正则表达式语法）。
+    -i : 直接修改读取的文件内容，而不是屏幕输出。
+    默认情况下sed不直接作用于读取的文件中
+    动作说明: [n1[,n2]] function
+    n1,n2 : 不见得会存在，一般代表选择进行动作的行数，举例来说，如果我的动作是需要在10到20行之间进行的，则“10，20[动作行为]”。
+    function 有下面的这些参数:
+    a : 新增到下一行，后面可以接字符串
+    c : 替换，后面可以接字符串
+    d : 删除，后面不接热河参数
+    i : 插入到上一行，后面可接字符串
+    p : 打印，通常会与参数 sed -n 一起运行
+    s : 查找并替换特定字符串，通常搭配正则表达式。
+    enternet mean:
+    eth0，eth1，eth2……代表网卡一，网卡二，网卡三……
+    lo代表127.0.0.1，即localhost
+    回环网卡（Loopback adaptor），是一种特殊的网络接口，不与任何实际设备连接，而是完全由软件实现。与回环地址（127.0.0.0/8 或 ::1/128）不同，回环网卡对系统“显示”为一块硬件。任何发送到该网卡上的数据都将立刻被同一网卡接收到。例子有 Linux 下的 lo 接口和 Windows 下的 Microsoft Loopback Interface 网卡。
 SUNSET:
 EVENING:
 NOTE:

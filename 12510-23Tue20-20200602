@@ -107,11 +107,11 @@ A机公司局域网
 B机公网linux主机
 C机家里的notebook
 A机:
-ssh -CfNg -R 7001:localhost:22     用户名@B机
+ssh -CfNg -R 5122:localhost:22     用户名@B机
 C机:
-ssh -CfNg -L 7000:localhost:7001   用户名@B机
+ssh -CfNg -L 5123:localhost:5122   用户名@B机
 C机:
-ssh -p 7000 A机用户名@localhost    就可以登录公司的A机了
+ssh -p 5123 A机用户名@localhost    就可以登录公司的A机了
 C机:
 ssh -X -p 7000 A机用户名@localhost 就可以执行A机上的图形程序了,比如nautilus .
 关闭用户图形界面，使用tty登录。

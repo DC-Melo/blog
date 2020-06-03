@@ -1,7 +1,8 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200603 → ??? ⇒ 
 ●:fix the problem of ssh reverse ⇒ ✓ DONE
-●:research the perferance of android  ⇒ 
+●:research the perferance of android  ⇒ ✓ waiting for input
 ●:research slam  ⇒ 
+●:research DL  ⇒ 
 TODO:@20200602 → ??? → @20200601 → ??? → @20200530 → ??? → @20200527 → ??? → @20200519 → ??? → @20200503 → ??? → 
 mutt -s 12509-23Wed20-20200603 melo.dachor@gmail.com < $dbg/12509-23Wed20-20200603
 
@@ -31,8 +32,73 @@ unix  2      [ ACC ]     STREAM     LISTENING     65285    3637/ssh-agent       
 unix  3      [ ]         STREAM     CONNECTED     30368    1078/sshd: /usr/sbi  
 
 NOON:
+Wed 03 Jun 2020 01:34:09 PM CST
+▣ 建立docker用户组
+docker通常会使用Unix socket和Docker引擎通讯，通常只有root和docker用户组的用户才可以访问该socket，不然你就要一直sudo，所以最好把你当前需要使用docker的用户添加到docker用户组中。
+建立docker用户组
+$ sudo groupadd docker
+将当前用户加入用户组
+$ sudo usermod -aG docker $USER
 
 AFTERNOON:
+▣ install caffe
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y libopencv-dev
+sudo apt-get install -y build-essential cmake git pkg-config
+sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install -y liblapack-dev
+sudo apt-get install -y libatlas-base-dev 
+sudo apt-get install -y --no-install-recommends libboost-all-dev
+sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-dev
+sudo apt-get install -y python-numpy python-scipy
+sudo apt-get install -y python3-dev
+sudo apt-get install -y python3-numpy python3-scipy
+▣ install caffe in docker.
+docker下安装caffe
+
+weixin_30279315 2019-06-10 18:38:00  45  收藏 1
+展开
+1、安装docker
+2、下载caffe docker镜像
+      docker pull bvlc/caffe:gpu
+      可以去https://hub.docker.com/search/?q=SSD%20caffe&type=image搜索想要的caffe版本
+3、docker images
+      查看镜像
+4、运行caffe容器
+   docker run -t -i bvlc/caffe:gpu /bin/bash
+5、import caffe
+
+▣ install tensorflow
+https://tensorflow.google.cn/install/pip
+Error:Can't uninstall 'protobuf'. No files were found to uninstall
+https://tensorflow.google.cn/install/docker
+亲，您好~目前caffe和tensorflow在企业里用的都比较多，如果大家在后面工作的话，这两种框架都是需要掌握的。caffe相比于tensorflow，由于用c++编写的，速度上更快一些，所以很多企业在进行自己算子开发的时候，会优先考虑caffe。tensorflow则有着更好的灵活性，在验证模型的时候，更加的便捷。再说我们这里的目标检测项目中，采用caffe的原因主要在于很多算法的原作者都是采用的caffe来编写设计的网络结构。以ssd为例，ssd作者提供的源码是caffe的，而且ssd的后续的改进的算法有绝大多数也是用caffe的编写的。在实战项目中的文本检测和多任务网络中，会用到tensorflow+EAST框架进行文本检测任务的实战应用和和tensorflow+MTCNN进行人脸+关键点多任务网络实战应用”。祝您学习愉快~
+▣ deploy wt test home page
+nohup python3 manage.py runserver 0.0.0.0:80&
+PING 10.1.21.240 (10.1.21.240) 56(84) bytes of data.
+From 10.1.21.88 icmp_seq=1 Destination Host Unreachable
+From 10.1.21.88 icmp_seq=2 Destination Host Unreachable
+From 10.1.21.88 icmp_seq=3 Destination Host Unreachable
+出现这种错误提示的话一般是由两种原因导致的，一是网线根本就没有插或者没有插好。
+二是因为电脑的网关没有配置，当网关没有配置时，电脑尝试去ping另外一个网段的IP地址的话，是会出现destination host unreachable的错误提示的。另外，回显request timeout表示ping请求没有得到回应，可能的原因是对方主机没有开启或者链路不通等；回显reply from IP地址：bytes＝32 time<10ms TTL=64表示ping请求得到了回应，链路通讯正常；做ping操作时还可能有其他各种各样的错误的，一般根据其错误可以从网络搜索到相关的错误原因的。
+▣ 
+sudo docker run --name my-caffe -it  -v ~/5W/caffe:/test/data bvlc/caffe
+sudo docker run --name my-tensorflow -it -p 8888:8888 -v ~/5W/tensorflow:/test/data tensorflow/tensorflow
+查看容器:sudo docker ps -a
+必须先启动容器：
+sudo docker start “容器ID”
+然后使用下边的命令进入shell：
+sudo docker exec -it “容器ID” bash
+将主机的文件复制到容器里：
+sudo docker cp 主机目录 容器ID:容器目录
+channel 2: open failed: connect failed: Connection refused
+kex_exchange_identification: read: Connection reset by peer
+
+
+
 
 SUNSET:
 

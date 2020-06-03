@@ -1,7 +1,10 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200602 → ??? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
-TODO:@20200601 → ??? → @20200531 → ??? → @20200529 → ??? → @20200526 → ??? → @20200518 → ??? → @20200502 → ??? → 
+●: ⇒ 
+TODO:@20200603 → ??? → @20200604 → ??? → @20200606 → ??? → @20200609 → ??? → @20200617 → ??? ⇒ @20200703 → ??? ⇒ 
+mutt -s 12510-23Tue20-20200602 melo.dachor@gmail.com < $dbg/12510-23Tue20-20200602
+
 1.make ssh turnel,2.make clear grub. 3.and start cont task, 1 hour connect one time.
 learn opencv,learn slam,learn caffe or tensorflow.
 mutt -s 12510-23Tue20-20200602 melo.dachor@gmail.com < $dbg/12510-23Tue20-20200602

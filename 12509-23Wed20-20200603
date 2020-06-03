@@ -1,7 +1,7 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200603 → ??? ⇒ 
-●: ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:fix the problem of ssh reverse ⇒ ✓ DONE
+●:research the perferance of android  ⇒ 
+●:research slam  ⇒ 
 TODO:@20200602 → ??? → @20200601 → ??? → @20200530 → ??? → @20200527 → ??? → @20200519 → ??? → @20200503 → ??? → 
 mutt -s 12509-23Wed20-20200603 melo.dachor@gmail.com < $dbg/12509-23Wed20-20200603
 
@@ -9,6 +9,26 @@ SUNRISE:
 reply email to cc
 
 MORNING:
+Wed 03 Jun 2020 10:53:41 AM CST
+▣ ssh -CfNg -L 5123:localhost:5122 root@aliyun
+ssh -p 5123 dc@localhost
+Wed 03 Jun 2020 10:09:32 AM CST
+vim 中在插入模式使用 <C-x><C-f>可以插入文件路径
+bind [::]:5123: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 5123
+Could not request local forwarding.
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1078/sshd: /usr/sbi  off (0.00/0/0)
+tcp        0      0 10.1.80.33:37714        106.14.166.241:22       ESTABLISHED 13678/ssh            keepalive (6795.52/0/0)
+tcp        0      0 10.1.80.33:37396        106.14.166.241:22       ESTABLISHED 12074/ssh            keepalive (6190.06/0/0)
+tcp        0      0 192.168.1.104:54514     106.14.166.241:22       ESTABLISHED 3815/ssh             keepalive (6060.01/0/0)
+tcp        0      0 10.1.80.33:37960        106.14.166.241:22       ESTABLISHED 14100/ssh            keepalive (6951.48/0/0)
+tcp        0      0 10.1.80.33:37448        106.14.166.241:22       ESTABLISHED 12624/ssh            keepalive (6446.16/0/0)
+tcp6       0      0 :::22                   :::*                    LISTEN      1078/sshd: /usr/sbi  off (0.00/0/0)
+unix  2      [ ACC ]     STREAM     LISTENING     38619    1777/systemd         /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     45648    1962/ssh-agent       /tmp/ssh-IbGGq260Rs4h/agent.1890
+unix  2      [ ACC ]     STREAM     LISTENING     41676    1792/gnome-keyring-  /run/user/1000/keyring/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     65285    3637/ssh-agent       /run/user/1000/keyring/.ssh
+unix  3      [ ]         STREAM     CONNECTED     30368    1078/sshd: /usr/sbi  
 
 NOON:
 

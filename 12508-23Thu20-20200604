@@ -1,0 +1,80 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200604 → ?o? ⇒ 
+●:research caffe ⇒ ✓ DONE next step:learn some book about tensorflow and caffe.
+●:go on to learn opencv and slam ⇒ 
+●:read response time code ⇒ 
+TODO:@20200605 → ??? → @20200606 → ??? → @20200608 → ??? → @20200611 → ??? → @20200619 → ??? ⇒ @20200705 → ??? ⇒ 
+mutt -s 12508-23Thu20-20200604 melo.dachor@gmail.com < $dbg/12508-23Thu20-20200604
+
+SUNRISE:
+
+MORNING:
+Thu 04 Jun 2020 10:09:33 AM CST
+▣ docker without sudo 
+查看用户组及成员
+sudo cat /etc/group | grep docker
+可以添加docker组
+sudo groupadd docker 
+添加用户到docker组 
+sudo gpasswd -a ${USER} docker 
+增加读写权限
+sudo chmod a+rw /var/run/docker.sock
+重启docker
+sudo systemctl restart docker 
+
+
+NOON:
+▣ cron task not run
+cron service start when computer startup.
+To schedule tasks that require administrative privileges (i.e. they are generally run using sudo), you should edit the root crontab:
+sudo crontab -e
+* * * * * command to be executed
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)
+Comma-separated values can be used to run more than one instance of a particular command within a time period. Dash-separated values can be used to run a command continuously. For example:
+01,31 04,05 1-15 1,6 * /usr/bin/somedirectory/somecommand
+▣ dc@dc-HP-ProBook-440-G6:~$ ssh -CfNg -L 5123:localhost:5122 root@aliyun
+bind [::]:5123: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 5123
+Could not request local forwarding.
+▲ the ssh service not start.
+▣ sudo apt-get autoremove gdb
+
+AFTERNOON:
+▣ enter the container
+docker exec -it  a1 /bin/bash
+进入/opt/caffe
+docker带的caffe目录，不需要再编译
+可以试验下这里的mnist例子。
+下载mnist数据集到这个目录下
+$ ./data/mnist/get_mnist.sh
+转换格式，在examples/mnist生成了两个目录：mnist_test_lmdb和mnist_train_lmdb
+$ ./examples/mnist/create_mnist.sh
+在 /opt/caffe文件夹下运行
+$ ./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt ✗
+ ./build/tools/caffe time --model=examples/mnist/lenet_train_test.prototxt ✓
+ ./build/tools/caffe time --model=examples/mnist/lenet_train_test.prototxt -gpu 0 
+▣ ssh crontab run, but there is no ssh service. if i just run script, there will be one service.
+▶ exit命令： not relate to exit
+(1)用于退出当前shell
+(2)在shell脚本中可以终止当前脚本执行
+▶ 改成dc作为用户就可以看到了 crontab -e
+▣ ubuntu20.04 install tensorflow.
+Can't uninstall 'protobuf'. No files were found to uninstall.
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'
+▣ python venv and requirement
+pip freeze >requirements.txt
+pip install -r requirements.txt
+▣ vmware for linux
+https://www.vmware.com/go/getworkstation-linux
+
+SUNSET:
+
+EVENING:
+
+NOTE:

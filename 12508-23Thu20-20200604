@@ -1,4 +1,4 @@
-TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200604 → ??? ⇒ 
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200604 → ?o? ⇒ 
 ●:research caffe ⇒ ✓ DONE next step:learn some book about tensorflow and caffe.
 ●:go on to learn opencv and slam ⇒ 
 ●:read response time code ⇒ 
@@ -58,6 +58,20 @@ $ ./examples/mnist/create_mnist.sh
 $ ./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt ✗
  ./build/tools/caffe time --model=examples/mnist/lenet_train_test.prototxt ✓
  ./build/tools/caffe time --model=examples/mnist/lenet_train_test.prototxt -gpu 0 
+▣ ssh crontab run, but there is no ssh service. if i just run script, there will be one service.
+▶ exit命令： not relate to exit
+(1)用于退出当前shell
+(2)在shell脚本中可以终止当前脚本执行
+▶ 改成dc作为用户就可以看到了 crontab -e
+▣ ubuntu20.04 install tensorflow.
+Can't uninstall 'protobuf'. No files were found to uninstall.
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'
+▣ python venv and requirement
+pip freeze >requirements.txt
+pip install -r requirements.txt
+▣ vmware for linux
+https://www.vmware.com/go/getworkstation-linux
 
 SUNSET:
 

@@ -13,10 +13,21 @@ caffe的数据层支持三中数据库输入：LevelDB.LMDB.HDF5.
 LevelDB是google非常高效的key-value数据库
 
 MORNING:
+▣ ssh: connect to host 106.14.166.241 port 22: Connection refused
 
 NOON:
 
 AFTERNOON:
+▣ netplan apply the ip changed.
+▣ one ssl connection 
+[root@iZuf653trdqtvmmdi2qa3wZ ~]# netstat -anltp |grep ssh
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      695/sshd            
+tcp        0     36 172.19.3.33:22          61.50.123.22:51148      ESTABLISHED 1151/sshd: root@pts
+dc@dc-HP-ProBook-440-G6:~$ ps aux |grep ssh
+dc         41596  0.0  0.0      0     0 ?        Zs   18:41   0:00 [ssh-agent] <defunct>
+dc         44225  0.0  0.0   6032  3828 ?        S    18:47   0:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+root       44858  0.0  0.0  12160  6964 ?        Ss   18:52   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+dc         45925  0.0  0.0  17664   664 pts/0    S+   19:03   0:00 grep --color=auto ssh
 
 SUNSET:
 

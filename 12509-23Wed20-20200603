@@ -105,3 +105,23 @@ SUNSET:
 EVENING:
 
 NOTE:
+  556  kill 3780
+  557  kill 1361
+  558  kill 1169
+  559  kill 1150
+  560  ps aux|grep ssh
+  561  ssh -CfNg -L 5123:localhost:5122 root@aliyun
+  562  ssh -p 5123 dc@aliyun
+  563  ps aux|grep ssh
+  564  ssh root@aliyun
+  565  ssh -p 5123 dc@aliyun
+  566  ssh -p 5123 dc@localhost
+  567  ssh -p 5123 dc@localhost
+  568* 
+  569  ps aux|grep ssh
+  570  ll
+  571  pullblog.sh 
+  572  reviewblog.sh 
+  573  ll
+  574  ll
+  575  history 20 >> $blogfile 

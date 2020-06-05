@@ -32,5 +32,575 @@ dc         45925  0.0  0.0  17664   664 pts/0    S+   19:03   0:00 grep --color=
 SUNSET:
 
 EVENING:
+http://www.luyixian.cn/news_show_16509.aspx
+开机启动
+在 Ubuntu 中我们可以使用 systemd 管理 autossh 的开机启动问题（旧版本中可以使用 init.d）。配置很简单，只需要创建一个 
+/etc/systemd/system/remote-autossh.service
+ 文件：
 
+[Unit]
+Description=AutoSSH service for remote tunnel
+After=network-online.target
+
+[Service]
+User=your_username
+ExecStart=/usr/bin/autossh -M 20001 -N -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R a_a_a_a:20000:localhost:22 -p 8383 remote_user@a_a_a_a
+
+[Install]
+WantedBy=multi-user.target
+这样就创建了一个 
+remote-autossh
+ 服务，并指定其在网络服务启动后启动。可以运行 
+systemctl daemon-reload && systemctl start remote-autossh
+ 立即启动服务，或者 
+systemctl enable remote-autossh.service
+ 启动服务并设置为开机启动。
+
+需要注意的是，配置文件中的 autossh 命令需要替换为其绝对地址，以及不支持 
 NOTE:
+    1  2020-06-05 21:28:40  ssh-keygen -t rsa -C "server-wt"
+    2  2020-06-05 21:28:40  sudo apt-get install openssh-server
+    3  2020-06-05 21:28:40  ifconfig
+    4  2020-06-05 21:28:40  sudo apt install net-tools
+    5  2020-06-05 21:28:40  ifconfig
+    6  2020-06-05 21:28:40  sudo apt install git
+    7  2020-06-05 21:28:40  sudo apt-get install openssh-server
+    8  2020-06-05 15:48:11  exit
+    9  2020-06-05 15:42:40  ll
+   10  2020-06-05 15:42:43  cd 4T/
+   11  2020-06-05 15:42:44  ll
+   12  2020-06-05 15:43:04  cd -
+   13  2020-06-05 15:43:25  cd 4T/install/
+   14  2020-06-05 15:43:26  ll
+   15  2020-06-05 15:43:41  vim _home_bashrc 
+   16  2020-06-05 15:43:59  vim _home_bashrc ~/.bashrc 
+   17  2020-06-05 15:45:12  source ~/.bashrc 
+   18  2020-06-05 15:45:20  echo $PATH
+   19  2020-06-05 15:45:22  ll
+   20  2020-06-05 15:45:59  cd ..
+   21  2020-06-05 15:46:00  ll
+   22  2020-06-05 15:50:54  exit
+   23  2020-06-05 15:55:45  sudo vim ~/.bashrc 
+   24  2020-06-05 15:56:18  cd 4T/
+   25  2020-06-05 15:56:19  ll
+   26  2020-06-05 15:56:36  mkdir tensorflow
+   27  2020-06-05 15:56:46  mkdir tensorflow caffe opencv 
+   28  2020-06-05 15:56:47  ll
+   29  2020-06-05 15:56:59  cd ../2P/
+   30  2020-06-05 15:56:59  ll
+   31  2020-06-05 15:57:05  mkdir 066
+   32  2020-06-05 15:57:05  ll
+   33  2020-06-05 15:57:27  cd 066/
+   34  2020-06-05 15:57:28  ll
+   35  2020-06-05 15:57:30  git clone ssh://p_dwjwang@10.1.120.4:29418/WTT4_ResponseTime
+   36  2020-06-05 15:57:38  ll
+   37  2020-06-05 15:57:41  cd WTT4_ResponseTime/
+   38  2020-06-05 15:57:42  ll
+   39  2020-06-05 15:57:51  source ~/.bashrc 
+   40  2020-06-05 15:57:53  ll
+   41  2020-06-05 15:58:14  python3 -m venv venv
+   42  2020-06-05 15:58:38  sudo apt-get install python3-venv
+   43  2020-06-05 16:00:06  ll
+   44  2020-06-05 16:20:27  cd $dtl
+   45  2020-06-05 16:20:27  ll
+   46  2020-06-05 16:20:37  exit
+   47  2020-06-05 16:00:38  cd 4T/
+   48  2020-06-05 16:00:38  ll
+   49  2020-06-05 16:00:49  gio trash Android/
+   50  2020-06-05 16:00:51  ll
+   51  2020-06-05 16:02:14  wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+   52  2020-06-05 16:06:11  ll
+   53  2020-06-05 16:06:30  unzip sdk-tools-linux-4333796.zip 
+   54  2020-06-05 16:06:32  ll
+   55  2020-06-05 16:06:40  cd tools/
+   56  2020-06-05 16:06:41  ll
+   57  2020-06-05 16:06:46  ls bin/
+   58  2020-06-05 16:06:55  cd ..
+   59  2020-06-05 16:08:54  ll
+   60  2020-06-05 16:08:59  ls tools/
+   61  2020-06-05 16:09:16  gio trash sdk-tools-linux-4333796.zip  tools/
+   62  2020-06-05 16:09:17  ll
+   63  2020-06-05 16:13:48  wget https://dl.google.com/android/repository/platform-tools_r30.0.2-linux.zip
+   64  2020-06-05 16:14:07  ll
+   65  2020-06-05 16:14:12  unzip platform-tools_r30.0.2-linux.zip 
+   66  2020-06-05 16:14:13  ll
+   67  2020-06-05 16:14:17  ls platform-tools
+   68  2020-06-05 16:14:28  ll
+   69  2020-06-05 16:17:06  wget https://download.oracle.com/otn-pub/java/jdk/14.0.1+7/664493ef4a6946b186ff29eb326336a2/jdk-14.0.1_linux-x64_bin.tar.gz
+   70  2020-06-05 16:19:02  ll
+   71  2020-06-05 16:37:17  cd tensorflow/
+   72  2020-06-05 16:37:18  ll
+   73  2020-06-05 16:37:30  python3 -m venv venv
+   74  2020-06-05 16:37:39  source venv/bin/activate
+   75  2020-06-05 16:37:40  ll
+   76  2020-06-05 16:38:55  pip3 --version
+   77  2020-06-05 16:39:16  sudo apt install python3-dev python3-pip python3-venv
+   78  2020-06-05 16:40:00  ll
+   79  2020-06-05 16:40:05  gio trash venv/
+   80  2020-06-05 16:40:26  deactivate
+   81  2020-06-05 16:40:29  ll
+   82  2020-06-05 16:40:42  sudo apt install python3-dev python3-pip python3-venv
+   83  2020-06-05 16:44:59  python3 -m venv --system-site-packages ./venv
+   84  2020-06-05 16:45:01  ll
+   85  2020-06-05 16:45:08  source venv/bin/activate
+   86  2020-06-05 16:45:20  pip install --upgrade pip
+   87  2020-06-05 16:45:43  pip install --upgrade tensorflow
+   88  2020-06-05 16:54:01  python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+   89  2020-06-05 16:57:48  python
+   90  2020-06-05 16:58:12  deactivate 
+   91  2020-06-05 16:58:14  exit
+   92  2020-06-05 17:06:35  ll
+   93  2020-06-05 17:08:49  $ autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 B-User@B-Address
+   94  2020-06-05 17:09:13  autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 root@aliyun
+   95  2020-06-05 17:09:26  ssh root@aliyun
+   96  2020-06-05 17:09:38  ping aliyun
+   97  2020-06-05 17:34:53  exit
+   98  2020-06-05 16:43:17  cd $din
+   99  2020-06-05 16:43:18  ll
+  100  2020-06-05 16:43:48  sudo vim _etc_hosts /etc/hosts
+  101  2020-06-05 16:47:19  cd ..
+  102  2020-06-05 16:47:19  ll
+  103  2020-06-05 16:47:26  mv platform-tools_r30.0.2-linux.zip Android/Sdk/
+  104  2020-06-05 16:47:27  ll
+  105  2020-06-05 16:52:13  sudo apt-get install autossh
+  106  2020-06-05 16:52:41  vim install/apt.sh 
+  107  2020-06-05 16:56:03  ssh-copy-id root@aliyun
+  108  2020-06-05 16:56:17  ping aliyun
+  109  2020-06-05 16:56:59  ssh-copy-id root@aliyun
+  110  2020-06-05 16:57:14  sudo ssh-copy-id root@aliyun
+  111  2020-06-05 17:01:40  cd ..
+  112  2020-06-05 17:01:40  ll
+  113  2020-06-05 17:01:44  cd 4T/
+  114  2020-06-05 17:01:46  cd install/
+  115  2020-06-05 17:01:46  ll
+  116  2020-06-05 17:01:55  vim vimplus.sh 
+  117  2020-06-05 17:28:02  ll ~
+  118  2020-06-05 17:30:06  cd ..
+  119  2020-06-05 17:30:07  ll
+  120  2020-06-05 17:34:56  exit
+  121  2020-06-05 17:02:29  sudo apt-get install cmake -y
+  122  2020-06-05 17:02:43  sudo apt-get install libclang-dev -y
+  123  2020-06-05 17:22:46  sudo apt-get install vim vim-scripts vim-gtk
+  124  2020-06-05 17:26:58  sudo apt-get install -y build-essential
+  125  2020-06-05 17:27:11  cd ~/.vimplus
+  126  2020-06-05 17:27:18  ll
+  127  2020-06-05 17:27:22  ./install.sh 
+  128  2020-06-05 17:33:01  ll
+  129  2020-06-05 17:33:07  cd ..
+  130  2020-06-05 17:33:08  ll
+  131  2020-06-05 17:33:25  ls .vim_bak_20200605172722/
+  132  2020-06-05 17:33:30  ll .vim_bak_20200605172722/
+  133  2020-06-05 17:33:47  cat .vim_bak_20200605172722/.netrwhist 
+  134  2020-06-05 17:34:07  tar -cvf .vim_bak_20200605172722.tar .vim_bak_20200605172722/
+  135  2020-06-05 17:34:09  ll
+  136  2020-06-05 17:34:16  gio trash .vim_bak_20200605172722
+  137  2020-06-05 17:34:17  ll
+  138  2020-06-05 17:35:00  exit
+  139  2020-06-05 21:28:40  ll
+  140  2020-06-05 21:28:40  vi /etc/netplan/01-network-manager-all.yaml 
+  141  2020-06-05 21:28:40  sudo vi /etc/netplan/01-network-manager-all.yaml 
+  142  2020-06-05 21:28:40  netplan apply 
+  143  2020-06-05 21:28:40  sudo netplan apply 
+  144  2020-06-05 21:28:40  ifconfig
+  145  2020-06-05 21:28:40  service network-manager restart
+  146  2020-06-05 21:28:40  ifconfig
+  147  2020-06-05 21:28:40  service network-manager restart
+  148  2020-06-05 21:28:40  sudo service network-manager restart
+  149  2020-06-05 21:28:40  ifconfig
+  150  2020-06-05 21:28:40  sudo vim /etc/netplan/01-network-manager-all.yaml 
+  151  2020-06-05 21:28:40  sudo vi /etc/netplan/01-network-manager-all.yaml 
+  152  2020-06-05 21:28:40  sudo netplan apply 
+  153  2020-06-05 15:30:01  ll
+  154  2020-06-05 15:30:42  cat .ssh/id_rsa.pub 
+  155  2020-06-05 15:32:06  ll
+  156  2020-06-05 15:33:46  mkdir 4T 2P 5W
+  157  2020-06-05 15:33:49  cd 4T/
+  158  2020-06-05 15:33:49  ll
+  159  2020-06-05 15:34:16  git clone git@github.com:DC-Melo/install.git
+  160  2020-06-05 15:35:39  cat ~/.ssh/id_rsa.pub 
+  161  2020-06-05 15:36:18  ll
+  162  2020-06-05 15:37:03  cd install/
+  163  2020-06-05 15:37:04  ll
+  164  2020-06-05 15:37:24  sudo apt-get install vim
+  165  2020-06-05 15:38:08  ll
+  166  2020-06-05 15:38:13  vim apt.sh 
+  167  2020-06-05 15:38:54  sh apt.sh 
+  168  2020-06-05 15:39:24  vim apt.sh 
+  169  2020-06-05 15:41:02  sh apt.sh 
+  170  2020-06-05 16:18:58  ll
+  171  2020-06-05 16:21:25  cd ..
+  172  2020-06-05 16:21:26  ll
+  173  2020-06-05 16:21:33  mkdir -p /Android/Sdk
+  174  2020-06-05 16:21:42  sudo mkdir -p /Android/Sdk/
+  175  2020-06-05 16:21:44  ll
+  176  2020-06-05 16:21:56  sudo mkdir -p ./Android/Sdk/
+  177  2020-06-05 16:21:57  ll
+  178  2020-06-05 16:22:08  mv platform-tools Android/Sdk/
+  179  2020-06-05 16:22:18  ll
+  180  2020-06-05 16:22:23  mv platform-tools Android/
+  181  2020-06-05 16:22:40  sudo gio trash Android/
+  182  2020-06-05 16:22:57  mkdir -p ./Android/Sdk/
+  183  2020-06-05 16:23:00  cd /
+  184  2020-06-05 16:23:01  l
+  185  2020-06-05 16:23:02  ll
+  186  2020-06-05 16:23:14  sudo rm -rf Android/
+  187  2020-06-05 16:23:17  cd 
+  188  2020-06-05 16:23:18  ll
+  189  2020-06-05 16:23:20  cd 4T/
+  190  2020-06-05 16:23:20  ll
+  191  2020-06-05 16:23:31  mv platform-tools Android/Sdk/
+  192  2020-06-05 16:23:50  ll
+  193  2020-06-05 16:24:24  cd ..
+  194  2020-06-05 16:24:25  ll
+  195  2020-06-05 16:24:27  cd 2P/
+  196  2020-06-05 16:24:27  ll
+  197  2020-06-05 16:24:54  echo $dbg
+  198  2020-06-05 16:25:02  source ~/.bashrc 
+  199  2020-06-05 16:25:05  echo $dbg
+  200  2020-06-05 16:25:22  mkdir -p $dbg
+  201  2020-06-05 16:25:25  cd $dbg
+  202  2020-06-05 16:25:26  ll
+  203  2020-06-05 16:25:56  adb devices
+  204  2020-06-05 16:29:44  cd $dpj
+  205  2020-06-05 16:29:45  ll
+  206  2020-06-05 16:29:50  cd 066
+  207  2020-06-05 16:29:51  ll
+  208  2020-06-05 16:29:54  cd WTT4_ResponseTime/
+  209  2020-06-05 16:29:55  ll
+  210  2020-06-05 16:30:03  source venv/
+  211  2020-06-05 16:34:11  python -m venv venv
+  212  2020-06-05 16:34:19  python3 -m venv venv
+  213  2020-06-05 16:34:34  sudo apt-get install python3-venv
+  214  2020-06-05 16:34:57  python3 -m venv venv
+  215  2020-06-05 16:35:00  ll
+  216  2020-06-05 16:35:08  source venv/bin/activate
+  217  2020-06-05 16:35:31  pip install -r requirements.txt 
+  218  2020-06-05 16:42:01  lll
+  219  2020-06-05 16:42:02  ll
+  220  2020-06-05 16:46:21  pip --version
+  221  2020-06-05 16:46:36  pip install --upgrade pip
+  222  2020-06-05 16:46:44  pip install -r requirements.txt 
+  223  2020-06-05 16:48:26  ll
+  224  2020-06-05 16:48:31  cat requirements.txt 
+  225  2020-06-05 16:49:19  pip install wxpython
+  226  2020-06-05 16:58:19  xpython Check the logs for full command output
+  227  2020-06-05 16:58:27  ll
+  228  2020-06-05 16:58:33  python --version
+  229  2020-06-05 16:58:47  pip install -r requirements.txt 
+  230  2020-06-05 16:59:02  2020-06-05 16:54:14.097233: W tensorflow/stream_executor/ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+  231  2020-06-05 16:59:18  2020-06-05 16:54:14.097233: W tensorflow/stream_executor/ll
+  232  2020-06-05 16:59:21  ll
+  233  2020-06-05 16:59:24  vim .
+  234  2020-06-05 16:59:45  ll
+  235  2020-06-05 16:59:52  vim case/
+  236  2020-06-05 17:03:43  git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+  237  2020-06-05 17:19:16  $ autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 B-User@B-Address
+  238  2020-06-05 17:19:51  autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 root@aliyun
+  239  2020-06-05 17:20:15  ssh-copy-id root@aliyun
+  240  2020-06-05 17:20:30  ssh root@aliyun
+  241  2020-06-05 17:20:38  autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 root@aliyun
+  242  2020-06-05 17:23:43  deactivate 
+  243  2020-06-05 17:24:01  l
+  244  2020-06-05 17:24:02  ll
+  245  2020-06-05 17:41:53  $ autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 B-User@B-Address
+  246  2020-06-05 17:42:11  autossh -M 30000 -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -NR 20000:localhost:22 root@aliyun
+  247  2020-06-05 17:43:55  ssh root@aliyun
+  248  2020-06-05 17:49:18  cd /etc/systemd/system/
+  249  2020-06-05 17:49:21  ll
+  250  2020-06-05 17:49:38  vim autossh.service
+  251  2020-06-05 17:49:43  sudo vim autossh.service
+  252  2020-06-05 17:52:14  systemctl start sutossh.service
+  253  2020-06-05 17:52:27  systemctl start autossh.service
+  254  2020-06-05 17:52:48  ps -ef|grep autossh
+  255  2020-06-05 17:53:43  autossh -fNR 8888:localhost:22   -p 40022 root@aliyun
+  256  2020-06-05 17:54:16  netstat -anltp |grep ssh
+  257  2020-06-05 17:56:58  systemctl 
+  258  2020-06-05 17:57:16  lsof -i:8888
+  259  2020-06-05 17:57:40  vim /etc/systemd/system/autossh.service 
+  260  2020-06-05 17:58:03  systemctl stop autossh.service
+  261  2020-06-05 17:58:19  systemctl status autossh.service
+  262  2020-06-05 18:00:11  autossh -M 7281 -fCNR 7280:localhost:22 root@aliyun
+  263  2020-06-05 18:00:57  ps aux |grep autossh
+  264  2020-06-05 18:01:36  kill 14054
+  265  2020-06-05 18:01:55  ps aux |grep autossh
+  266  2020-06-05 18:06:22  ssh -fCNR 7280:localhost:22 root@aliyun
+  267  2020-06-05 18:06:35  ps aux |grep autossh
+  268  2020-06-05 18:06:53  kill 14143
+  269  2020-06-05 18:07:00  kill 14161
+  270  2020-06-05 18:07:05  ps aux |grep autossh
+  271  2020-06-05 18:07:15  kill 14163
+  272  2020-06-05 18:07:19  ps aux |grep autossh
+  273  2020-06-05 18:07:25  ps aux 
+  274  2020-06-05 18:07:28  ps aux |grep autossh
+  275  2020-06-05 18:08:20  ssh -fCNR 7280:localhost:22 root@aliyun
+  276  2020-06-05 18:11:14  ps aux |grep autossh
+  277  2020-06-05 18:11:22  ps aux |grep ssh
+  278  2020-06-05 18:11:36  kill 14159
+  279  2020-06-05 18:11:42  kill 14170
+  280  2020-06-05 18:11:45  ps aux |grep ssh
+  281  2020-06-05 18:12:28  ssh root@aliyun
+  282  2020-06-05 18:13:24  autossh -M 7281 -fCNR 7280:localhost:22 root@aliyun
+  283  2020-06-05 18:13:30  ps aux |grep autossh
+  284  2020-06-05 18:15:15  kill 14183 14188
+  285  2020-06-05 18:15:18  ps aux |grep autossh
+  286  2020-06-05 18:15:23  ps aux |grep ssh
+  287  2020-06-05 18:21:51  ssh -fCNR 8887:127.0.0.1:22 root@aliyun
+  288  2020-06-05 18:23:27  ps aux |grep ssh
+  289  2020-06-05 18:23:36  ping aliyun
+  290  2020-06-05 18:26:24  ll
+  291  2020-06-05 18:26:27  ps aux |grep ssh
+  292  2020-06-05 18:26:42  ps aux
+  293  2020-06-05 18:27:05  ps aux |grep ssh
+  294  2020-06-05 18:32:16  kill 8240
+  295  2020-06-05 18:32:23  sudo kill 8240
+  296  2020-06-05 18:32:39  ps aux |grep ssh
+  297  2020-06-05 18:33:07  sudo kill 6822
+  298  2020-06-05 18:33:21  sudo kill 14221
+  299  2020-06-05 18:57:20  exit
+  300  2020-06-05 18:54:31  ps aux
+  301  2020-06-05 18:54:35  ps aux|grep ssh
+  302  2020-06-05 18:55:35  lsof -i:22
+  303  2020-06-05 18:55:47  ps aux|grep ssh
+  304  2020-06-05 18:55:55  service ssh start
+  305  2020-06-05 18:56:03  ps aux|grep ssh
+  306  2020-06-05 18:56:12  lsof -i:22
+  307  2020-06-05 18:56:34  sudo apt-get install openssh-server openssh-client 
+  308  2020-06-05 18:57:01  ssh dc@10.1.51.52
+  309  2020-06-05 18:57:29  lsof -i:22
+  310  2020-06-05 18:57:48  netstat |grep ssh
+  311  2020-06-05 18:58:24  ping www.baidu.com
+  312  2020-06-05 18:58:27  exit
+  313  2020-06-05 19:00:04  ps aux |grep ssh
+  314  2020-06-05 19:01:27  exit
+  315  2020-06-05 19:02:10  ps aux |grep ssh
+  316  2020-06-05 19:02:22  ssh root@aliyun
+  317  2020-06-05 19:02:47  exit
+  318  2020-06-05 19:05:44  apt-get -y install autossh
+  319  2020-06-05 19:05:50  sudo apt-get -y install autossh
+  320  2020-06-05 19:06:12  ssh-copy-id root@aliyun
+  321  2020-06-05 19:07:07  netstat -anltp |grep ssh
+  322  2020-06-05 19:07:11  sudo netstat -anltp |grep ssh
+  323  2020-06-05 19:07:43  ping localhost
+  324  2020-06-05 19:07:58  autossh -fNR 8888:localhost:22   -p 40022 root@aliyun
+  325  2020-06-05 19:08:02  sudo netstat -anltp |grep ssh
+  326  2020-06-05 19:10:11  kill 16784 16105
+  327  2020-06-05 19:10:14  sudo kill 16784 16105
+  328  2020-06-05 19:10:36  sudo netstat -anltp |grep ssh
+  329  2020-06-05 19:10:44  ps aux|grep ssh
+  330  2020-06-05 19:10:55  sudo netstat -anltp |grep ssh
+  331  2020-06-05 19:12:52  autossh -p 40022  -NR  8888:localhost:22 root@aliyun
+  332  2020-06-05 19:13:11  sudo netstat -anltp |grep ssh
+  333  2020-06-05 19:15:30  autossh -M 5678 -fN -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "PasswordAuthentication=no" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R 123.56.21.222:54345:localhost:2222 userW@123.56.21.222 -p61397
+  334  2020-06-05 19:15:30  ————————————————
+  335  2020-06-05 19:15:30  版权声明：本文为CSDN博主「________Yang」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+  336  2020-06-05 19:16:59  autossh -M 5678 -fN -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "PasswordAuthentication=no" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R aliyun:54345:localhost:2222 root@aliyun -p61397
+  337  2020-06-05 19:18:36  sudo netstat -anltp |grep ssh
+  338  2020-06-05 19:18:56  kill 16885
+  339  2020-06-05 19:18:58  sudo netstat -anltp |grep ssh
+  340  2020-06-05 19:25:28  kill 17001
+  341  2020-06-05 19:25:30  sudo netstat -anltp |grep ssh
+  342  2020-06-05 19:25:51  ssh -CfNg -R 5122:localhost:22  root@aliyun
+  343  2020-06-05 19:28:15  sudo netstat -anltp |grep ssh
+  344  2020-06-05 19:33:08  reboot
+  345  2020-06-05 19:33:17  sudo reboot
+  346  2020-06-05 20:21:04  sudo apt-get install fcitx fcitx-googlepinyin im-config
+  347  2020-06-05 20:22:53  sudo rm /var/lib/dpkg/lock-frontend 
+  348  2020-06-05 20:25:40  im-config
+  349  2020-06-05 20:25:58  fcitx-config-gtk3
+  350  2020-06-05 19:52:09  ssh -fCNR 7280:localhost:22 root@aliyun
+  351  2020-06-05 19:54:09  ssh root@aliyun
+  352  2020-06-05 19:54:39  sudo netstat -anltp |grep ssh
+  353  2020-06-05 19:54:48  netstat -anltp |grep ssh
+  354  2020-06-05 19:55:29  sudo netstat -anltp |grep ssh
+  355  2020-06-05 19:55:34  netstat -anltp |grep ssh
+  356  2020-06-05 20:00:30  ssh -p 22 -qngfNTR 6766:loaclhost root@aliyun
+  357  2020-06-05 20:03:15  autossh -fNR 8888:localhost:22   -p 40022 root@aliyun
+  358  2020-06-05 20:04:40  sudo netstat -anltp |grep 8888
+  359  2020-06-05 20:05:22  netstat -anltp |grep ssh
+  360  2020-06-05 20:05:28  kill 2848
+  361  2020-06-05 20:05:35  netstat -anltp |grep ssh
+  362  2020-06-05 20:05:41  kill 3848
+  363  2020-06-05 20:05:43  netstat -anltp |grep ssh
+  364  2020-06-05 20:05:49  sudo netstat -anltp |grep ssh
+  365  2020-06-05 20:10:54  vim /etc/ssh/sshd_config 
+  366  2020-06-05 20:11:03  sudo vim /etc/ssh/sshd_config 
+  367  2020-06-05 20:11:19  sudo reload ssh
+  368  2020-06-05 20:11:47  reload ssh
+  369  2020-06-05 20:11:58  sudo apt install reload
+  370  2020-06-05 20:14:39  ssh -NfR 1234:localhost:2223 root@aliyun -p2221
+  371  2020-06-05 20:15:00  sudo netstat -anltp |grep ssh
+  372  2020-06-05 20:16:14  cd 5W/
+  373  2020-06-05 20:16:15  ll
+  374  2020-06-05 20:16:21  vim test.cpp
+  375  2020-06-05 20:16:38  g++ -g test.cpp 
+  376  2020-06-05 20:16:44  gdb a.out 
+  377  2020-06-05 20:39:59  exit
+  378  2020-06-05 19:46:14  service sshd status
+  379  2020-06-05 19:46:29  ps aux|grep ssh
+  380  2020-06-05 20:30:52  cd $dtl
+  381  2020-06-05 20:30:53  ll
+  382  2020-06-05 20:30:55  cd install/
+  383  2020-06-05 20:30:56  ll
+  384  2020-06-05 20:31:56  whereis chromium
+  385  2020-06-05 20:32:12  whereis chromium-browser  
+  386  2020-06-05 20:32:26  ll ~
+  387  2020-06-05 20:32:54  cd ~/.config/
+  388  2020-06-05 20:32:56  ll
+  389  2020-06-05 20:33:05  cd -
+  390  2020-06-05 20:33:10  ll
+  391  2020-06-05 20:33:43  cp _home_snap_chromium_1165__config_chromium_Default.tar /home/dc/.config/chromium/
+  392  2020-06-05 20:33:46  cd $_
+  393  2020-06-05 20:33:48  ll
+  394  2020-06-05 20:34:12  gio trash Default/
+  395  2020-06-05 20:34:40  mkdir Default
+  396  2020-06-05 20:34:51  mv _home_snap_chromium_1165__config_chromium_Default.tar Default/
+  397  2020-06-05 20:34:54  cd Default/
+  398  2020-06-05 20:34:55  ll
+  399  2020-06-05 20:35:00  tar -xvf _home_snap_chromium_1165__config_chromium_Default.tar 
+  400  2020-06-05 20:35:01  ll
+  401  2020-06-05 20:35:06  ls _home_snap_chromium_1165__config_chromium_Default
+  402  2020-06-05 20:35:36  mv _home_snap_chromium_1165__config_chromium_Default.tar  ..
+  403  2020-06-05 20:35:38  cd ..
+  404  2020-06-05 20:35:39  ll
+  405  2020-06-05 20:35:48  gio trash Default/
+  406  2020-06-05 20:35:55  tar -xvf _home_snap_chromium_1165__config_chromium_Default.tar 
+  407  2020-06-05 20:35:56  ll
+  408  2020-06-05 20:36:04  mv _home_snap_chromium_1165__config_chromium_Default Default
+  409  2020-06-05 20:42:38  reboot
+  410  2020-06-05 21:02:35  exit
+  411  2020-06-05 20:45:31  autossh -M 2222 -CqTfnN -R 0.0.0.0:2222:127.0.0.1:22 root@aliyun
+  412  2020-06-05 20:48:06  ps aux|grep ssh
+  413  2020-06-05 20:48:15  kill 1371
+  414  2020-06-05 20:48:24  sudo kill 1571
+  415  2020-06-05 20:48:31  ps aux|grep ssh
+  416  2020-06-05 20:49:59  ssh -fCNR 7280:localhost:22 root@aliyun
+  417  2020-06-05 20:52:22  ps aux|grep ssh
+  418  2020-06-05 20:52:26  kill 1588
+  419  2020-06-05 20:52:28  ps aux|grep ssh
+  420  2020-06-05 21:01:30  ssh -CfNg -R 5122:localhost:22  root@aliyun
+  421  2020-06-05 21:23:58  exit
+  422  2020-06-05 21:08:14  ssh -CfNg -R 5122:localhost:22 root@aliyun
+  423  2020-06-05 21:12:50  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  424  2020-06-05 21:13:45  ps aux|grep ssh
+  425  2020-06-05 21:14:35  kill 2491
+  426  2020-06-05 21:14:40  ps aux|grep ssh
+  427  2020-06-05 21:16:02  ssh -CfNg -R 5122:localhost:22 root@aliyun
+  428  2020-06-05 21:16:31  ps aux|grep ssh
+  429  2020-06-05 21:16:45  kill 2926
+  430  2020-06-05 21:16:56  ps aux|grep ssh
+  431  2020-06-05 21:17:07  kill 3047
+  432  2020-06-05 21:17:33  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  433  2020-06-05 21:17:54  ps aux|grep ssh
+  434  2020-06-05 21:18:08  kill 3244 3245
+  435  2020-06-05 21:18:11  ps aux|grep ssh
+  436  2020-06-05 21:18:19  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  437  2020-06-05 21:19:05  vim /etc/systemd/system/autossh.service 
+  438  2020-06-05 21:19:28  sudo vim /etc/systemd/system/autossh.service 
+  439  2020-06-05 21:20:26  whereis autossh
+  440  2020-06-05 21:20:31  sudo vim /etc/systemd/system/autossh.service 
+  441  2020-06-05 21:20:57  history |grep autossh
+  442  2020-06-05 21:21:13  systemctl stop autossh.service
+  443  2020-06-05 21:21:26  systemctl status autossh.service
+  444  2020-06-05 21:21:34  systemctl start autossh.service
+  445  2020-06-05 21:21:41  systemctl status autossh.service
+  446  2020-06-05 21:22:00  systemctl start autossh.service
+  447  2020-06-05 21:22:07  systemctl status autossh.service
+  448  2020-06-05 21:22:15  sudo vim /etc/systemd/system/autossh.service 
+  449  2020-06-05 21:22:56  ps aux|grep ssh
+  450  2020-06-05 21:23:08  kill 3346
+  451  2020-06-05 21:23:37  ps aux|grep ssh
+  452  2020-06-05 21:23:51  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  453  2020-06-05 21:24:01  exit
+  454  2020-06-05 21:24:55  ps aux|grep ssh
+  455  2020-06-05 21:25:21  ps aux|grep ssh
+  456  2020-06-05 21:25:45  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  457  2020-06-05 21:26:00  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun &
+  458  2020-06-05 21:26:05  ps aux|grep ssh
+  459  2020-06-05 21:26:11  exit
+  460  2020-06-05 21:29:04  vim /etc/systemd/system/autossh.service 
+  461  2020-06-05 21:29:50  systemctl status autossh.service ssh.service
+  462  2020-06-05 21:32:38  ps aux|grep ssh
+  463  2020-06-05 21:35:20  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun &
+  464  2020-06-05 21:35:41  ps aux|grep ssh
+  465  2020-06-05 21:39:22  autossh -M 5678 -CfNg -R 5122:localhost:22 root@aliyun
+  466  2020-06-05 21:45:35  ps aux|grep ssh
+  467  2020-06-05 21:46:39  systemctl status autossh.service
+  468  2020-06-05 21:47:27  systemctl start autossh.service
+  469  2020-06-05 21:47:37  systemctl status autossh.service
+  470  2020-06-05 21:49:10  sudo vim /etc/systemd/system/autossh.service 
+  471  2020-06-05 21:50:23  systemctl stop autossh.service
+  472  2020-06-05 21:50:32  systemctl status autossh.service
+  473  2020-06-05 21:50:42  systemctl start autossh.service
+  474  2020-06-05 21:50:50  systemctl status autossh.service
+  475  2020-06-05 21:51:00  systemctl start autossh.service
+  476  2020-06-05 21:51:23  systemctl daemon-reload
+  477  2020-06-05 21:51:30  systemctl start autossh.service
+  478  2020-06-05 21:51:42  sudo systemctl status autossh.service
+  479  2020-06-05 21:52:00  sudo systemctl stop autossh.service
+  480  2020-06-05 21:52:03  sudo systemctl status autossh.service
+  481  2020-06-05 21:52:12  sudo systemctl start autossh.service
+  482  2020-06-05 21:52:15  sudo systemctl status autossh.service
+  483  2020-06-05 21:56:21  systemctl daemon-reload
+  484  2020-06-05 21:56:37  systemctl start autossh
+  485  2020-06-05 21:56:53  systemctl status autossh
+  486  2020-06-05 21:57:33  ps aux|grep ssh
+  487  2020-06-05 21:57:41  kill 4834
+  488  2020-06-05 21:57:49  ps aux|grep ssh
+  489  2020-06-05 21:58:57  autossh -M 5678  -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -CfNg -R 5122:localhost:22 root@aliyun
+  490* 2020-06-05 22:01:30  
+  491  2020-06-05 22:06:21  ps aux|grep ssh
+  492  2020-06-05 22:06:27  kill 8717
+  493  2020-06-05 22:06:29  ps aux|grep ssh
+  494  2020-06-05 22:07:00  autossh -M 5678 -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -CfNg -R 5122:localhost:22 root@106.14.166.241
+  495  2020-06-05 22:07:54  sudo vim /etc/systemd/system/autossh.service 
+  496  2020-06-05 22:08:13  systemctl daemon-reload && systemctl start autossh
+  497  2020-06-05 22:08:40  systemctl enable autossh.service
+  498  2020-06-05 22:09:12  systemctl status autossh.service
+  499  2020-06-05 22:09:31  systemctl start autossh.service
+  500  2020-06-05 22:09:38  systemctl status autossh.service
+  501  2020-06-05 22:11:47  sudo mv /etc/systemd/system/autossh.service /etc/systemd/system/remote-autossh.service 
+  502  2020-06-05 22:12:09  cat $_
+  503  2020-06-05 22:12:39  sudo systemctl daemon-reload && systemctl start remote-autossh
+  504  2020-06-05 22:12:52  systemctl enable remote-autossh.service
+  505  2020-06-05 22:13:14  systemctl status remote-autossh.service
+  506  2020-06-05 22:13:39  systemctl start remote-autossh.service
+  507  2020-06-05 22:13:44  systemctl status remote-autossh.service
+  508  2020-06-05 22:14:04  ps aux|grep ssh
+  509  2020-06-05 22:14:10  kill 9157
+  510  2020-06-05 22:14:20  systemctl enable remote-autossh.service
+  511  2020-06-05 22:14:32  systemctl status remote-autossh.service
+  512  2020-06-05 22:14:40  systemctl start remote-autossh.service
+  513  2020-06-05 22:14:46  systemctl status remote-autossh.service
+  514* 2020-06-05 22:14:59  
+  515  2020-06-05 22:15:28  kill 9738
+  516  2020-06-05 22:15:34  systemctl status remote-autossh.service
+  517  2020-06-05 22:15:41  ps aux|grep ssh
+  518  2020-06-05 22:15:58  systemctl enable remote-autossh.service
+  519  2020-06-05 22:16:12  ps aux|grep ssh
+  520  2020-06-05 22:16:22  systemctl status remote-autossh.service
+  521  2020-06-05 22:16:30  systemctl start remote-autossh.service
+  522  2020-06-05 22:16:35  systemctl status remote-autossh.service
+  523  2020-06-05 22:16:55  ps aux|grep ssh
+  524  2020-06-05 22:18:07  cd $dbg
+  525  2020-06-05 22:18:08  ll
+  526  2020-06-05 22:18:42  cd ..
+  527  2020-06-05 22:18:48  gio trash blog/
+  528  2020-06-05 22:18:53  git clone git@github.com:DC-Melo/blog.git
+  529  2020-06-05 22:19:00  ll
+  530  2020-06-05 22:19:03  cd blog/
+  531  2020-06-05 22:19:03  ll
+  532  2020-06-05 22:19:08  cd ..
+  533  2020-06-05 22:19:12  cd $dcm
+  534  2020-06-05 22:19:13  ll
+  535  2020-06-05 22:19:20  mkdir -p $dcm
+  536  2020-06-05 22:19:23  cd $_
+  537  2020-06-05 22:19:24  ll
+  538  2020-06-05 22:19:28  cd ..
+  539  2020-06-05 22:19:29  ll
+  540  2020-06-05 22:19:33  gio trash command/
+  541  2020-06-05 22:19:50  git clone git@github.com:DC-Melo/command.git
+  542  2020-06-05 22:20:04  ll
+  543  2020-06-05 22:20:09  reviewblog.sh 
+  544  2020-06-05 22:21:33  pullblog.sh 
+  545  2020-06-05 22:21:42  reviewblog.sh 
+  546  2020-06-05 22:22:12  history 1000 >> $blogfile 

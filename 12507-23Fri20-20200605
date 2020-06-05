@@ -1,0 +1,25 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200605 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200606 → ??? → @20200607 → ??? → @20200609 → ??? → @20200612 → ??? → @20200620 → ??? ⇒ @20200706 → ??? ⇒ 
+mutt -s 12507-23Fri20-20200605 melo.dachor@gmail.com < $dbg/12507-23Fri20-20200605
+
+SUNRISE:
+Fri Jun  5 08:23:02 CST 2020
+A.read caffe.
+池化是压缩数据，防止过拟合。
+caffe的数据层支持三中数据库输入：LevelDB.LMDB.HDF5.
+LevelDB是google非常高效的key-value数据库
+
+MORNING:
+
+NOON:
+
+AFTERNOON:
+
+SUNSET:
+
+EVENING:
+
+NOTE:

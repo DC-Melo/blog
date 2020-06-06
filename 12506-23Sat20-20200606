@@ -60,7 +60,19 @@ sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
 执行复制命令，将Eigen文件夹及其内容放在/usr/include
 ▣ ssh key control. different account diffenent sshkey
 ssh -T git@github.com
-
+▣ clear .git size
+1.Checkout
+   git checkout --orphan latest_branch
+2. Add all the files
+   git add -A
+3. Commit the changes
+   git commit -am "commit message"
+4. Delete the branch
+   git branch -D master
+5.Rename the current branch to master
+   git branch -m master
+6.Finally, force update your repository
+   git push -f origin master
 
 
 NOON:

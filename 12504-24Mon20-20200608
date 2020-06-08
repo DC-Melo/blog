@@ -135,6 +135,11 @@ OPENCV_VERSION := 3
 test git
 
 SUNSET:
+termux setting:
+1.install git ssh vim
+2.clone code
+3.set path，not need to set enviroment 
+
 
 EVENING:
 

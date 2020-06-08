@@ -1,7 +1,7 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200608 → ??? ⇒ 
-●:run response script ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:run response script ⇒ ✗
+●:cpu 内存填充方案研究 ⇒ ✗
+●:一体化的性能测试方案 ⇒ ✗
 TODO:@20200609 → ??? → @20200610 → ??? → @20200612 → ??? → @20200615 → ??? → @20200623 → ??? ⇒ @20200709 → ??? ⇒ 
 mutt -s 12504-24Mon20-20200608 melo.dachor@gmail.com < $dbg/12504-24Mon20-20200608
 
@@ -113,9 +113,25 @@ socks5 代理（-D）：相当于 ss/ssr
 service sshd restart
 
 NOON:
-
+Emmagee——开源Android性能测试工具
 
 AFTERNOON:
+▣ install caffe: `cv::imread(cv::String const&, int)'
+分析
+caffe的opencv默认版本为2
+我的服务器的输入命令行后
+$ pkg-config --modversion opencv
+3.2.0
+版本为3
+
+解决
+修改makefile
+#Uncomment if you’re using OpenCV 3
+#OPENCV_VERSION := 3
+去掉第二行注释
+#Uncomment if you’re using OpenCV 3
+OPENCV_VERSION := 3
+
 
 SUNSET:
 

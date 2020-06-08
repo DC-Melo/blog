@@ -1,0 +1,86 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200606 → ??? ⇒ 
+●:learn caffe tensorflow opencv slam ⇒ 
+●: ⇒ 
+TODO:@20200607 → ??? → @20200608 → ??? → @20200610 → ??? → @20200613 → ??? → @20200621 → ??? ⇒ @20200707 → ??? ⇒ 
+mutt -s 12506-23Sat20-20200606 melo.dachor@gmail.com < $dbg/12506-23Sat20-20200606
+
+SUNRISE:
+▣ ssh config 
+autossh -M 5678 -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -CfNg -R 5122:localhost:22 root@106.14.166.241
+ssh -CfNg -L 5123:localhost:5122 root@aliyun
+ssh -p 5123 dc@localhost
+一、ssh相关配置
+ssh的相关配置主要是解决连接自动断开的问题，其又分为客户端和服务端部分。涉及到的参数有ClientAliveInterval（服务端参数）、ClientAliveCountMax（服务端参数）、ServerAliveInterval（客户端参数）
+1、sshd_config服务端参数
+ClientAliveInterval指定了服务器端向客户端请求消息的时间间隔, 默认是0，不发送。而ClientAliveInterval 300表示5分钟发送一次，然后客户端响应，这样就保持长连接了。
+ClientAliveCountMax，默认值3。ClientAliveCountMax表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开，正常情况下，客户端不会不响应。
+ClientAliveInterval 300
+ClientAliveCountMax 3
+按上面的配置的话，300*3＝900秒＝15分钟，即15分钟客户端不响应时，ssh连接会自动退出。
+具体可以参看man sshd_config 获取更多参数信息。
+2、ssh_config客户端配置
+# vim /etc/ssh/ssh_config
+找到里面的ServerAliveInterval 参数，如果没有你同样自己加一个就好了。参数意义相同，都是秒数，比如5分钟：
+ServerAliveInterval 300
+以上在客户端配置后，就会有反空闲设置，即每5分钟会自动和服务端做一次确认。windows下的ssh客户端软件可以使用如下方法配置：
+SecureCRT的配置如下图：
+putty设置如下：
+putty -> Connection -> Seconds between keepalives ( 0 to turn off )，默认为0，改为60。
+二、bash下的TMOUT参数
+默认情况下，一般我们不会修改sshd_config和ssh_config配置达到自动退出的控制，而是通过shell 自身带的变量操作。常见的bash shell 下有一个TMOUT参数可以设置自动超时时间，配置方法如下：
+#vi /etc/profile
+TMOUT=180    //设置三分钟超时
+export TMOUT
+配置完成后source /etc/profile 生效，执行echo $TMOUT查看。具体更多变量可以man bash查看
+三、csh下的自动超时
+csh shell 下的自动超时变量是autologout，具体设置方法如下：
+# vim /etc/csh.cshrc
+# 添加如下行：
+set autologout=30
+修改完成后，退出连接再重新登陆即可生效。更多可以使用man csh 获取。
+
+
+
+MORNING:
+▣ install opencv,还不明白这个的作用
+下面操作可选 ，以上只是安装好了，但是还没有配置环境
+sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+编译的时候可以采用下面的命令
+`pkg-config opencv --libs --cflags opencv`
+▣ Learning opencv 3 code
+https://github.com/oreillymedia/Learning-OpenCV-3_examples.git
+▣ Eigen install
+sudo apt-get install libeigen3-dev
+1、apt-get方式(假设默认安装到/usr/local/include里(可在终端中输入locate eigen3查看位置)，若实际中默认安装到了/usr/include的话，可以对应替换下面命令的相应部分)
+运行命令：
+sudo apt-get install libeigen3-dev
+运行命令:（参考第二种方法的最下面的说明）
+sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include
+执行复制命令，将Eigen文件夹及其内容放在/usr/include
+▣ ssh key control. different account diffenent sshkey
+ssh -T git@github.com
+▣ clear .git size
+1.Checkout
+   git checkout --orphan latest_branch
+2. Add all the files
+   git add -A
+3. Commit the changes
+   git commit -am "commit message"
+4. Delete the branch
+   git branch -D master
+5.Rename the current branch to master
+   git branch -m master
+6.Finally, force update your repository
+   git push -f origin master
+
+
+NOON:
+
+AFTERNOON:
+
+SUNSET:
+
+EVENING:
+
+NOTE:

@@ -1,7 +1,6 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200605 → ??? ⇒ 
 ●: ⇒ 
 ●: ⇒ 
-●: ⇒ 
 TODO:@20200606 → ??? → @20200607 → ??? → @20200609 → ??? → @20200612 → ??? → @20200620 → ??? ⇒ @20200706 → ??? ⇒ 
 mutt -s 12507-23Fri20-20200605 melo.dachor@gmail.com < $dbg/12507-23Fri20-20200605
 
@@ -32,6 +31,7 @@ dc         45925  0.0  0.0  17664   664 pts/0    S+   19:03   0:00 grep --color=
 SUNSET:
 
 EVENING:
+autossh -M 5678 -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -CfNg -R 5122:localhost:22 root@106.14.166.241
 http://www.luyixian.cn/news_show_16509.aspx
 开机启动
 在 Ubuntu 中我们可以使用 systemd 管理 autossh 的开机启动问题（旧版本中可以使用 init.d）。配置很简单，只需要创建一个 
@@ -380,7 +380,7 @@ NOTE:
   320  2020-06-05 19:06:12  ssh-copy-id root@aliyun
   321  2020-06-05 19:07:07  netstat -anltp |grep ssh
   322  2020-06-05 19:07:11  sudo netstat -anltp |grep ssh
-  323  2020-06-05 19:07:43  ping localhost
+  3sd:u23  2020-06-05 19:07:43  ping localhost
   324  2020-06-05 19:07:58  autossh -fNR 8888:localhost:22   -p 40022 root@aliyun
   325  2020-06-05 19:08:02  sudo netstat -anltp |grep ssh
   326  2020-06-05 19:10:11  kill 16784 16105
@@ -578,29 +578,3 @@ NOTE:
   518  2020-06-05 22:15:58  systemctl enable remote-autossh.service
   519  2020-06-05 22:16:12  ps aux|grep ssh
   520  2020-06-05 22:16:22  systemctl status remote-autossh.service
-  521  2020-06-05 22:16:30  systemctl start remote-autossh.service
-  522  2020-06-05 22:16:35  systemctl status remote-autossh.service
-  523  2020-06-05 22:16:55  ps aux|grep ssh
-  524  2020-06-05 22:18:07  cd $dbg
-  525  2020-06-05 22:18:08  ll
-  526  2020-06-05 22:18:42  cd ..
-  527  2020-06-05 22:18:48  gio trash blog/
-  528  2020-06-05 22:18:53  git clone git@github.com:DC-Melo/blog.git
-  529  2020-06-05 22:19:00  ll
-  530  2020-06-05 22:19:03  cd blog/
-  531  2020-06-05 22:19:03  ll
-  532  2020-06-05 22:19:08  cd ..
-  533  2020-06-05 22:19:12  cd $dcm
-  534  2020-06-05 22:19:13  ll
-  535  2020-06-05 22:19:20  mkdir -p $dcm
-  536  2020-06-05 22:19:23  cd $_
-  537  2020-06-05 22:19:24  ll
-  538  2020-06-05 22:19:28  cd ..
-  539  2020-06-05 22:19:29  ll
-  540  2020-06-05 22:19:33  gio trash command/
-  541  2020-06-05 22:19:50  git clone git@github.com:DC-Melo/command.git
-  542  2020-06-05 22:20:04  ll
-  543  2020-06-05 22:20:09  reviewblog.sh 
-  544  2020-06-05 22:21:33  pullblog.sh 
-  545  2020-06-05 22:21:42  reviewblog.sh 
-  546  2020-06-05 22:22:12  history 1000 >> $blogfile 

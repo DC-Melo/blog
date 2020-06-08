@@ -1,0 +1,24 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200607 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200608 → ??? → @20200609 → ??? → @20200611 → ??? → @20200614 → ??? → @20200622 → ??? ⇒ @20200708 → ??? ⇒ 
+mutt -s 12505-23Sun20-20200607 melo.dachor@gmail.com < $dbg/12505-23Sun20-20200607
+
+SUNRISE:
+1.备份，文件的话，将其硬l链接，文件夹的话，打包备份。
+2.移动，两边都移动。
+ls -A -R 文件夹
+3.手机设置，设置路径，pull blog和pull command
+grep -rl 正则  路径  | xargs sed -i 's/原始字符串/目标字符串/g'
+MORNING:
+
+NOON:
+
+AFTERNOON:
+
+SUNSET:
+
+EVENING:
+
+NOTE:

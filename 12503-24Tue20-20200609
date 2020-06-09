@@ -1,9 +1,5 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200609 → ??? ⇒ 
-<<<<<<< HEAD
-●:写了一些东西 ⇒ 
-=======
-●: ⇒ 
->>>>>>> origin/master
+●:内存填充,CPU填充调研 ⇒ 
 ●: ⇒ 
 ●: ⇒ 
 TODO:@20200610 → ??? → @20200611 → ??? → @20200613 → ??? → @20200616 → ??? → @20200624 → ??? ⇒ @20200710 → ??? ⇒ 
@@ -19,6 +15,16 @@ MORNING:
 NOON:
 
 AFTERNOON:
+▣ all download use wget or command line
+cURL
+cURL是在多种协议上传输数据的命令行工具。cURL是支持FTP, HTTP, FTPS, TFTP, TELNET, IMAP, POP3等协议的客户端应用。cURL是一个不同于wget 的简单下载器，和其它的相比，它支持LDAP，POP3。cURL也很好的支持代理下载，暂停下载以及恢复下载
+w3m
+W3m是GPL协议下发布的基于文本的web浏览器。W3m支持表格，帧，颜色，SSL连接以及内联图像。W3m以快速浏览而出名。
+安装w3m
+W3m在大部分Linux发行版中也是默认可用的。如果不可用的话可以用apt或者yum获取需要的安装包。
+sed -n '4,$p' test.txt
+▣ install apk and start apk  ✓
+▣ screen shot named by launch activity ✓
 
 SUNSET:
 

@@ -132,6 +132,7 @@ $ pkg-config --modversion opencv
 #Uncomment if you’re using OpenCV 3
 OPENCV_VERSION := 3
 
+test git
 
 SUNSET:
 

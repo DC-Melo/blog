@@ -321,7 +321,7 @@ Fastbit是一个追随 NoSQL(Not Only SQL) 运动精神的开源的数据处理�
 DUNE (Distributed and Unified Numerics Environment)，分布和统一数值解环境，是一种求解偏微分方程的基于网格的方法（PDE）的模块化的工具箱。DUNE是所有这些体现了科学计算的概念从抽象的接口设置第一次。现代C + +编程技术使同样的概念非常不同的实现...DUNE更多DUNE信息
 计算机代数系统 Maxima
 Maxima是一种用Common Lisp开发的计算机代数系统（或符号计算系统），用于公式推导、符号计算、数值计算等。 类似的商业产品有美国Wolfram Research公司的Mathematica、加拿大滑铁卢大学的Maple（其计算机代数系统核心作为Matlab的符号计算系统）等等。...Maxima更多Maxima信息
-GNU线性编程工具 GLPK
+GNU线性编程工具 GLPe
 GLPK (GNU Linear Programming Kit:GNU线性编程工具)用于建立线性规划LP和混合型整数规划MIP问题的建模语言，并对模型进行最优化求解。 类似的商业产品是美国Lindo公司的Lindo和Lingo软件，相比之下求解运筹问题能力较弱。...更多GLPK信息
 C语言共享库 libease
 libease 是一个C语言的共享库，包含一些图像处理效果库和多种算术计算方法。 easeNone easeIn easeOut easeIo easeOi easeBounceIn easeBounceOut easeBackIn easeBackOut easeBackIo...libease更多libease信息

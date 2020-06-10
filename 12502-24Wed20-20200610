@@ -6,12 +6,20 @@ TODO:@20200611 → ??? → @20200612 → ??? → @20200614 → ??? → @20200617
 mutt -s 12502-24Wed20-20200610 melo.dachor@gmail.com < $dbg/12502-24Wed20-20200610
 
 SUNRISE:
+<<<<<<< HEAD
 
 MORNING:
 Wed Jun 10 10:16:58 HKT 2020
 ▣ error: The following untracked working tree files would be overwritten by merge:
 if there is same file create by different computer,just merge.
 where you pull blog. pull blog and merge it.
+=======
+awk 引用变量，需要加单双引号
+grep -v 不匹配
+awk 修改$2后，会根据OFS重建$0。
+
+MORNING:
+>>>>>>> temp
 
 NOON:
 

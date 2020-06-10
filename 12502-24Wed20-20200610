@@ -1,0 +1,23 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200610 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200611 → ??? → @20200612 → ??? → @20200614 → ??? → @20200617 → ??? → @20200625 → ??? ⇒ @20200711 → ??? ⇒ 
+mutt -s 12502-24Wed20-20200610 melo.dachor@gmail.com < $dbg/12502-24Wed20-20200610
+
+SUNRISE:
+awk 引用变量，需要加单双引号
+grep -v 不匹配
+awk 修改$2后，会根据OFS重建$0。
+
+MORNING:
+
+NOON:
+
+AFTERNOON:
+
+SUNSET:
+
+EVENING:
+
+NOTE:

@@ -1,35 +1,42 @@
 TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200610 → ??? ⇒ 
-●: ⇒ 
-●: ⇒ 
+●:查看响应时间代码 ⇒ ✓
+●:修缮code中的脚本 ⇒ ✓
 ●: ⇒ 
 TODO:@20200611 → ??? → @20200612 → ??? → @20200614 → ??? → @20200617 → ??? → @20200625 → ??? ⇒ @20200711 → ??? ⇒ 
 mutt -s 12502-24Wed20-20200610 melo.dachor@gmail.com < $dbg/12502-24Wed20-20200610
 
 SUNRISE:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> temp
+awk 引用变量，需要加单双引号
+grep -v 不匹配
+awk 修改$2后，会根据OFS重建$0。
 
 MORNING:
 Wed Jun 10 10:16:58 HKT 2020
 ▣ error: The following untracked working tree files would be overwritten by merge:
 if there is same file create by different computer,just merge.
 where you pull blog. pull blog and merge it.
-<<<<<<< HEAD
-=======
-=======
-awk 引用变量，需要加单双引号
-grep -v 不匹配
-awk 修改$2后，会根据OFS重建$0。
-
-MORNING:
->>>>>>> temp
->>>>>>> temp
+查看远程仓库:
+git remote -v
+比如 在步骤一中，我们查看到远程有一个叫origin的仓库，我们可以使用如下命令从origin远程仓库获取最新版本的代码
+git fetch origin master:temp
+上面代码的意思是：从远程的origin仓库的master分支下载到本地master并新建一个temp分支
+查看temp分支与本地原有分支的不同
+git diff temp
+将temp分支和本地的master分支合并
+git merge temp
+现在，B的本地代码已经和远程仓库处于同一个版本了，于是B可以开心coding了。
+最后再提一下，上面的步骤中我们创建了temp分支，如果想要删除temp分支，也是可以的，命令如下：
+git branch -d temp
+▣ WT OA password:OAlil01518747
+▣ windows python虚拟环境
 
 NOON:
 
 AFTERNOON:
+Wed Jun 10 16:33:54 HKT 2020
+change server host name :hostnamectl set-hostname XXXX;
+▣ install docker and caffe cpu
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 SUNSET:
 

@@ -1,0 +1,24 @@
+TARGET:DAWN → SUNRISE → MORNING → NOON → AFTERNOON → SUNSET → EVENING → NIGHT → @20200612 → ??? ⇒ 
+●: ⇒ 
+●: ⇒ 
+●: ⇒ 
+TODO:@20200613 → ??? → @20200614 → ??? → @20200616 → ??? → @20200619 → ??? → @20200627 → ??? ⇒ @20200713 → ??? ⇒ 
+mutt -s 12500-24Fri20-20200612 melo.dachor@gmail.com < $dbg/12500-24Fri20-20200612
+
+SUNRISE:
+tdd:测试驱动开发
+包括：实现测试，验证新写的测试会失败，编写实现测试的功能，验证心得测试和旧的测试会一起通过，重构代码。
+ha：wqa
+
+
+MORNING:
+
+NOON:
+
+AFTERNOON:
+
+SUNSET:
+
+EVENING:
+
+NOTE:

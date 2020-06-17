@@ -6,6 +6,20 @@ zzz{
     /* background-color:#efefef; */
     /* font-weight:bold; */
     }
+todo{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
+}
+friend{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
 action{
     display:none;
     /* visibility: hidden; */
@@ -13,11 +27,11 @@ action{
     /* background-color:#efefef; */
     /* font-weight:bold; */
 }
-todo{
+result{
     display:none;
     /* visibility: hidden; */
-    /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
     /* font-weight:bold; */
 }
 timestamp{

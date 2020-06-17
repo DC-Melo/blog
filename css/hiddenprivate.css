@@ -6,6 +6,13 @@ zzz{
     /* background-color:#efefef; */
     /* font-weight:bold; */
     }
+idea{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
+}
 todo{
     display:none;
     /* visibility: hidden; */
@@ -13,7 +20,14 @@ todo{
     /* background-color: #FFF5F4; */
     /* font-weight:bold; */
 }
-friend{
+resource{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
+tool{
     display:none;
     /* visibility: hidden; */
     /* border:1px solid #ccc; */

@@ -37,10 +37,11 @@ tool{
 action{
     /* display:none; */
     /* visibility: hidden; */
-    border:1px solid #ccc;
-    background-color:#efefef;
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* margin-left: 72px; */
+    float:right
     font-weight:bold;
-    text-align:right;
 }
 result{
     display:none;
@@ -57,10 +58,10 @@ timestamp{
     /* font-weight:bold; */
 }
 timeblock{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    font-weight:bold;
 }
 </style>

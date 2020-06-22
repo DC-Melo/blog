@@ -7,7 +7,7 @@ zzz{
     /* font-weight:bold; */
     }
 idea{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
@@ -40,7 +40,7 @@ action{
     /* border:1px solid #ccc; */
     /* background-color:#efefef; */
     /* margin-left: 72px; */
-    float:right
+    float:right;
     font-weight:bold;
 }
 result{
@@ -51,11 +51,11 @@ result{
     /* font-weight:bold; */
 }
 timestamp{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    font-weight:bold;
 }
 timeblock{
     /* display:none; */

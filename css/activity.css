@@ -10,58 +10,56 @@ idea{
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    background-color: #FFF5F4;
+    font-weight:bold;
 }
 todo{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    background-color: #FFF5F4;
+    font-weight:bold;
 }
 resource{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
+    background-color:#efefef;
+    font-weight:bold;
 }
 tool{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
+    background-color:#efefef;
+    font-weight:bold;
 }
 action{
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* margin-left: 72px; */
-    float:right;
+    background-color:#efefef;
     font-weight:bold;
 }
 result{
-    display:none;
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
+    background-color:#efefef;
+    font-weight:bold;
 }
 timestamp{
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
+    background-color: #FFF5F4;
     font-weight:bold;
 }
 timeblock{
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
+    background-color: #FFF5F4;
     font-weight:bold;
 }
 </style>

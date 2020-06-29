@@ -1,59 +1,57 @@
 <style type="text/css">
-p{
-    background-color:yellow;
-    font-size:xx-small;
-}
-id-dc{
+p.id {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
     font-weight:bold;
 }
-td-dc{
+p.todo {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
     /* font-weight:bold; */
 }
-rs-dc{
+p.rs {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
     /* background-color:#efefef; */
     font-weight:bold;
 }
-tl-dc{
+p.tl {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
     /* background-color:#efefef; */
     font-weight:bold;
 }
-ac-dc{
+p.ac {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
+    text-align:right;
     color:#888888;
     /* background-color:#efefef; */
     font-weight:bold;
 }
-rt-dc{
+p.rt {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
     /* background-color:#efefef; */
     font-weight:bold;
 }
-ts-dc{
+p.ts {
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
     font-weight:bold;
 }
-tb-dc{
+p.tb {
+    text-align:right;
     /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */

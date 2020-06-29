@@ -1,13 +1,65 @@
 <style type="text/css">
-p{
-    background-color:yellow;
-    font-size:xx-small;
+zzz{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
 }
-action{
-    /* display:none; */
+iddc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
+}
+tddc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
+}
+rsdc{
+    display:none;
     /* visibility: hidden; */
     /* border:1px solid #ccc; */
-    background-color:#efefef;
-    font-weight:bold;
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
+tldc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
+acdc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
+rtdc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    /* font-weight:bold; */
+}
+tsdc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
+}
+tbdc{
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    /* font-weight:bold; */
 }
 </style>

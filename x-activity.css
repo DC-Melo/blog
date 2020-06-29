@@ -1,4 +1,11 @@
 <style type="text/css">
+p.if {
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    font-weight:bold;
+}
 p.id {
     display:none;
     /* visibility: hidden; */
@@ -34,6 +41,13 @@ p.ac {
     /* border:1px solid #ccc; */
     text-align:right;
     color:#888888;
+    /* background-color:#efefef; */
+    font-weight:bold;
+}
+p.fb {
+    display:none;
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
     /* background-color:#efefef; */
     font-weight:bold;
 }

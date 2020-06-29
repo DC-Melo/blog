@@ -1,65 +1,63 @@
 <style type="text/css">
-zzz{
-    display:none;
+p{
+    background-color:yellow;
+    font-size:xx-small;
+}
+id-dc{
+    /* display:none; */
     /* visibility: hidden; */
-    /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
-    }
-idea{
-    display:none;
+    /* border:1px solid red; */
+    /* background-color: #FFF5F4; */
+    font-weight:bold;
+}
+td-dc{
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
     /* font-weight:bold; */
 }
-todo{
-    display:none;
+rs-dc{
+    /* display:none; */
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    font-weight:bold;
+}
+tl-dc{
+    /* display:none; */
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    font-weight:bold;
+}
+ac-dc{
+    /* display:none; */
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    color:#888888;
+    /* background-color:#efefef; */
+    font-weight:bold;
+}
+rt-dc{
+    /* display:none; */
+    /* visibility: hidden; */
+    /* border:1px solid #ccc; */
+    /* background-color:#efefef; */
+    font-weight:bold;
+}
+ts-dc{
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    font-weight:bold;
 }
-resource{
-    display:none;
-    /* visibility: hidden; */
-    /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
-}
-tool{
-    display:none;
-    /* visibility: hidden; */
-    /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
-}
-action{
-    display:none;
-    /* visibility: hidden; */
-    /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
-}
-result{
-    display:none;
-    /* visibility: hidden; */
-    /* border:1px solid #ccc; */
-    /* background-color:#efefef; */
-    /* font-weight:bold; */
-}
-timestamp{
-    display:none;
+tb-dc{
+    /* display:none; */
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
-}
-timeblock{
-    display:none;
-    /* visibility: hidden; */
-    /* border:1px solid red; */
-    /* background-color: #FFF5F4; */
-    /* font-weight:bold; */
+    font-weight:bold;
 }
 </style>

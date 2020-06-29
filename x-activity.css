@@ -6,13 +6,13 @@ p.id {
     /* background-color: #FFF5F4; */
     font-weight:bold;
 }
-p.td {
+p.todo {
     display:none;
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */
-    color:#888888;
-    font-weight:bold;
+    /* font-weight:bold; */
+    font-size:10px;
 }
 p.rs {
     display:none;
@@ -53,6 +53,7 @@ p.ts {
 }
 p.tb {
     display:none;
+    text-align:right;
     /* visibility: hidden; */
     /* border:1px solid red; */
     /* background-color: #FFF5F4; */

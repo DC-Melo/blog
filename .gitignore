@@ -1,2 +1,4 @@
-*.nt
+*.computer.md
+*.patch.md
+*.addpatch.md
 test*
